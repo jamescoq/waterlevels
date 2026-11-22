@@ -39,11 +39,11 @@
 
 ## 6. Derivation
 
-- [ ] 6.1 Implement the status rules in one module with the 70 % and 40 % thresholds as constants; verify every `station-status` scenario passes as a table-driven test
-- [ ] 6.2 Implement the change since yesterday with the 18–30 hour window; verify the rose, no-change, first-day and portal-did-not-update scenarios
-- [ ] 6.3 Implement circle size and overlap handling; for the desktop and the phone layout; verify the circle-size scenarios, a test that no circle moves more than 16 px in either layout, and the two-neighbours and dense-cluster scenarios
-- [ ] 6.4 Generate `latest.json` from registry, overrides and snapshots; verify it validates against its schema and is under 50 KB gzipped for the real station count
-- [ ] 6.5 Implement the headline and status counts as a shared function used by the browser; verify every `national-summary` scenario passes as a unit test
+- [x] 6.1 Implement the status rules in one module with the 70 % and 40 % thresholds as constants; verify every `station-status` scenario passes as a table-driven test
+- [x] 6.2 Implement the change since yesterday with the 18–30 hour window; verify the rose, no-change, first-day and portal-did-not-update scenarios
+- [x] 6.3 Implement circle size and overlap handling; for the desktop and the phone layout; verify the circle-size scenarios, a test that no circle moves more than 16 px in either layout, and the two-neighbours and dense-cluster scenarios
+- [x] 6.4 Generate `latest.json` from registry, overrides and snapshots; verify it validates against its schema and is under 50 KB gzipped for the real station count
+- [x] 6.5 Implement the headline and status counts as a shared function used by the browser; verify every `national-summary` scenario passes as a unit test
 
 ## 7. Map assets
 

@@ -247,33 +247,40 @@ type Zone =
 
 A source recorded as "partial" returned fewer than 70 % of its registered stations; none of its rows are stored.
 
-`/data/latest.json` (published, under 50 KB gzipped):
+`/data/latest.json` (published, under 50 KB gzipped: 11 KB on real data; built by `pnpm derive`, exact schema in `src/shared/latest.ts`):
 
 ```ts
 type Latest = {
   schemaVersion: 1;
   builtAt: string;
-  lastSuccessfulFetch: string;
+  lastSuccessfulFetch: string | null;      // null before the first collection
   sources: Snapshot["sources"];
-  stations: Array<{
+  sourceReasons: Snapshot["sourceReasons"];
+  map: { desktop: { width: 880; height: number }; phone: { width: 358; height: number } };
+  stations: Array<{                        // hidden stations left out; larger circles first
     id: string; name: string; river: string; basin: string;
-    desktop: { x: number; y: number; r: number };   // pre-projected, after overlap handling at an 880 px map
-    phone: { x: number; y: number; r: number };     // the same, worked out for a 390 px map
+    source: SourceCode; sourceName: string;  // "Povodí Odry"
+    sourceStatus: SourceStatus;              // the source's status today, for the card's note
+    sourceUrl: string;
+    desktop: { x: number; y: number; r: number } | null;  // 880 px map, after overlap handling; null until placed
+    phone: { x: number; y: number; r: number } | null;    // 358 px map (390 px screen minus gutters)
     buildStatus: Status;                     // status at build time; the browser re-applies the 36 h rule
     levelOnlyReason: "no-zone" | "fill-not-published" | null;
     fillPct: number | null; fillPctRaw: number | null;
     storageFilled: number | null; storageCapacity: number | null;   // capacity = today's filled + free
     level: number | null; volume: number | null; inflow: number | null; outflow: number | null;
     levels: Station["levels"];
-    changeCm: number | null;
+    changeCm: number | null;                 // 0 means under 1 cm
     measuredAt: string | null;
-    isLastKnown: boolean;                    // values from an older snapshot because the source failed
-    note: string | null;
-    sourceUrl: string;
+    isLastKnown: boolean;                    // values from an older snapshot because the source has none today
+    overrideReason: string | null;           // active planned drawdown
+    portalNote: string;
   }>;
 };
 type Status = "no-data" | "planned" | "above-storage" | "level-only" | "high" | "medium" | "low";
 ```
+
+The status rules (`src/shared/status.ts`) and the headline (`src/shared/headline.ts`) are shared code: the build uses them for `buildStatus`, the browser for the 36-hour rule and the hero. The map frame and projection (`src/shared/projection.ts`) are shared with the map asset pipeline.
 
 Storage capacity has two sources on purpose. The **weighted fill** uses the day's own figures from the portal (`storage.filled + storage.free`), so it stays consistent with the portal's percentage even where the storage zone differs between seasons. **Circle size** uses the registry's `storageVolume`, so circles do not change size from day to day.
 
