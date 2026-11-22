@@ -3,16 +3,16 @@
 ## 1. Setup
 
 - [x] 1.1 Create the pnpm TypeScript project with ESLint, Prettier and Vitest, and the folder layout from design.md Decision 2; verify `pnpm lint`, `pnpm typecheck` and `pnpm test` pass on the empty project
-- [ ] 1.2 Add `ci.yml` (lint, type check, tests, build on pull requests and pushes to `main`); verify a pull request shows a green run
+- [x] 1.2 Add `ci.yml` (lint, type check, tests, build on pull requests and pushes to `main`); verify a pull request shows a green run
 - [x] 1.3 Export the four canvas artboards into `design/`; verify the desktop, phone list, phone detail and six-states references are present
 - [x] 1.4 Create the orphan `data` branch with an empty `snapshots/` folder; verify `git ls-remote` shows the branch
 
 ## 2. Portal probe
 
-- [ ] 2.1 Add `probe.yml`, guarded to run only in this repository, that fetches robots.txt, `Prehled.aspx` and `Objemy.aspx` for every source and uploads the pages; verify a manual run lists a status code and row count for all five sources
+- [x] 2.1 Add `probe.yml`, guarded to run only in this repository, that fetches robots.txt, `Prehled.aspx` and `Objemy.aspx` for every source and uploads the pages; verify a manual run lists a status code and row count for all five sources
 - [x] 2.2 Find the Povodí Labe reservoir portal and add it to the probe; verify the probe loads its overview and volumes pages
 - [x] 2.3 Record the URL patterns, robots.txt rules, column layout, station count and the time of day the 07:00 reading appears for each portal in `sources.ts` comments; verify every source has an entry and the cron time in design.md is later than the latest of those times
-- [ ] 2.4 If any portal blocks the GitHub-hosted runner, set up the Czech fallback machine with a repository-scoped deploy key and cron; verify a push from it lands on `data` and triggers `deploy.yml`
+- [x] 2.4 Povodí Ohře blocks the GitHub-hosted runner with a Cloudflare challenge; mark it paused in `sources.ts` with the reason, per design.md Decision 3; verify `sources.ts` marks only `poh` as paused
 
 ## 3. Parsers
 
@@ -31,11 +31,11 @@
 ## 5. Daily collection
 
 - [ ] 5.1 Implement the polite HTTP client (User-Agent, robots.txt, 2 s spacing, 30 s timeout, two retries); verify mocked-server tests for the request budget, robots.txt blocking and retry scenarios
-- [ ] 5.2 Implement the run: scrape, match stations, contain source failures, apply validation guards, write the snapshot with every parsed value; verify tests for the layout-change, all-unreachable, one-portal-down, unmatched-row and value-not-shown scenarios
+- [ ] 5.2 Implement the run: scrape, match stations, contain source failures, apply validation guards, write the snapshot with every parsed value; verify tests for the layout-change, all-unreachable, one-portal-down, paused-source, unmatched-row and value-not-shown scenarios, including that a paused source receives no request
 - [ ] 5.3 Add `scrape.yml` with the schedule, the repository guard, the commit to `data`, `status/last-run.json` and the raw-page artifact with 90-day retention; verify a manual run commits a snapshot and uploads the artifact, and that the guard condition is on the scrape job
 - [ ] 5.4 Add `pnpm reparse --from <date>` that regenerates snapshots from raw-page artifacts; verify it reproduces a committed snapshot byte for byte
 - [ ] 5.5 Add the dead-man's-switch ping with its URL as a repository secret; verify the check service records a ping after a manual run
-- [ ] 5.6 Add the `alert` job that runs last and fails for a "partial" source, a source without usable data in three consecutive snapshots, or a new unmatched row; verify with fixture snapshots that it fails in each case, passes after a one-day outage, and that the snapshot commit and deploy still happen
+- [ ] 5.6 Add the `alert` job that runs last and fails for a "partial" source, a source without usable data in three consecutive snapshots, or a new unmatched row; verify with fixture snapshots that it fails in each case, passes after a one-day outage and for a paused source, and that the snapshot commit and deploy still happen
 
 ## 6. Derivation
 
@@ -76,6 +76,7 @@
 - [ ] 9.6 Measure the home page with a mobile lab test; verify Largest Contentful Paint is 2.5 s or less
 - [ ] 9.7 Have the owner create the GoatCounter site and put its site code into the build configuration; verify a visit to https://stavvody.cz appears in the GoatCounter dashboard and that the browser stores no cookie
 - [ ] 9.8 Add stavvody.cz to Google Search Console using DNS verification; verify the property shows as verified
+- [ ] 9.9 Have the owner ask Povodí Ohře to let `stavvody.cz-bot` through Cloudflare or to provide a data feed; once agreed, run the probe workflow and remove the pause; verify the probe loads both Ohře pages from GitHub and the next snapshot records `poh` as "ok"
 
 ## 10. Integration checks
 

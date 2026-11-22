@@ -8,6 +8,11 @@ export interface Source {
   name: string;
   /** Reservoir portal root; page names are appended to it. */
   baseUrl: string;
+  /**
+   * Set when the daily scrape must not contact this source, with the reason. Its stations are
+   * shown as "Bez dat". The probe still checks paused sources, to see when they can resume.
+   */
+  paused?: string;
 }
 
 /** Daily pages, relative to a source's baseUrl. */
@@ -66,10 +71,15 @@ export const SOURCES: readonly Source[] = [
     // robots.txt: Cloudflare-managed; "User-agent: *" allows everything, with the content
     // signal "search=yes, ai-train=no, use=reference". We do not train models on the data.
     // 24 stations. The path uses lower-case "nadrze".
+    // Blocked from GitHub-hosted runners: the probe on 2026-11-22 (run 45009512496) got 403
+    // with a Cloudflare JavaScript challenge ("Just a moment…") for both pages, while a Czech
+    // home network loads them normally. The challenge must not be circumvented. Paused until
+    // Povodí Ohře lets stavvody.cz-bot through or offers a feed (design.md Decision 3, tasks 9.9).
     code: "poh",
     basin: "ohre",
     name: "Povodí Ohře",
     baseUrl: "https://sap.poh.cz/portal/nadrze/cz/pc/",
+    paused: "Cloudflare bot challenge (403) for GitHub-hosted runners",
   },
   {
     // robots.txt: redirects to the site's 404 page, so no rules apply.
