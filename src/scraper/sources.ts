@@ -45,6 +45,12 @@ export type DailyPage = keyof typeof DAILY_PAGES;
  *   Teplota vzduchu, Qa…Q100 (odtok), Poznámka. Volumes pages are identical everywhere.
  *
  * Every portal answers in about 2 s per page. Total: 118 stations.
+ *
+ * Found while building the registry (tasks 4.1):
+ *   - A portal sometimes answers with a "Prosím, čekejte, načítám data" placeholder instead of
+ *     the table (Moravy, 11:49); see isLoadingPage() in portals/mge.ts. Fetch again later.
+ *   - Detail pages publish outflow for every portal, including the three whose overview pages
+ *     do not. The daily run does not fetch detail pages, so those stations show no outflow.
  */
 export const SOURCES: readonly Source[] = [
   {

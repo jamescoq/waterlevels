@@ -14,10 +14,13 @@
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "probe": "NODE_EXTRA_CA_CERTS=certs/intermediates.pem tsx src/scraper/probe.ts"
+    "probe": "NODE_EXTRA_CA_CERTS=certs/intermediates.pem tsx src/scraper/probe.ts",
+    "registry:build": "NODE_EXTRA_CA_CERTS=certs/intermediates.pem tsx scripts/registry/build.ts",
+    "registry:coordinates": "tsx scripts/registry/coordinates.ts"
   },
   "dependencies": {
-    "cheerio": "1.2.0"
+    "cheerio": "1.2.0",
+    "zod": "4.6.7"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

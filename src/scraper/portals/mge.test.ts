@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 import type { SourceCode } from "../sources.ts";
 import {
   LayoutError,
+  isLoadingPage,
   parseOverview,
   parseVolumes,
   type OverviewRow,
@@ -183,6 +184,22 @@ describe("parseVolumes", () => {
       retentionControllable: { filled: 0, filledPct: 0, free: 33.156, freePct: 100 },
       retentionUncontrollable: "undefined-zone",
     });
+  });
+});
+
+describe("isLoadingPage", () => {
+  const read = (file: string) =>
+    readFileSync(join(import.meta.dirname, "../../../test/fixtures/pmo", file), "utf8");
+
+  it("recognises the portal's 'loading data' placeholder (Moravy, captured 2026-11-22)", () => {
+    const html = read("overview-loading.html");
+    expect(isLoadingPage(html)).toBe(true);
+    expect(parseOverview(html)).toEqual([]);
+  });
+
+  it("does not flag a normal page", () => {
+    expect(isLoadingPage(read("overview.html"))).toBe(false);
+    expect(isLoadingPage(read("volumes.html"))).toBe(false);
   });
 });
 
