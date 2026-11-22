@@ -7,7 +7,7 @@ See proposal.md for why the site exists, and the specs for what it must do. Cons
 - The data exists only as HTML tables on five Povodí portals. There is no API. At least four portals run the same MGE Data software with the same three page types.
 - The data changes once a day and the audience only reads it.
 - Hosting and automation must be free, with no server to maintain.
-- Three portals (Vltavy, Ohře, Labe) could not be loaded from a cloud environment during design. Their structure is assumed from the two that loaded.
+- All five portals were loaded from a Czech network on 2026-11-22 (`src/scraper/sources.ts` records the findings). Whether they answer GitHub's runners is checked by the probe workflow.
 - The project owner has bought the domain stavvody.cz.
 
 ```mermaid
@@ -115,15 +115,21 @@ Scraper behaviour:
 - User-Agent: `stavvody.cz-bot/1.0 (+https://stavvody.cz/o-datech; <project contact email>)`.
 - Timeout 30 s; retries after 5 s and 20 s.
 
-| Source | Povodí | Base URL | Verified |
+| Source | Povodí | Base URL | Stations (2026-11-22) |
 |---|---|---|---|
-| `pmo` | Moravy | `https://sap.pmo.cz/portal/Nadrze/cz/pc/` | yes |
-| `pod` | Odry | `https://www.pod.cz/portal/Nadrze/cz/pc/` | yes |
-| `poh` | Ohře | `https://sap.poh.cz/portal/nadrze/cz/pc/` | no |
-| `pvl` | Vltavy | `https://www.pvl.cz/portal/Nadrze/cz/pc/` | no |
-| `pla` | Labe | unknown; gauge portal at `pla.cz/portal/sap/` uses the same software | no |
+| `pmo` | Moravy | `https://sap.pmo.cz/portal/Nadrze/cz/pc/` | 29 |
+| `pod` | Odry | `https://www.pod.cz/portal/Nadrze/cz/pc/` | 7 |
+| `poh` | Ohře | `https://sap.poh.cz/portal/nadrze/cz/pc/` | 24 |
+| `pvl` | Vltavy | `https://www.pvl.cz/portal/Nadrze/cz/pc/` | 42 |
+| `pla` | Labe | `https://www.pla.cz/portal/nadrze/cz/pc/` | 16 |
 
-Pages: `Prehled.aspx` (daily), `Objemy.aspx` (daily), `Mereni.aspx?id=…&oid=…` (registry build only).
+Pages: `Prehled.aspx` (daily), `Objemy.aspx` (daily), `Mereni.aspx?id=…&oid=…` (registry build only). A station is identified by `id` and `oid` together.
+
+Probe findings that shape the parsers (details in `src/scraper/sources.ts`):
+
+- Columns differ between portals, so they are mapped by heading, never by position. Outflow ("Odtok") is on the Odra and Vltava overview pages only; the other three publish no outflow there, so their cards show it as not available.
+- Values are near-real-time (refreshed every 10–60 minutes), not one daily 07:00 reading.
+- www.pvl.cz sends the wrong intermediate TLS certificate. The correct one is kept in `certs/intermediates.pem` and loaded with `NODE_EXTRA_CA_CERTS`, so verification stays on.
 
 ### 4. TypeScript with Vite and Preact
 
@@ -273,7 +279,7 @@ Commits pushed with the default `GITHUB_TOKEN` do not start other workflows, so 
 
 `contents: write` only in `scrape.yml`; `pages: write` and `id-token: write` only in `deploy.yml`. One scrape and one deploy at a time. Third-party actions pinned by commit SHA.
 
-The schedule leaves at least an hour after the 07:00 reading in both winter and summer time. When the portals actually publish that reading is unverified; the probe records it (tasks 2.3) and the cron line is adjusted if needed.
+The probe showed the portals refresh their values every 10–60 minutes, so the run time does not depend on a publishing time; 07:17 UTC keeps the morning values fresh for the day.
 
 The `alert` job is the last job in `scrape.yml` and fails on purpose when a source is "partial", when a source has delivered no usable data in three consecutive snapshots, or when a new unmatched row appears. A failed job emails the owner. Because it runs after the commit and the deploy, it never blocks either.
 
