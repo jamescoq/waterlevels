@@ -24,6 +24,10 @@ export interface MapFrame {
   height: number;
   /** WGS84 → SVG px in this frame (y grows downwards). */
   project(lon: number, lat: number): { x: number; y: number };
+  /** SVG px in this frame → WGS84. */
+  unproject(x: number, y: number): { lon: number; lat: number };
+  /** Ground distance of one px, in metres (true at the standard parallels). */
+  metresPerPx: number;
 }
 
 let extent: { minX: number; maxX: number; minY: number; maxY: number } | null = null;
@@ -62,9 +66,14 @@ export function mapFrame(width: number): MapFrame {
   return {
     width,
     height: Math.round((maxY - minY) * scale * 10) / 10,
+    metresPerPx: 1 / scale,
     project(lon, lat) {
       const [x, y] = toMap.forward([lon, lat]) as [number, number];
       return { x: (x - minX) * scale, y: (maxY - y) * scale };
+    },
+    unproject(x, y) {
+      const [lon, lat] = toMap.inverse([x / scale + minX, maxY - y / scale]) as [number, number];
+      return { lon, lat };
     },
   };
 }

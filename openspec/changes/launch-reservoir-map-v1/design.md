@@ -160,9 +160,11 @@ Fonts (Outfit, Inter) are **self-hosted** so visitor IPs are not sent to Google,
 
 ### 5. Map geometry projected at build time
 
-Projection: Lambert conformal conic fitted to Czechia, `+proj=lcc +lat_1=49 +lat_2=50.5 +lat_0=49.8 +lon_0=15.5 +ellps=WGS84`. Border (Natural Earth), rivers (DIBAVOD or OpenStreetMap, simplified with mapshaper), cities and stations are projected with proj4 into one SVG coordinate space during the build. The hillshade raster is warped to the same projection and extent with GDAL and exported as WebP at 880 px and 1760 px. The browser draws plain SVG over an image and does no projection math.
+Projection: Lambert conformal conic fitted to Czechia, `+proj=lcc +lat_1=49 +lat_2=50.5 +lat_0=49.8 +lon_0=15.5 +ellps=WGS84` (`src/shared/projection.ts`). Border and cities (Natural Earth), rivers (OpenStreetMap, clipped and simplified with mapshaper) and stations are projected with proj4 into one SVG coordinate space during the build. The hillshade is computed directly in that frame from the Copernicus DEM GLO-90 (each output pixel is unprojected and its elevation sampled), tinted in the design's blues, masked to the border and exported as WebP at 880 px and 1760 px. The pipeline is plain Node (geotiff, sharp, mapshaper); no GDAL. The browser draws plain SVG over an image and does no projection math.
 
-The asset pipeline lives in `scripts/map/` with a README listing every command and source download. It runs on a developer machine and its outputs are committed.
+Natural Earth's rivers are too sparse for Czechia (no Berounka, Otava, Jizera), so rivers come from OpenStreetMap: main rivers ≥ 150 km, tributaries 40–150 km, the stream at each placed reservoir, and every river these flow into, so every tributary meets its main river. Result on 2026-11-22: 10 main rivers, 57 tributaries, 44 feeder streams, 22 connectors; `geometry.json` 44 KB gzipped, hillshades 15 KB and 60 KB.
+
+The asset pipeline lives in `scripts/map/` (`pnpm map:build`, `pnpm map:preview`) with a README listing sources, licences and required credits. It runs on a developer machine; downloads are cached, a rerun reproduces the committed outputs byte for byte.
 
 Alternative considered: MapLibre with vector tiles. Rejected for v1 because it adds a large library and a tile source for a map that does not zoom. It stays the path if free zooming is ever wanted.
 

@@ -47,10 +47,10 @@
 
 ## 7. Map assets
 
-- [ ] 7.1 Write `scripts/map/` (Natural Earth border, rivers in three weights, cities, hillshade warped to the project projection) with a README of every command; verify re-running it reproduces the committed outputs
-- [ ] 7.2 Check that every tributary meets its main river after simplification; verify by a visual review recorded in the pull request
-- [ ] 7.3 Keep map assets within budget; verify geometry under 150 KB gzipped and each hillshade size under 300 KB
-- [ ] 7.4 Record source, licence and required credit for every map dataset in `scripts/map/README.md`; verify each dataset has all three
+- [x] 7.1 Write `scripts/map/` (Natural Earth border, rivers in three weights, cities, hillshade warped to the project projection) with a README of every command; verify re-running it reproduces the committed outputs
+- [x] 7.2 Check that every tributary meets its main river after simplification; verify by a visual review recorded in the pull request
+- [x] 7.3 Keep map assets within budget; verify geometry under 150 KB gzipped and each hillshade size under 300 KB
+- [x] 7.4 Record source, licence and required credit for every map dataset in `scripts/map/README.md`; verify each dataset has all three
 
 ## 8. Front end
 
