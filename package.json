@@ -1,0 +1,33 @@
+{
+  "name": "stavvody",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Map of Czech reservoir water levels at stavvody.cz, built from the five Povodí portals",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@12.15.0",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "probe": "NODE_EXTRA_CA_CERTS=certs/intermediates.pem tsx src/scraper/probe.ts"
+  },
+  "dependencies": {
+    "cheerio": "1.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "22.20.5",
+    "eslint": "10.14.0",
+    "globals": "17.14.0",
+    "prettier": "3.9.10",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.1",
+    "vitest": "5.1.0"
+  }
+}

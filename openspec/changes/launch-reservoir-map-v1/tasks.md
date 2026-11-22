@@ -2,16 +2,16 @@
 
 ## 1. Setup
 
-- [ ] 1.1 Create the pnpm TypeScript project with ESLint, Prettier and Vitest, and the folder layout from design.md Decision 2; verify `pnpm lint`, `pnpm typecheck` and `pnpm test` pass on the empty project
+- [x] 1.1 Create the pnpm TypeScript project with ESLint, Prettier and Vitest, and the folder layout from design.md Decision 2; verify `pnpm lint`, `pnpm typecheck` and `pnpm test` pass on the empty project
 - [ ] 1.2 Add `ci.yml` (lint, type check, tests, build on pull requests and pushes to `main`); verify a pull request shows a green run
-- [ ] 1.3 Export the four canvas artboards into `design/`; verify the desktop, phone list, phone detail and six-states references are present
-- [ ] 1.4 Create the orphan `data` branch with an empty `snapshots/` folder; verify `git ls-remote` shows the branch
+- [x] 1.3 Export the four canvas artboards into `design/`; verify the desktop, phone list, phone detail and six-states references are present
+- [x] 1.4 Create the orphan `data` branch with an empty `snapshots/` folder; verify `git ls-remote` shows the branch
 
 ## 2. Portal probe
 
 - [ ] 2.1 Add `probe.yml`, guarded to run only in this repository, that fetches robots.txt, `Prehled.aspx` and `Objemy.aspx` for every source and uploads the pages; verify a manual run lists a status code and row count for all five sources
-- [ ] 2.2 Find the Povodí Labe reservoir portal and add it to the probe; verify the probe loads its overview and volumes pages
-- [ ] 2.3 Record the URL patterns, robots.txt rules, column layout, station count and the time of day the 07:00 reading appears for each portal in `sources.ts` comments; verify every source has an entry and the cron time in design.md is later than the latest of those times
+- [x] 2.2 Find the Povodí Labe reservoir portal and add it to the probe; verify the probe loads its overview and volumes pages
+- [x] 2.3 Record the URL patterns, robots.txt rules, column layout, station count and the time of day the 07:00 reading appears for each portal in `sources.ts` comments; verify every source has an entry and the cron time in design.md is later than the latest of those times
 - [ ] 2.4 If any portal blocks the GitHub-hosted runner, set up the Czech fallback machine with a repository-scoped deploy key and cron; verify a push from it lands on `data` and triggers `deploy.yml`
 
 ## 3. Parsers

@@ -1,0 +1,10 @@
+# Single-package project; this file only carries pnpm settings.
+
+# Do not install package versions published less than 14 days ago (in minutes).
+# Gives the registry time to pull compromised releases before they reach us.
+minimumReleaseAge: 20160
+
+# Dependencies allowed to run install scripts. esbuild (used by tsx and Vite) checks its
+# platform binary after install.
+allowBuilds:
+  esbuild: true
