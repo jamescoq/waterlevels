@@ -19,10 +19,12 @@
     "reparse": "tsx src/scraper/reparse.ts",
     "alerts": "tsx src/scraper/alerts.ts",
     "registry:build": "NODE_EXTRA_CA_CERTS=certs/intermediates.pem tsx scripts/registry/build.ts",
-    "registry:coordinates": "tsx scripts/registry/coordinates.ts"
+    "registry:coordinates": "tsx scripts/registry/coordinates.ts",
+    "derive": "tsx src/derive/run.ts"
   },
   "dependencies": {
     "cheerio": "1.2.0",
+    "proj4": "2.22.0",
     "zod": "4.6.7"
   },
   "devDependencies": {

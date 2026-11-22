@@ -6,3 +6,4 @@ probe-out/
 .cache/
 data/
 raw-pages/
+public/data/
