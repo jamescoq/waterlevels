@@ -4,3 +4,5 @@ probe-out/
 .DS_Store
 *.log
 .cache/
+data/
+raw-pages/
