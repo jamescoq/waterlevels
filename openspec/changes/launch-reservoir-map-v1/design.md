@@ -212,26 +212,31 @@ Coordinates come from Wikidata (CC0, no attribution needed) and, for the rest, O
 type Overrides = Record<string, { status: "planned"; reason: string; from?: string; until?: string }>;
 ```
 
-`snapshots/YYYY/YYYY-MM-DD.json` (data branch; every parsed value, nothing derived):
+`snapshots/YYYY/YYYY-MM-DD.json` (data branch; every parsed value, nothing derived; exact schema in `src/shared/snapshot.ts`):
 
 ```ts
 type Snapshot = {
   schemaVersion: 1;
+  date: string;       // Prague calendar date, YYYY-MM-DD
   fetchedAt: string;  // UTC
   sources: Record<SourceCode, "ok" | "failed" | "blocked" | "partial" | "paused">;
-  stations: Record<string, {
-    measuredAt: string | null;   // Prague time with offset
+  sourceReasons: Record<SourceCode, string | null>;   // why a source is not "ok"
+  stations: Record<string, {                          // keyed by station id
+    measuredAt: string | null;        // overview page, Prague time with offset
+    volumesMeasuredAt: string | null; // volumes page, which can lag the overview
     level: number | null; volume: number | null;
     inflow: number | null; outflow: number | null;     // m³/s
-    precipitation24h: number | null;                   // mm
+    precipitation1h: number | null; precipitation24h: number | null;  // mm
     airTemperature: number | null;                     // °C
-    floodThresholds: Record<string, number> | null;    // outflow Q1…Q100, m³/s
+    floodThresholds: Partial<Record<"Qa" | "Q1" | "Q5" | "Q20" | "Q100", number>> | null;  // m³/s
+    purpose: string | null;                            // "Účel" as published
     storage: Zone;
     retentionControllable: Zone;
     retentionUncontrollable: Zone;
     note: string;                                      // portal note, verbatim
   }>;
-  unmatched: { source: SourceCode; name: string; raw: Record<string, string> }[];
+  unmatched: { source: SourceCode; portalId: { id: string; oid: string }; name: string }[];
+  warnings: string[];                                  // implausible values, unregistered rows
 };
 
 // A dash on the volumes page ("zone not defined") is kept apart from blank cells ("not measured").
@@ -311,7 +316,7 @@ The scrape and probe jobs carry `if: github.repository == 'jamescoq/waterlevels'
 
 - A failed scheduled run emails the person who last changed the cron line in `scrape.yml`. This covers both a failed scrape and the `alert` job (Decision 9).
 - A dead-man's-switch check (e.g. healthchecks.io, free) is pinged after each successful scrape and emails the owner when no ping arrives for 36 hours. This also catches GitHub disabling scheduled workflows after 60 days of repository inactivity, or skipping runs under load. The ping URL is a repository secret.
-- After a parser fix, `pnpm reparse --from <date>` regenerates snapshots from the kept raw pages.
+- After a parser fix, download the affected runs' `raw-pages-<run id>` artifacts with `gh run download` and run `pnpm reparse <archive-dir>... --data-dir <data checkout>`; it replays each run with the current parser and rewrites that day's snapshot. Unchanged code reproduces a snapshot byte for byte.
 - A planned drawdown is added by a pull request to `registry/overrides.json`; merging redeploys the site.
 
 ### 11. "Jen hladina" for stations without a fill figure

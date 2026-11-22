@@ -15,6 +15,9 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "probe": "NODE_EXTRA_CA_CERTS=certs/intermediates.pem tsx src/scraper/probe.ts",
+    "scrape": "NODE_EXTRA_CA_CERTS=certs/intermediates.pem tsx src/scraper/scrape.ts",
+    "reparse": "tsx src/scraper/reparse.ts",
+    "alerts": "tsx src/scraper/alerts.ts",
     "registry:build": "NODE_EXTRA_CA_CERTS=certs/intermediates.pem tsx scripts/registry/build.ts",
     "registry:coordinates": "tsx scripts/registry/coordinates.ts"
   },

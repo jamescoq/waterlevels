@@ -4,3 +4,5 @@ design/
 openspec/
 test/fixtures/
 .cache/
+data/
+raw-pages/

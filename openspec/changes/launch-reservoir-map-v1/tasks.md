@@ -30,12 +30,12 @@
 
 ## 5. Daily collection
 
-- [ ] 5.1 Implement the polite HTTP client (User-Agent, robots.txt, 2 s spacing, 30 s timeout, two retries); verify mocked-server tests for the request budget, robots.txt blocking and retry scenarios
-- [ ] 5.2 Implement the run: scrape (fetching a page again after 30 s, at most twice, when the portal answers with its "Prosím, čekejte, načítám data" placeholder), match stations, contain source failures, apply validation guards, write the snapshot with every parsed value; verify tests for the layout-change, all-unreachable, one-portal-down, paused-source, unmatched-row and value-not-shown scenarios, including that a paused source receives no request
+- [x] 5.1 Implement the polite HTTP client (User-Agent, robots.txt, 2 s spacing, 30 s timeout, two retries); verify mocked-server tests for the request budget, robots.txt blocking and retry scenarios
+- [x] 5.2 Implement the run: scrape (fetching a page again after 30 s, at most twice, when the portal answers with its "Prosím, čekejte, načítám data" placeholder), match stations, contain source failures, apply validation guards, write the snapshot with every parsed value; verify tests for the layout-change, all-unreachable, one-portal-down, paused-source, unmatched-row and value-not-shown scenarios, including that a paused source receives no request
 - [ ] 5.3 Add `scrape.yml` with the schedule, the repository guard, the commit to `data`, `status/last-run.json` and the raw-page artifact with 90-day retention; verify a manual run commits a snapshot and uploads the artifact, and that the guard condition is on the scrape job
-- [ ] 5.4 Add `pnpm reparse --from <date>` that regenerates snapshots from raw-page artifacts; verify it reproduces a committed snapshot byte for byte
+- [x] 5.4 Add `pnpm reparse <archive-dir>...` that regenerates snapshots from downloaded raw-page artifacts; verify it reproduces a committed snapshot byte for byte
 - [ ] 5.5 Add the dead-man's-switch ping with its URL as a repository secret; verify the check service records a ping after a manual run
-- [ ] 5.6 Add the `alert` job that runs last and fails for a "partial" source, a source without usable data in three consecutive snapshots, or a new unmatched row; verify with fixture snapshots that it fails in each case, passes after a one-day outage and for a paused source, and that the snapshot commit and deploy still happen
+- [x] 5.6 Add the `alert` job that runs last and fails for a "partial" source, a source without usable data in three consecutive snapshots, or a new unmatched row; verify with fixture snapshots that it fails in each case, passes after a one-day outage and for a paused source, and that the snapshot commit and deploy still happen
 
 ## 6. Derivation
 

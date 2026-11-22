@@ -1,0 +1,95 @@
+name: Scrape
+
+# Daily collection (design.md Decision 9; tasks 5.3–5.6).
+# Commits the day's snapshot and status/last-run.json to the data branch, keeps the raw pages
+# as an artifact for 90 days, pings the health check, then checks for data alerts.
+# A failed job emails whoever last changed the cron line below.
+
+on:
+  schedule:
+    - cron: "17 7 * * *" # 08:17 CET / 09:17 CEST
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    # Forks must not contact the portals under this project's User-Agent.
+    if: github.repository == 'jamescoq/waterlevels'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    env:
+      HEALTHCHECK_URL: ${{ secrets.HEALTHCHECK_URL }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: data
+          path: data
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - id: scrape
+        run: pnpm scrape --data-dir data --raw-dir raw-pages
+
+      # Runs after a failed scrape too, so status/last-run.json records the failure.
+      - name: Commit to the data branch
+        if: always() && steps.scrape.outcome != 'skipped'
+        working-directory: data
+        env:
+          MESSAGE: ${{ steps.scrape.outputs.message }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git commit -m "${MESSAGE:-data: run $(date -u +%F)}"
+          git push
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: always() && steps.scrape.outcome != 'skipped'
+        with:
+          name: raw-pages-${{ github.run_id }}
+          path: raw-pages/
+          retention-days: 90
+          if-no-files-found: ignore
+
+      # Dead-man's switch (tasks 5.5): the check emails the owner when no ping arrives for 36 h.
+      - name: Ping the health check
+        if: success() && env.HEALTHCHECK_URL != ''
+        run: curl -fsS -m 10 --retry 3 "$HEALTHCHECK_URL" > /dev/null
+
+  # The deploy workflow is called here once it exists (tasks 9.1).
+
+  alert:
+    needs: scrape
+    if: github.repository == 'jamescoq/waterlevels'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: data
+          path: data
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm alerts --data-dir data
