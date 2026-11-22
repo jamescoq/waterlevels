@@ -109,8 +109,20 @@ A problem with one source MUST NOT discard the other sources' data. A source tha
 - **THEN** the snapshot is stored with values for the other four sources
 - **AND** the snapshot records that source as "partial" and holds none of its 10 rows
 
+### Requirement: Paused sources
+The owner SHALL be able to pause a source, with a reason, when it cannot be collected, for example because it blocks automated access. The system MUST NOT send any request to a paused source and SHALL record it as "paused" in every snapshot.
+
+#### Scenario: Daily run with Povodí Ohře paused
+- **WHEN** a daily run executes while Povodí Ohře is paused
+- **THEN** no request is sent to sap.poh.cz
+- **AND** the snapshot records Ohře as "paused" and holds no values for its stations
+
+#### Scenario: Source resumed
+- **WHEN** the owner removes the pause and the next daily run executes
+- **THEN** the system collects that source like any other
+
 ### Requirement: Owner notification
-The system SHALL notify the owner when a run fails, when a source is recorded as "partial", when the same source has delivered no usable data in three consecutive daily runs, and when a run finds an unregistered station that the previous snapshot did not list. A notification MUST NOT stop the snapshot from being stored or the site from being updated.
+The system SHALL notify the owner when a run fails, when a source is recorded as "partial", when the same source that is not paused has delivered no usable data in three consecutive daily runs, and when a run finds an unregistered station that the previous snapshot did not list. A notification MUST NOT stop the snapshot from being stored or the site from being updated.
 
 #### Scenario: Layout change
 - **WHEN** a source is recorded as "partial"
@@ -124,6 +136,10 @@ The system SHALL notify the owner when a run fails, when a source is recorded as
 #### Scenario: One-day outage
 - **WHEN** a source is recorded as "failed" in one run and "ok" in the next
 - **THEN** the owner is not notified
+
+#### Scenario: Paused source
+- **WHEN** a source has been recorded as "paused" for three or more consecutive daily runs
+- **THEN** the owner is not notified about it
 
 #### Scenario: New reservoir on a portal
 - **WHEN** a run finds a portal row that matches no registered station and was not in the previous snapshot's unmatched rows

@@ -7,7 +7,7 @@ See proposal.md for why the site exists, and the specs for what it must do. Cons
 - The data exists only as HTML tables on five Povodí portals. There is no API. At least four portals run the same MGE Data software with the same three page types.
 - The data changes once a day and the audience only reads it.
 - Hosting and automation must be free, with no server to maintain.
-- All five portals were loaded from a Czech network on 2026-11-22 (`src/scraper/sources.ts` records the findings). Whether they answer GitHub's runners is checked by the probe workflow.
+- All five portals were loaded from a Czech network on 2026-11-22 (`src/scraper/sources.ts` records the findings). From a GitHub-hosted runner the same day, four answered and Povodí Ohře returned a Cloudflare bot challenge (403), so the scraper cannot run entirely on GitHub's runners (Decision 3).
 - The project owner has bought the domain stavvody.cz.
 
 ```mermaid
@@ -101,13 +101,22 @@ Raw HTML is **not** committed. Each run uploads the fetched pages as a gzipped A
 
 Alternative considered: snapshots on `main`. Rejected because 365 bot commits a year would bury code changes.
 
-### 3. Scraper on a GitHub-hosted runner, with a Czech fallback
+### 3. Scraper on a GitHub-hosted runner; Povodí Ohře paused
 
-Default: `ubuntu-latest` (US datacenter IPs). A probe workflow tests every portal from that runner before anything else is built.
+The scraper runs on `ubuntu-latest` (US datacenter IPs). The probe on 2026-11-22 showed four portals answer it. Povodí Ohře sits behind Cloudflare, which answers datacenter IPs with a JavaScript bot challenge (403), while a Czech home connection loads the same pages.
 
-If any portal blocks it: a small Czech machine (Raspberry Pi at home or a cheap Czech VPS) runs `pnpm scrape` from cron and pushes the snapshot to `data` with a **deploy key limited to this repository**. The push triggers the deploy workflow.
+Decision (owner, 2026-11-22): launch on GitHub with **Povodí Ohře paused**. Its 24 stations are shown as "Bez dat" with a note pointing to the Povodí website, and no request is sent to its portal (water-data-collection spec, "Paused sources"). The owner asks Povodí Ohře to let `stavvody.cz-bot` through Cloudflare or to provide a data feed, together with the consent request. When the probe workflow loads Ohře from GitHub, the pause is removed.
 
-Rejected: registering that machine as a self-hosted Actions runner. On a public repository a self-hosted runner can be made to execute code from outside contributors.
+The challenge MUST NOT be circumvented, for example by imitating a browser or solving it with a headless browser. It is the site owner's decision to keep automated clients out.
+
+Alternatives considered:
+
+| Option | Why not now |
+|---|---|
+| Whole scrape from an always-on machine on a Czech home connection, pushing to `data` with a deploy key limited to this repository | Works for all five portals, but needs a machine to keep running; the owner has none ready. Stays the fallback if Ohře does not respond |
+| Czech VPS or another cloud host | Also datacenter IPs, so Cloudflare is likely to challenge them too; would need a probe run before paying for it |
+| Split: GitHub for four portals, a home machine for Ohře | Two writers to the `data` branch and a merge step, for one source |
+| Self-hosted Actions runner on a home machine | On a public repository a self-hosted runner can be made to execute code from outside contributors |
 
 Scraper behaviour:
 
@@ -198,7 +207,7 @@ type Overrides = Record<string, { status: "planned"; reason: string; from?: stri
 type Snapshot = {
   schemaVersion: 1;
   fetchedAt: string;  // UTC
-  sources: Record<SourceCode, "ok" | "failed" | "blocked" | "partial">;
+  sources: Record<SourceCode, "ok" | "failed" | "blocked" | "partial" | "paused">;
   stations: Record<string, {
     measuredAt: string | null;   // Prague time with offset
     level: number | null; volume: number | null;
@@ -323,7 +332,8 @@ Alternatives considered:
 
 ## Risks / Trade-offs
 
-- [Portals block GitHub's US IPs] → Probe first; Czech fallback machine with a repository-scoped deploy key (Decision 3).
+- [Povodí Ohře keeps blocking GitHub's runners, so a fifth of the reservoirs never get data] → Request to Povodí Ohře; if it is refused or unanswered, move the scrape to an always-on machine on a Czech home connection (Decision 3).
+- [Another portal adds a bot challenge later] → It shows up as a "failed" source, the owner is notified after three days, and the source can be paused the same way.
 - [Portal layout changes] → That source is recorded as "partial", its stations show "Bez dat" with their last known values, the other sources update as usual and the owner is emailed the same day; parser fix plus re-parse from raw pages.
 - [A fork scrapes the portals under this project's name] → Repository guard on the scrape and probe jobs (Decision 9).
 - [Visit counts are too low because ad blockers block the counter, or GoatCounter's free service ends] → Counts are treated as a lower bound; the site never depends on the counter; Cloudflare Web Analytics is the fallback (Decision 12).

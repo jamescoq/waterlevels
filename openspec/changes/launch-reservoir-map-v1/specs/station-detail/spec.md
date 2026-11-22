@@ -62,6 +62,10 @@ For a station in "Plánované snížení", "Bez dat" or "Jen hladina" the card S
 - **WHEN** a station is "Bez dat" because its source failed today
 - **THEN** the card shows the last known values with their measurement time and a note that today's data is missing
 
+#### Scenario: Source paused
+- **WHEN** a station is "Bez dat" because its source is paused
+- **THEN** the note says that data from this Povodí is not collected at the moment and points to "Živá data na webu Povodí", for example "Data z Povodí Ohře zatím nestahujeme. Aktuální stav najdete na webu Povodí."
+
 ### Requirement: Shareable link
 The card SHALL offer "Odkaz na tuto nádrž", which copies a URL of the form https://stavvody.cz/?stanice={station id}. Opening that URL SHALL show the site with that station selected.
 

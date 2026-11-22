@@ -18,7 +18,7 @@ Each shown station SHALL have exactly one status, taken from the first rule that
 - **THEN** its status is "Bez dat"
 
 ### Requirement: No data
-A station SHALL have the status "Bez dat" when its source delivered no usable data in the latest snapshot (recorded as "failed", "blocked" or "partial"), or when it has no measurement from the last 36 hours. The 36-hour check MUST use the viewer's current time, so it holds even when the site has not been rebuilt.
+A station SHALL have the status "Bez dat" when its source delivered no usable data in the latest snapshot (recorded as "failed", "blocked", "partial" or "paused"), or when it has no measurement from the last 36 hours. The 36-hour check MUST use the viewer's current time, so it holds even when the site has not been rebuilt.
 
 #### Scenario: Source failed today
 - **WHEN** the latest snapshot records the station's source as "failed"
@@ -26,6 +26,10 @@ A station SHALL have the status "Bez dat" when its source delivered no usable da
 
 #### Scenario: Source returned too few rows
 - **WHEN** the latest snapshot records the station's source as "partial"
+- **THEN** the station's status is "Bez dat"
+
+#### Scenario: Source paused
+- **WHEN** the latest snapshot records the station's source as "paused"
 - **THEN** the station's status is "Bez dat"
 
 #### Scenario: Collection stopped
