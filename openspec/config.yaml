@@ -1,0 +1,15 @@
+schema: spec-driven
+
+# Project context for OpenSpec artifacts and workflows.
+context: |
+  stavvody.cz is a personal, non-commercial, one-page public web app. It shows on a map of Czechia how full each reservoir is today, using data scraped once a day from the reservoir portals of the five Povodí state enterprises.
+  Product source of truth (intent, goals, visual design, decision log): the design doc "Stav nádrží – design doc (v1)" at https://claude.ai/artifact/5aAwuPKnWZfVEe2VVVa5Sg and the design canvas at https://claude.ai/artifact/4cmWYMd3wusJXFCg59YuCU. The canvas artboards are exported into design/ as the visual reference. If a spec and the design doc disagree on product behaviour, ask the owner (Jakub) instead of choosing.
+  The interface is Czech only. Write OpenSpec artifacts in English and quote UI strings in Czech exactly as they appear on screen.
+  Nothing may suggest the site is an official Povodí or government service. No company branding.
+  Hosting and automation must stay free: static files on GitHub Pages, scheduled jobs on GitHub Actions, no server to maintain.
+  Load on the Povodí servers must stay at a handful of requests per day. Visitors' browsers never contact the Povodí portals.
+  Name things for stations and water levels in general, not only reservoirs: river gauges are planned for v2.
+
+rules:
+  tasks:
+    - Every task states how its completion is verified.
