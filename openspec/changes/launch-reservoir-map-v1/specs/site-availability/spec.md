@@ -18,11 +18,12 @@ The site SHALL be served at https://stavvody.cz. Requests to http:// or to www.s
 - **THEN** they are redirected to https://stavvody.cz
 
 ### Requirement: Own files only
-A visitor's browser MUST load only files served from stavvody.cz. It MUST NOT contact the Povodí portals, font services or analytics services, except when the visitor follows a link to a portal.
+A visitor's browser MUST load only files served from stavvody.cz. It MUST NOT contact the Povodí portals, font services or any other third party, with two exceptions: the single request that reports the visit to the visit counter, and links the visitor follows.
 
 #### Scenario: Page load
 - **WHEN** a visitor loads the site and selects a station
-- **THEN** every network request goes to stavvody.cz
+- **THEN** every file is loaded from stavvody.cz
+- **AND** the only request to another host is the one that reports the visit
 
 ### Requirement: Survives failed collection
 When data collection fails, the site SHALL keep serving the last successfully collected data.

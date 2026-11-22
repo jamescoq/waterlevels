@@ -32,7 +32,7 @@ The site MUST state in its footer and on its methodology page that it is not an 
 - **THEN** it states that the site is unofficial and names the five Povodí as the data sources
 
 ### Requirement: Methodology page
-The site SHALL have a short methodology page in Czech, linked from the footer, that explains where the data comes from, what the storage and retention zones are, how statuses are derived, why a planned drawdown is not rated, that the site is unofficial, and the credits and licences of the map data.
+The site SHALL have a short methodology page in Czech, linked from the footer, that explains where the data comes from, what the storage and retention zones are, how statuses are derived, why a planned drawdown is not rated, that the site is unofficial, the credits and licences of the map data, and how visits are counted.
 
 #### Scenario: Open methodology
 - **WHEN** a visitor follows the methodology link in the footer

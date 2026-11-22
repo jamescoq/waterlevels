@@ -64,6 +64,7 @@
 - [ ] 8.8 Build the phone layout with the bottom sheet opening on the list; verify against the phone artboards at 390 px width with no horizontal scroll
 - [ ] 8.9 Meet the `site-accessibility` requirements; verify an automated axe check reports no violations, a keyboard-only walk-through, and contrast of the smallest labels
 - [ ] 8.10 Build the footer with sources, update frequency, "data bez záruky" and the unofficial notice; verify the `data-transparency` footer scenarios
+- [ ] 8.11 Add visit counting with a self-hosted, pinned `count.js`, loaded only on stavvody.cz with an explicit path; verify in the Playwright test that a load under the production hostname sends exactly one request to the counter, a load on localhost sends none, selecting stations sends none, and the site works with the counter request blocked
 
 ## 9. Hosting and launch
 
@@ -73,6 +74,8 @@
 - [ ] 9.4 Render the map at the real station count and have the owner choose a density solution if it is crowded; verify the decision is recorded in design.md
 - [ ] 9.5 Review the 70 % and 40 % thresholds against a week of real data with the owner; verify the decision is recorded in design.md
 - [ ] 9.6 Measure the home page with a mobile lab test; verify Largest Contentful Paint is 2.5 s or less
+- [ ] 9.7 Have the owner create the GoatCounter site and put its site code into the build configuration; verify a visit to https://stavvody.cz appears in the GoatCounter dashboard and that the browser stores no cookie
+- [ ] 9.8 Add stavvody.cz to Google Search Console using DNS verification; verify the property shows as verified
 
 ## 10. Integration checks
 

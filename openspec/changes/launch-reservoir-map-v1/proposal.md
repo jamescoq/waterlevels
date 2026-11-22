@@ -13,6 +13,7 @@ The five Povodí state enterprises publish reservoir data as tables on five sepa
 - Status rules that describe how full each storage zone is, with planned drawdowns and missing data shown outside the rating instead of as drought.
 - Source, measurement time and a "data bez záruky" note shown with every number; a methodology page; a clear statement that the site is unofficial.
 - Hosting on GitHub Pages and a scheduled job on GitHub Actions. No server and no database.
+- Cookieless visit counting for the owner, with no consent banner.
 
 Out of scope for this change: history charts, river gauges (planned for v2), forecasts or alerts, an English version, accounts, street-level zoom, ponds the portals do not list.
 
@@ -29,6 +30,7 @@ Out of scope for this change: history charts, river gauges (planned for v2), for
 - `data-transparency`: source, measurement time, disclaimer, methodology page and the unofficial notice.
 - `site-availability`: where the site is served, its independence from the portals, and its behaviour while loading and when data collection fails.
 - `site-accessibility`: accessibility rules that apply across the whole site.
+- `visit-statistics`: cookieless counting of visits for the owner, and its disclosure to visitors.
 
 ### Modified Capabilities
 
@@ -38,6 +40,6 @@ None. This is the first change in the project.
 
 - New code: scraper, derive step, front end, map asset pipeline and GitHub Actions workflows (see design.md).
 - New branch `data` holding daily snapshots, written only by the scheduled job.
-- External systems: DNS for stavvody.cz, GitHub Pages and Actions on a public repository, about ten requests a day to the Povodí portals.
+- External systems: DNS for stavvody.cz, GitHub Pages and Actions on a public repository, about ten requests a day to the Povodí portals, and a GoatCounter account for visit counts.
 - Dependencies: Node.js 22, TypeScript, Vite, Preact, cheerio, zod, proj4 (build time only).
 - Legal: consent from the five Povodí is still pending. The project stays non-commercial until it is settled (design.md, Risks).

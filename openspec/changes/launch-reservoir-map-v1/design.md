@@ -296,11 +296,31 @@ The label and the map mark (solid `#A9BCD2` outline, empty, centre dot) are defa
 
 Alternative considered: showing a station with an unpublished fill as "Bez dat". Rejected because it has a fresh level, which an empty dashed circle would hide.
 
+### 12. Visit counting with GoatCounter
+
+Visits are counted with GoatCounter's hosted service, which is free for non-commercial use.
+
+- The counting script `count.js` is **self-hosted**: a pinned copy is committed under `public/` and served from stavvody.cz. The only third-party request is the one it sends to `https://<site-code>.goatcounter.com/count`.
+- The script is loaded with `async` after the app's own code, and only when `location.hostname` is `stavvody.cz`.
+- The counted path is set explicitly instead of relying on the script's default: `/` for a plain visit and `/?stanice=<id>` for a visit that arrives through a shared link. Selections inside the page use `history.replaceState` and are not counted.
+- The site code is not a secret; it sits in the page source.
+- Per GoatCounter's documentation it sets no cookies, stores nothing on the device and does not keep IP addresses. It records the page, the referring site, browser and system, screen size, language and country. Re-check this when signing up, and list the same items on the methodology page.
+
+Alternatives considered:
+
+| Option | Why not |
+|---|---|
+| Google Analytics | Sets cookies, so it needs a consent banner under Czech law; its script is larger than the whole JS budget; sends visitor IPs to Google; widely blocked |
+| Cloudflare Web Analytics | Free and cookieless, but needs a Cloudflare account and its script cannot be self-hosted; the fallback if GoatCounter stops fitting |
+| Plausible, Fathom, Simple Analytics | Paid |
+| No counting, Google Search Console only | Shows only visits from Google Search; still worth adding next to GoatCounter, since it needs no script |
+
 ## Risks / Trade-offs
 
 - [Portals block GitHub's US IPs] → Probe first; Czech fallback machine with a repository-scoped deploy key (Decision 3).
 - [Portal layout changes] → That source is recorded as "partial", its stations show "Bez dat" with their last known values, the other sources update as usual and the owner is emailed the same day; parser fix plus re-parse from raw pages.
 - [A fork scrapes the portals under this project's name] → Repository guard on the scrape and probe jobs (Decision 9).
+- [Visit counts are too low because ad blockers block the counter, or GoatCounter's free service ends] → Counts are treated as a lower bound; the site never depends on the counter; Cloudflare Web Analytics is the fallback (Decision 12).
 - [A reservoir is emptied before its planned-drawdown entry exists] → The lower plausibility bound stores the level as missing until the entry is added; the raw pages allow a re-parse for 90 days.
 - [Legal: Czech database law may cover systematic daily copying; Povodí consent pending] → Non-commercial, attribution and "data bez záruky" on every card, unofficial notice; removing a source is one line in `sources.ts`, and its past snapshots can be removed from the `data` branch if asked.
 - [Public repository exposes snapshots] → Same data as the site; revisit hosting (Cloudflare with a private repo) if a Povodí objects to the raw archive.
