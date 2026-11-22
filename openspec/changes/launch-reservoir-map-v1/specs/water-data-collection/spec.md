@@ -73,40 +73,76 @@ The system MUST keep a blank cell on a volumes page (value not measured) distinc
 - **THEN** the snapshot marks the zone as not defined for that station
 
 ### Requirement: Implausible values
-The system SHALL store a value as missing, log a warning and continue the run when the value is outside physical bounds: a level more than 20 m below the permanent-pool level or more than 2 m above the dam crest, or a percentage below 0 or above 150.
+The system SHALL store a value as missing, log a warning and continue the run when the value is outside physical bounds: a level more than 20 m below the permanent-pool level or more than 2 m above the dam crest, or a percentage below 0 or above 150. The lower level bound SHALL NOT apply to a station with an active planned-drawdown entry, whose reservoir may be emptied for repairs.
 
 #### Scenario: Level far above the crest
 - **WHEN** a parsed level is 3 m above the station's dam crest
 - **THEN** the snapshot stores that level as missing
 - **AND** the run log contains a warning for that station
 
-### Requirement: Validation guards
-The system MUST NOT store a snapshot, and the run MUST end as failed so the owner is notified, when every source failed, when any source returned fewer than 70 % of the stations registered for it, or when the snapshot does not match its schema. The previously published data SHALL stay live.
+#### Scenario: Reservoir emptied for repairs
+- **WHEN** a station with an active planned-drawdown entry reports a level 30 m below its permanent-pool level
+- **THEN** the snapshot stores that level as reported
 
-#### Scenario: Portal layout changed
-- **WHEN** a source that has 28 registered stations yields 10 parsed rows
-- **THEN** no snapshot is stored for that run
-- **AND** the run ends as failed
-- **AND** the site keeps showing the previous data
+### Requirement: Validation guards
+The system MUST NOT store a snapshot, and the run MUST end as failed, when no source delivered usable data or when the snapshot does not match its schema. The previously published data SHALL stay live.
 
 #### Scenario: All portals unreachable
 - **WHEN** every source fails to load
 - **THEN** no snapshot is stored and the run ends as failed
+- **AND** the site keeps showing the previous data
 
-### Requirement: Single source failure
-When one source cannot be reached but the guards pass for the others, the system SHALL store the snapshot with values for the reachable sources and SHALL record the unreachable source as "failed".
+#### Scenario: Snapshot does not match its schema
+- **WHEN** the assembled snapshot fails schema validation
+- **THEN** no snapshot is stored and the run ends as failed
+
+### Requirement: Source failure is contained
+A problem with one source MUST NOT discard the other sources' data. A source that cannot be reached SHALL be recorded as "failed". A source that returns fewer than 70 % of the stations registered for it SHALL be recorded as "partial", and none of its rows SHALL be stored. The snapshot SHALL still be stored with the values of the remaining sources.
 
 #### Scenario: One portal down
 - **WHEN** Povodí Ohře does not respond after the allowed retries and all other sources succeed
 - **THEN** the snapshot is stored with values for the other four sources
 - **AND** the snapshot records Ohře as "failed"
 
+#### Scenario: Portal layout changed
+- **WHEN** a source that has 28 registered stations yields 10 parsed rows and all other sources succeed
+- **THEN** the snapshot is stored with values for the other four sources
+- **AND** the snapshot records that source as "partial" and holds none of its 10 rows
+
+### Requirement: Owner notification
+The system SHALL notify the owner when a run fails, when a source is recorded as "partial", when the same source has delivered no usable data in three consecutive daily runs, and when a run finds an unregistered station that the previous snapshot did not list. A notification MUST NOT stop the snapshot from being stored or the site from being updated.
+
+#### Scenario: Layout change
+- **WHEN** a source is recorded as "partial"
+- **THEN** the owner is notified the same day
+- **AND** the site is still updated with the other sources' data
+
+#### Scenario: Portal down for three days
+- **WHEN** a source is recorded as "failed" or "blocked" in three consecutive daily snapshots
+- **THEN** the owner is notified after the third run
+
+#### Scenario: One-day outage
+- **WHEN** a source is recorded as "failed" in one run and "ok" in the next
+- **THEN** the owner is not notified
+
+#### Scenario: New reservoir on a portal
+- **WHEN** a run finds a portal row that matches no registered station and was not in the previous snapshot's unmatched rows
+- **THEN** the owner is notified with the row's name and source
+
 ### Requirement: Snapshot retention
-The system SHALL keep every daily snapshot indefinitely. Snapshots MUST hold parsed values only, with no statuses or other derived values, so that derived data can be recomputed whenever the rules change.
+The system SHALL keep every daily snapshot indefinitely. A snapshot MUST hold every value read from the daily pages, including values the site does not show yet. It MUST hold parsed values only, with no statuses or other derived values, so that derived data can be recomputed whenever the rules change.
 
 #### Scenario: Rules change
 - **WHEN** the status thresholds are changed
 - **THEN** the statuses of any past day can be recomputed from its stored snapshot without fetching anything from the portals
+
+#### Scenario: Value not shown in v1
+- **WHEN** the overview page gives a station's 24-hour precipitation, which the v1 site does not show
+- **THEN** the snapshot stores it
+
+#### Scenario: Free volume
+- **WHEN** the volumes page gives a station's filled and free storage volume
+- **THEN** the snapshot stores both
 
 ### Requirement: Raw page retention
 The system SHALL keep the raw pages fetched by each run for at least 90 days, so that snapshots can be parsed again after a parser fix.

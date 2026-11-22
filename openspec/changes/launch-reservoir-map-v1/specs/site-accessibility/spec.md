@@ -18,7 +18,7 @@ All text SHALL have a contrast ratio of at least 4.5:1 against its background, o
 - **THEN** the label keeps a contrast ratio of at least 4.5:1
 
 ### Requirement: Status not by colour alone
-Every status SHALL be distinguishable without colour: each station's status SHALL be named in text wherever it is shown in the list and card, "Nad zásobní hladinou" circles SHALL have a double outline and "Bez dat" circles a dashed outline.
+Every status SHALL be distinguishable without colour: each station's status SHALL be named in text wherever it is shown in the list and card, "Nad zásobní hladinou" circles SHALL have a double outline, "Bez dat" circles a dashed outline and "Jen hladina" circles a centre dot.
 
 #### Scenario: Greyscale
 - **WHEN** the site is viewed in greyscale

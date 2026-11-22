@@ -1,6 +1,6 @@
 # Proposal: launch the reservoir map v1 at stavvody.cz
 
-Status: proposed, waiting for the owner's approval of the approach in design.md.
+Status: proposed. The owner has confirmed the approach: GitHub Pages from a public repository, and Preact for the front end.
 
 ## Why
 

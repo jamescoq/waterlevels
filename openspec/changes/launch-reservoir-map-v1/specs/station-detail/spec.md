@@ -7,7 +7,7 @@ Explains one selected station in plain terms: how full it is, where its water li
 ## ADDED Requirements
 
 ### Requirement: Card content
-The card SHALL show the station's name, river and Povodí, its status chip, its storage fill percentage in the status colour, its level, stored volume, inflow, outflow and change since yesterday with an arrow. A value that is missing SHALL be shown as missing, never as zero.
+The card SHALL show the station's name, river and Povodí, its status chip, its storage fill percentage in the status colour when it has one, its level, stored volume, inflow, outflow and change since yesterday with an arrow. A value that is missing SHALL be shown as missing, never as zero.
 
 #### Scenario: Complete data
 - **WHEN** a visitor selects a station with all values measured
@@ -29,7 +29,11 @@ The card SHALL show a schematic section of the dam with three labelled levels, "
 - **THEN** the section omits the "Plná zásoba" level and still shows the current water line
 
 ### Requirement: Plain-language level sentence
-The card SHALL state the distance between the current level and the top of the storage zone in one sentence, in metres with one decimal place and a decimal comma.
+The card SHALL state the distance between the current level and the top of the storage zone in one sentence, in metres with one decimal place and a decimal comma. A station whose storage-zone level is not known SHALL have no such sentence.
+
+#### Scenario: No storage-zone level
+- **WHEN** the selected station has no storage zone defined
+- **THEN** the card shows its level without the sentence
 
 #### Scenario: Below full storage
 - **WHEN** the level is 4.8 m below the top of the storage zone
@@ -40,7 +44,15 @@ The card SHALL state the distance between the current level and the top of the s
 - **THEN** the card reads "Hladina je 0,3 m nad plnou hladinou"
 
 ### Requirement: Note for stations outside the rating
-For a station in "Plánované snížení" or "Bez dat" the card SHALL show a note box explaining the state. For a planned drawdown it SHALL give the reason and state that the low level is not a sign of drought.
+For a station in "Plánované snížení", "Bez dat" or "Jen hladina" the card SHALL show a note box explaining the state. For a planned drawdown it SHALL give the reason and state that the low level is not a sign of drought. For "Jen hladina" it SHALL say whether the dam has no storage zone or its Povodí does not publish the fill.
+
+#### Scenario: Dam without a storage zone
+- **WHEN** a station is "Jen hladina" because its dam has no storage zone
+- **THEN** the note reads, for example, "Tato nádrž nemá vymezený zásobní prostor, proto u ní neuvádíme naplnění."
+
+#### Scenario: Fill not published
+- **WHEN** a station is "Jen hladina" because its Povodí does not publish the fill
+- **THEN** the note reads, for example, "Povodí u této nádrže naplnění neuvádí."
 
 #### Scenario: Planned drawdown
 - **WHEN** a station is in "Plánované snížení" because of dam repairs
@@ -51,10 +63,10 @@ For a station in "Plánované snížení" or "Bez dat" the card SHALL show a not
 - **THEN** the card shows the last known values with their measurement time and a note that today's data is missing
 
 ### Requirement: Shareable link
-The card SHALL offer "Odkaz na tuto nádrž", which copies a URL of the form https://stavvody.cz/?nadrz={station id}. Opening that URL SHALL show the site with that station selected.
+The card SHALL offer "Odkaz na tuto nádrž", which copies a URL of the form https://stavvody.cz/?stanice={station id}. Opening that URL SHALL show the site with that station selected.
 
 #### Scenario: Open a shared link
-- **WHEN** a visitor opens https://stavvody.cz/?nadrz=pod-slezska-harta
+- **WHEN** a visitor opens https://stavvody.cz/?stanice=pod-slezska-harta
 - **THEN** the site loads with Slezská Harta selected and its card open
 
 #### Scenario: Unknown station id

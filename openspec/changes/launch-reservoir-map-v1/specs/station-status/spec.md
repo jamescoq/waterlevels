@@ -7,7 +7,7 @@ Gives each station exactly one status that describes how full its storage zone i
 ## ADDED Requirements
 
 ### Requirement: Status precedence
-Each shown station SHALL have exactly one status, taken from the first rule that matches in this order: "Bez dat", "Plánované snížení", "Nad zásobní hladinou", no storage zone defined, "Vysoká zásoba", "Střední zásoba", "Nízká zásoba".
+Each shown station SHALL have exactly one status, taken from the first rule that matches in this order: "Bez dat", "Plánované snížení", "Nad zásobní hladinou", "Jen hladina", "Vysoká zásoba", "Střední zásoba", "Nízká zásoba".
 
 #### Scenario: Planned drawdown at low fill
 - **WHEN** a station has an active planned-drawdown entry and its storage zone is 20 % full
@@ -18,22 +18,22 @@ Each shown station SHALL have exactly one status, taken from the first rule that
 - **THEN** its status is "Bez dat"
 
 ### Requirement: No data
-A station SHALL have the status "Bez dat" when its source failed in the latest snapshot, when its latest measurement is older than 36 hours, or when its storage zone is defined but its fill is missing. The 36-hour check MUST use the viewer's current time, so it holds even when the site has not been rebuilt.
+A station SHALL have the status "Bez dat" when its source delivered no usable data in the latest snapshot (recorded as "failed", "blocked" or "partial"), or when it has no measurement from the last 36 hours. The 36-hour check MUST use the viewer's current time, so it holds even when the site has not been rebuilt.
 
 #### Scenario: Source failed today
 - **WHEN** the latest snapshot records the station's source as "failed"
+- **THEN** the station's status is "Bez dat"
+
+#### Scenario: Source returned too few rows
+- **WHEN** the latest snapshot records the station's source as "partial"
 - **THEN** the station's status is "Bez dat"
 
 #### Scenario: Collection stopped
 - **WHEN** a visitor opens the site 37 hours after the station's latest measurement and no newer data was published
 - **THEN** the station's status is "Bez dat"
 
-#### Scenario: Fill not measured
-- **WHEN** the station has a storage zone but the portal left its fill blank
-- **THEN** the station's status is "Bez dat"
-
 ### Requirement: Planned drawdown
-A station SHALL have the status "Plánované snížení" when the owner has entered a planned drawdown for it whose date range includes today, or when the portal note for the station states a deliberate drawdown. An entry whose end date has passed MUST be ignored.
+A station SHALL have the status "Plánované snížení" when the owner has entered a planned drawdown for it whose date range includes today. An entry whose end date has passed MUST be ignored.
 
 #### Scenario: Active entry
 - **WHEN** a planned-drawdown entry for the station runs until 31 March 2027 and today is 1 March 2027
@@ -44,7 +44,7 @@ A station SHALL have the status "Plánované snížení" when the owner has ente
 - **THEN** the entry has no effect and the station's status follows the remaining rules
 
 ### Requirement: Above the storage level
-A station SHALL have the status "Nad zásobní hladinou" when any of its retention volume is filled or its level is above the top of its storage zone.
+A station SHALL have the status "Nad zásobní hladinou" when any of its retention volume is filled, when its level is above the top of its storage zone, or when its storage fill is above 100 %.
 
 #### Scenario: Retention in use
 - **WHEN** the station's filled retention volume is greater than zero
@@ -55,13 +55,17 @@ A station SHALL have the status "Nad zásobní hladinou" when any of its retenti
 - **THEN** the station's status is "Nad zásobní hladinou"
 - **AND** its circle and card show the fill drawn at 100 %
 
-### Requirement: No storage zone defined
-A station whose portal defines no storage zone SHALL get no fill percentage and no fill rating. It SHALL show its level only and count as outside the rating.
+### Requirement: Level only
+A station SHALL have the status "Jen hladina" when its portal defines no storage zone for it or does not publish its storage fill. It SHALL show its level without a fill percentage or fill rating, and SHALL count as outside the rating.
 
-#### Scenario: Dash on the volumes page
+#### Scenario: No storage zone
 - **WHEN** the station's storage zone is marked as not defined
-- **THEN** the station shows its level without a fill percentage
+- **THEN** the station's status is "Jen hladina" and it shows its level without a fill percentage
 - **AND** it counts towards "mimo hodnocení"
+
+#### Scenario: Fill not published
+- **WHEN** the station has a storage zone, the portal left its fill blank, and its level was measured today
+- **THEN** the station's status is "Jen hladina", not "Bez dat"
 
 ### Requirement: Fill rating
 A station with a measured storage-zone fill SHALL have the status "Vysoká zásoba" at 70 % or more, "Střední zásoba" from 40 % to under 70 %, and "Nízká zásoba" under 40 %.
@@ -79,7 +83,7 @@ A station with a measured storage-zone fill SHALL have the status "Vysoká záso
 - **THEN** the status is "Nízká zásoba"
 
 ### Requirement: Change since yesterday
-The system SHALL show each station's level change against its measurement taken 18 to 30 hours before the current one, in whole centimetres. A change under 1 cm either way SHALL read "Od včerejška beze změny". Without such a measurement it SHALL read "Změnu od včerejška neznáme".
+The system SHALL show each station's level change in whole centimetres against its measurement taken 18 to 30 hours earlier, but only when its current measurement is newer than the one in the previous snapshot. A change under 1 cm either way SHALL read "Od včerejška beze změny". In every other case it SHALL read "Změnu od včerejška neznáme".
 
 #### Scenario: Level rose
 - **WHEN** today's level is 491.32 m and the level 24 hours earlier was 491.20 m
@@ -95,7 +99,7 @@ The system SHALL show each station's level change against its measurement taken 
 
 #### Scenario: Portal did not update
 - **WHEN** the latest snapshot repeats the same measurement time as the previous day's snapshot
-- **THEN** the change reads "Změnu od včerejška neznáme"
+- **THEN** the change reads "Změnu od včerejška neznáme", even if a snapshot from two days ago holds a measurement 24 hours older
 
 ### Requirement: Trend source
 The change since yesterday MUST be based on measured levels only. Inflow minus outflow MUST NOT be used as a trend, because it ignores withdrawals such as drinking-water intake.

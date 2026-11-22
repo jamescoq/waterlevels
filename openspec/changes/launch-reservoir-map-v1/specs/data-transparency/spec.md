@@ -7,7 +7,7 @@ Makes every number traceable and its limits clear, so the site is never mistaken
 ## ADDED Requirements
 
 ### Requirement: Source and time with every number
-Every station value shown SHALL be accompanied by the station's Povodí and its measurement time. The page header SHALL show the time of the last successful data collection.
+Every station's card SHALL name the station's Povodí and give the measurement time of its values. The page header SHALL show the time of the last successful data collection, which is the source time for the numbers in the hero, on the map and in the list.
 
 #### Scenario: Card source line
 - **WHEN** a visitor opens a station's card
