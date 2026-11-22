@@ -112,7 +112,7 @@ Rejected: registering that machine as a self-hosted Actions runner. On a public 
 Scraper behaviour:
 
 - One parser for the MGE Data software (`portals/mge.ts`), configured per source in `sources.ts`. If a portal needs ASP.NET postbacks (`__VIEWSTATE`) to show all rows, the adapter replays the form post as a single request.
-- User-Agent: `stavvody.cz-bot/1.0 (+https://stavvody.cz/o-datech; <project contact email>)`.
+- User-Agent: `stavvody.cz-bot/1.0 (+https://stavvody.cz/o-datech; stavvodycz@gmail.com)`. Until the methodology page is live the URL points to the GitHub repository.
 - Timeout 30 s; retries after 5 s and 20 s.
 
 | Source | Povodí | Base URL | Stations (2026-11-22) |
@@ -352,5 +352,3 @@ Rollback: re-run `deploy.yml` from an earlier commit of `main`; a bad snapshot i
 None of these change the specs, the approach or the tasks:
 
 - Display name: "Stav vody" to match the domain, or another name? (Owner)
-- Project contact email for the User-Agent and the footer. (Owner)
-- Code licence; MIT suggested. (Owner)

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "description": "Map of Czech reservoir water levels at stavvody.cz, built from the five Povodí portals",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "type": "module",
   "packageManager": "pnpm@12.15.0",
   "engines": {

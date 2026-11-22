@@ -21,3 +21,9 @@ pnpm test
 ## Data
 
 The data belongs to Povodí Moravy, Odry, Ohře, Vltavy and Labe and is published by them without guarantee. This project is not affiliated with them.
+
+Contact: stavvodycz@gmail.com
+
+## Licence
+
+The code is released under the [MIT licence](LICENSE). The licence does not cover the Povodí data or the map data, which keep their own terms.
