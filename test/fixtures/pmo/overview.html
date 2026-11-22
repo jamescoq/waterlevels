@@ -1,0 +1,1176 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="-1" /><meta http-equiv="cache-control" content="private" /><title>
+	Povodí Moravy - Stavy nádrží
+</title><link href="../../Styles/Style.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-15884733-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-15884733-3');
+    </script>
+<link href="../../App_Themes/PC/PC.css" type="text/css" rel="stylesheet" /></head>
+<body onload="ZvolTemaAplikaceNaZakladeRozliseniKlienta();">
+    <form name="aspnetForm" method="post" action="./Prehled.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C30AD075" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdACymE2tHTdlqX6y9KCSipqjiZmUr3LOVL7ax8se9GIqeCQt+B0SjBaraYpC3s5b4IUHzWIK/eE4y4+KKLXgGmrwfS+UpSkDEd0FMxW5sqD+iNpgXB+BaTryM5tlr5lb7EiNx++KGAmwfJrdg49OR+rGj/VrAXLaYmAQZYILEZ1k7UnhW1d+e2ZdCmKADGdDgd4cqpL8SWWQCjbfFTgcoyrRV06fQ7pCKaB/CcA+0C4lO0NdAx3+vamvUvjIz5rHz/hRjR5d4O3E8TZJvF2tkXHosxSXGYAuiJCvzfx2KvL12DAHFX/MDB9+8EWPmUZcQDNqk4r1N3FVcye1VsuKPns6s3FJQ2elVhY/NdEM8ZXz0HpJpfsmXuicWIcoPn44KMYkOKfTEP4cTcCorT2Vy2rQjwJtzTt7C3HCXMhgw2o2B3Ki8omnm7QdhA5M+CMVbTdzXKHTZaTryz6WXuU2rQWOxgafNO3WfC7g3Lylg9Zo/Lzpu5UT7ER1uhz9yWQJx8opjfY5hAvCsy1XQHvTAoH6k02PIJOiz14YN3w8jyk7lgsvEhKYRtvFaPoNAokvM4OcT2KydC2wlxEsXY1Ak9g/9wEZb0DHh8oCOQ+V2kCWkc1xI3BtWtRi/q5vbFWaPZdZjSWWolcFm6pkypuZ+zwv2oMwOYQ8U9H9sWeurb10/qg0VF6NVg1Tp86/CxbISQsr+mePSiVETTdVkHiA5Ffpr/Q1E5uQ0RvOSmxxtsOO5aUKfc053wWvmsJgsY/K1EcRdHbKR+0Coa8qbSKtzNpxOujeLk3+l1lkugxhhmcjBEYkN4EaWgpjEGxJohGA97XiY2n7R+pY6mhX7x+i9rOyRJG3SO4izdugROW7RQhNavMoVG49K8OH0DeVnHFwR6yaeZcq76YN1HEO6BroefKlz6FQwW1xXJ7QWNV06EA4BKlSGzJK/dzlaxwzlExg/JAKX71WHkZGpz/KAvTxAGAff" />
+        <script src='/portal/Nadrze/Scripts/MasterUtility.js' type="text/javascript"></script>
+        
+        <div id="horniMenuDiv" style="padding: 0px 5px 0px 5px; height: 20px; filter: progid:DXImageTransform.Microsoft.Gradient(endColorstr='#0000ffff', startColorstr='#FF99CCCC', gradientType='0')">
+            <span style="float: left; text-align: left">
+                <a id="ctl00_StavyAPrutokyHL" class="zahlavi1" href="https://sap.pmo.cz/portal/Sap/cz/" target="_blank"><b>Stavy a průtoky</b></a>&nbsp;
+                <span class="oddelovac">|</span>&nbsp;
+                <a id="ctl00_NadrzeHL" class="zahlavi1" href="CelkovaMapa.aspx"><b>Nádrže</b></a>&nbsp;
+                <span class="oddelovac">|</span>&nbsp;
+                <a id="ctl00_SrazkyHL" class="zahlavi1" href="https://sap.pmo.cz/portal/srazky/cz/" target="_blank"><b>Srážky</b></a>&nbsp;
+                <span class="oddelovac">|</span>&nbsp;
+                <a id="ctl00_JakostHL" class="zahlavi1" href="https://www.pmo.cz/portal/jvn/cz/index.htm" target="_blank"><b>Jakost</b></a>
+            </span>
+            <span style="float: right; text-align: right">
+                <span id="ctl00_PosledniAktualizaceLbl" class="zahlavi1">Poslední aktualizace stránek</span>
+                <span id="ctl00_PosledniAktualizaceDatumLbl" class="zahlavi1">22.11.2026 10:37</span>
+            </span>
+        </div>
+        <div id="ctl00_obsahVseDiv" style="background-repeat: repeat-x; width: 100%; position: relative;">
+            <div id="ctl00_obsahZuzenyCentrovanyDiv" class="obsahZuzenyCentrovany">
+                <div id="ctl00_hlavickaDiv" style="background-repeat:no-repeat;width:100%;height:110px;border-bottom:1px solid #AAAAAA;background-image:url(/portal/Nadrze/Images/zahlavi/zahlavi_cz.jpg);">
+                    <div id="ctl00_linkaDiv" style="width:100%;z-index:1500;height:6px;background-image:url(/portal/Nadrze/Images/zahlavi/bgzahlavi.jpg);"></div>
+                    <a id="ctl00_LogoPovodiHL" href="https://www.pmo.cz" target="_blank" style="display:inline-block;position: absolute; top: 34px; right: 13px; border: 1px solid #AAAAAA; padding: 2px; background-color: white"><img src="../../Images/logo_povodi_5.gif" alt="" border="0" /></a>
+                    <select name="ctl00$MonitorovaciStaniceDDL" id="ctl00_MonitorovaciStaniceDDL" class="text1" style="position: absolute; top: 69px; left: 85px;">
+	<option value="-1">--- N&#225;drž (n&#225;drž - tok) ---</option>
+	<option value="20|3">VD Bojkovice - Kolelačsk&#253; potok</option>
+	<option value="27|2">VD Boskovice - Běl&#225;</option>
+	<option value="6|2">VD Brno - Svratka</option>
+	<option value="24|1">VD Bystřička - Bystřička</option>
+	<option value="14|2">VD Dalešice - Jihlava</option>
+	<option value="29|2">VD Dalešice - přepoč&#237;tan&#225; - Jihlava</option>
+	<option value="17|3">VD Fryšt&#225;k - Fryšt&#225;ck&#253; potok</option>
+	<option value="23|1">VD Horn&#237; Bečva - Rožnovsk&#225; Bečva</option>
+	<option value="9|2">VD Hubenov - Maršovsk&#253; potok</option>
+	<option value="12|2">VD Jevišovice - Jevišovka</option>
+	<option value="26|1">VD Karolinka - Stanovnice</option>
+	<option value="21|3">VD Koryčany - Kyjovka</option>
+	<option value="11|2">VD Landštejn - Pstruhovec</option>
+	<option value="10|2">VD Letovice - Křet&#237;nka</option>
+	<option value="19|3">VD Ludkovice - Ludkovick&#253; potok</option>
+	<option value="18|3">VD Luhačovice - Luhačovick&#253; potok</option>
+	<option value="30|2">VD Mohelno - Jihlava</option>
+	<option value="7|2">VD Mostiště - Oslava</option>
+	<option value="13|2">VD Nov&#225; Ř&#237;še - Olšansk&#253; potok</option>
+	<option value="5|3">VD Nov&#233; Ml&#253;ny - Doln&#237; n&#225;drž - Dyje</option>
+	<option value="3|3">VD Nov&#233; Ml&#253;ny - Horn&#237; n&#225;drž - Dyje</option>
+	<option value="4|3">VD Nov&#233; Ml&#253;ny - Středn&#237; n&#225;drž - Dyje</option>
+	<option value="16|3">VD Opatovice - Mal&#225; Han&#225;</option>
+	<option value="25|1">VD Plumlov - Hloučela</option>
+	<option value="22|3">VD Slušovice - Dřevnice</option>
+	<option value="8|2">VD V&#237;r I - Svratka</option>
+	<option value="1|2">VD Vranov - Dyje</option>
+	<option value="15|2">VD V&#253;rovice - Jevišovka</option>
+	<option value="2|2">VD Znojmo - Dyje</option>
+
+</select>
+
+                    <div id="pocitadloAJazykyDiv" style="position: absolute; top: 10px; right: 5px;">
+                        <span style="margin: 0px 10px 0px 250px;">
+                            &nbsp;
+                        </span>
+                        <span>
+                            <input type="image" name="ctl00$CzIB" id="ctl00_CzIB" title="Česká verze" src="../../Images/vlajky/vlajky_r1_c1_f2.gif" border="0" />&nbsp;
+                            <input type="image" name="ctl00$SkIB" id="ctl00_SkIB" title="Slovenská verzia" onmouseover="ZvyrazniTlacitkoSVlajkou(this)" onmouseout="ZasedniTlacitkoSVlajkou(this)" src="../../Images/vlajky/vlajky_r1_c3.gif" border="0" />&nbsp;
+                            <input type="image" name="ctl00$EnIB" id="ctl00_EnIB" title="English version" onmouseover="ZvyrazniTlacitkoSVlajkou(this)" onmouseout="ZasedniTlacitkoSVlajkou(this)" src="../../Images/vlajky/vlajky_r1_c7.gif" border="0" />&nbsp;
+                         
+                        </span>
+                    </div>
+                    <div id="spodniMenuDiv" style="position: absolute; top: 88px; width: 100%;">
+                        <span style="float: left; padding-left: 5px;">
+                            <a id="ctl00_CelkovaMapaPovodiHL" class="zahlavi1" href="CelkovaMapa.aspx"><b>Celková mapa povodí</b></a>&nbsp;
+                            <span id="ctl00_Label1" class="oddelovac">|</span>&nbsp;
+                            <a id="ctl00_PrehledMereniHL" class="zahlavi1" href="Prehled.aspx"><b>Přehled měření</b></a>&nbsp;
+                            <span id="ctl00_Label2" class="oddelovac">|</span>&nbsp;
+                            <a id="ctl00_ObjemyVodyHL" class="zahlavi1" href="Objemy.aspx"><b>Objemy vody v nádržích</b></a>&nbsp;
+                         
+                        </span>
+                        
+                        <span style="float: right; padding-right: 5px;">
+                            <span id="ctl00_Label4" class="text1bold">Zobrazení:</span>
+                            <input type="image" name="ctl00$PCIB" id="ctl00_PCIB" class="text1" src="../../Images/temata/pc.png" border="0" />
+                            <input type="image" name="ctl00$SmartPhoneIB" id="ctl00_SmartPhoneIB" class="zahlavi1" onmouseover="ZvyrazniTlacitkoProVolbuVzhledu(this)" onmouseout="ZasedniTlacitkoProVolbuVzhledu(this)" src="../../Images/temata/smartphone_zasedle.png" border="0" />
+                            <input type="image" name="ctl00$TextIB" id="ctl00_TextIB" class="zahlavi1" onmouseover="ZvyrazniTlacitkoProVolbuVzhledu(this)" onmouseout="ZasedniTlacitkoProVolbuVzhledu(this)" src="../../Images/temata/text_zasedle.png" border="0" />
+                        </span>
+                    </div>
+                </div>
+                <div style="padding: 0px 5px 0px 5px;">
+                    <div style="width: 100%; height: 15px; padding-top: 5px;">
+                        <span id="ctl00_SkrytyNazevLbl" class="texthide" style="width: 25%; float: left">Stavy a průtoky</span>
+                        <span id="ctl00_UpozorneniLbl" class="textUpozor" style="float: left; width: 50%; text-align: center;">UPOZORNĚNÍ: Veškerá uváděná data jsou bez záruky</span>
+                        <span id="ctl00_SkryteDatumLbl" class="texthide" style="width: 25%; float: left; text-align: right;">22.11.2026 10:39:23</span>
+                    </div>
+                    <div id="obsahDiv" style="padding: 5px;">
+                        
+    
+
+    
+
+    
+    
+
+    <div style="clear: left;">
+        <a id="ctl00_ObsahCPH_VsechnyZavodyHL" class="text4bold" href="Prehled.aspx" style="margin-right:8px;color:red;">Všechny závody</a>
+        
+                <a accesskey="1" class="text4bold" href="Prehled.aspx?oid=1" style="margin-right: 8px;"><font color="#0080FF">Závod Horní Morava</font></a>
+            
+                <a accesskey="2" class="text4bold" href="Prehled.aspx?oid=2" style="margin-right: 8px;"><font color="#0080FF">Závod Dyje</font></a>
+            
+                <a accesskey="3" class="text4bold" href="Prehled.aspx?oid=3" style="margin-right: 8px;"><font color="#0080FF">Závod Střední Morava</font></a>
+            
+        
+    </div>
+    <span id="ctl00_ObsahCPH_debugLbl"><font color="Red"></font></span>
+    <div style="overflow-x: auto;">
+        
+        <div>
+	<table class="dataMereniGW" cellspacing="0" cellpadding="3" rules="all" bordercolor="#AAAAAA" border="1" id="ctl00_ObsahCPH_DataMereniGV" style="margin-top:10px; margin-bottom:5px">
+		<tr class="text1 bunkaHlavicky" bgcolor="Silver">
+			<th class="text2bold" align="left" colspan="4" style="border:1px solid #AAAAAA;border-right:none;padding-left:3px;"><span>Přehled měření&nbsp;&nbsp;</span><span><font color="Red">22.11.2026</font></span></th><th class="text2bold" align="center" colspan="10" style="border:1px solid #AAAAAA;border-left:none;border-right:none;">Všechny závody</th><th align="right" colspan="3" style="border:1px solid #AAAAAA;border-left:none;padding-right:5px;"><input type="image" name="ctl00$ObsahCPH$DataMereniGV$ctl01$ctl02" title="Generovat PDF" src="../../Images/generovat_pdf.png" border="0" /></th>
+		</tr><tr class="text1 bunkaHlavicky" bgcolor="Silver">
+			<th class="text1bold" title="" scope="col" height="30" style="background-color:#EAEAEA;border:1px solid #AAAAAA;">
+                        <input type="hidden" name="ctl00$ObsahCPH$DataMereniGV$ctl02$HiddenField1" id="ctl00_ObsahCPH_DataMereniGV_ctl02_HiddenField1" value="nazev" />
+                        <input type="hidden" name="ctl00$ObsahCPH$DataMereniGV$ctl02$HiddenField2" id="ctl00_ObsahCPH_DataMereniGV_ctl02_HiddenField2" value="ASC" />
+                        <a id="ctl00_ObsahCPH_DataMereniGV_ctl02_HyperLink1" class="text1bold" href="Prehled.aspx?rad=nazev&amp;smer=ASC" style="text-decoration: underline;">Nádrž</a>
+                    </th><th class="text1bold" title="" scope="col" style="background-color:#EAEAEA;border:1px solid #AAAAAA;">
+                        <input type="hidden" name="ctl00$ObsahCPH$DataMereniGV$ctl02$HiddenField3" id="ctl00_ObsahCPH_DataMereniGV_ctl02_HiddenField3" value="tok" />
+                        <input type="hidden" name="ctl00$ObsahCPH$DataMereniGV$ctl02$HiddenField4" id="ctl00_ObsahCPH_DataMereniGV_ctl02_HiddenField4" value="ASC" />
+                        <a id="ctl00_ObsahCPH_DataMereniGV_ctl02_HyperLink2" class="text1bold" href="Prehled.aspx?rad=tok&amp;smer=ASC" style="text-decoration: underline;">Tok</a>
+                    </th><th class="text1bold" title="" scope="col" style="background-color:#EAEAEA;border:1px solid #AAAAAA;">Účel</th><th class="text1bold" title="" scope="col" style="background-color:#EAEAEA;border:1px solid #AAAAAA;">Datum</th><th class="text1bold" title="" scope="col" style="background-color:#EAEAEA;border:1px solid #AAAAAA;">Hladina vody v nádrži</th><th class="text1bold" title="" scope="col" style="background-color:#EAEAEA;border:1px solid #AAAAAA;">Objem</th><th class="text1bold" title="" scope="col" style="background-color:#EAEAEA;border:1px solid #AAAAAA;">Přítok</th><th class="text1bold" title="" scope="col" style="background-color:#EAEAEA;border:1px solid #AAAAAA;">Srážky (1h)</th><th class="text1bold" title="" scope="col" style="background-color:#EAEAEA;border:1px solid #AAAAAA;">Srážky (24h)</th><th class="text1bold" title="Dlouhodobý průměrný průtok na odtoku - statistika HMÚ" scope="col" style="background-color:#EAEAEA;border:1px solid #AAAAAA;">Teplota vzduchu</th><th class="text1bold" title="1letý průtok na odtoku - statistika HMÚ" scope="col" style="background-color:#EAEAEA;border:1px solid #AAAAAA;">Qa (odtok)</th><th class="text1bold" title="5letý průtok na odtoku - statistika HMÚ" scope="col" style="background-color:#EAEAEA;border:1px solid #AAAAAA;">Q1 (odtok)</th><th class="text1bold" title="20letý průtok na odtoku - statistika HMÚ" scope="col" style="background-color:#EAEAEA;border:1px solid #AAAAAA;">Q5 (odtok)</th><th class="text1bold" title="100letý průtok na odtoku - statistika HMÚ" scope="col" style="background-color:#EAEAEA;border:1px solid #AAAAAA;">Q20 (odtok)</th><th class="text1bold" title="" scope="col" style="background-color:#EAEAEA;border:1px solid #AAAAAA;">Q100 (odtok)</th><th class="text1bold" scope="col" style="background-color:#EAEAEA;border:1px solid #AAAAAA;">
+                        <input type="hidden" name="ctl00$ObsahCPH$DataMereniGV$ctl02$HiddenField5" id="ctl00_ObsahCPH_DataMereniGV_ctl02_HiddenField5" value="poznamka" />
+                        <input type="hidden" name="ctl00$ObsahCPH$DataMereniGV$ctl02$HiddenField6" id="ctl00_ObsahCPH_DataMereniGV_ctl02_HiddenField6" value="ASC" />
+                        <a id="ctl00_ObsahCPH_DataMereniGV_ctl02_HyperLink3" class="text1bold" href="Prehled.aspx?rad=poznamka&amp;smer=ASC" style="text-decoration: underline;">Poznámka</a>
+                    </th>
+		</tr><tr class="text1 bunkaHlavicky" bgcolor="Silver" style="height: 20px; line-height: 20px; vertical-align: bottom;">
+			<th align="left" style="border:1px solid #AAAAAA;background-color:#EAEAEA;"></th><th align="left" style="border:1px solid #AAAAAA;background-color:#EAEAEA;"></th><th style="border:1px solid #AAAAAA;background-color:#EAEAEA;"></th><th style="border:1px solid #AAAAAA;background-color:#EAEAEA;"></th><th align="center" style="border:1px solid #AAAAAA;background-color:#EAEAEA;"><span class="text1">m n.m.</span></th><th align="center" style="border:1px solid #AAAAAA;background-color:#EAEAEA;"><span class="text1">mil [m<sup>3</sup>]</span></th><th align="center" style="border:1px solid #AAAAAA;background-color:#EAEAEA;"><span class="text1">[m<sup>3</sup>s<sup>-1</sup>]</span></th><th align="center" style="border:1px solid #AAAAAA;background-color:#EAEAEA;"><span class="text1">[m<sup>3</sup>s<sup>-1</sup>]</span></th><th align="center" style="border:1px solid #AAAAAA;background-color:#EAEAEA;"><span class="text1">[mm]</span></th><th align="center" style="border:1px solid #AAAAAA;background-color:#EAEAEA;"><span class="text1">[°C]</span></th><th align="center" style="border:1px solid #AAAAAA;background-color:#EAEAEA;"><span class="text1">[m<sup>3</sup>s<sup>-1</sup>]</span></th><th align="center" style="border:1px solid #AAAAAA;background-color:#EAEAEA;"><span class="text1">[m<sup>3</sup>s<sup>-1</sup>]</span></th><th align="center" style="border:1px solid #AAAAAA;background-color:#EAEAEA;"><span class="text1">[m<sup>3</sup>s<sup>-1</sup>]</span></th><th align="center" style="border:1px solid #AAAAAA;background-color:#EAEAEA;"><span class="text1">[m<sup>3</sup>s<sup>-1</sup>]</span></th><th align="center" style="border:1px solid #AAAAAA;background-color:#EAEAEA;"><span class="text1">[m<sup>3</sup>s<sup>-1</sup>]</span></th><th align="left" style="border:1px solid #AAAAAA;background-color:#EAEAEA;"></th>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl04_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=20&amp;oid=3">VD Bojkovice</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl04_Label1"><b>Kolelačský potok</b></span>
+                    </td><td class="bunkaGridu" align="left" bgcolor="#D6EAF8" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl04_UcelLbl">Vodárenská</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl04_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl04_hladinaLbl"><b>317,94</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl04_objemLbl"><b>0,44</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl04_pritokLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl04_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl04_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl04_teplotaLbl"><b>2,20</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl04_qaOdtok"><b>0,09</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl04_q1Odtok"><b>4,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl04_q5Odtok"><b>12,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl04_q20Odtok"><b>24,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl04_q100Odtok"><b>45,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl04_Label6"> </span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl05_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=27&amp;oid=2">VD Boskovice</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl05_Label1"><b>Bělá</b></span>
+                    </td><td class="bunkaGridu" align="left" bgcolor="#D6EAF8" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl05_UcelLbl">Vodárenská</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl05_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl05_hladinaLbl"><b>426,01</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl05_objemLbl"><b>4,72</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl05_pritokLbl"><b>0,03</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl05_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl05_srazkyLbl"><b>0,10</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl05_teplotaLbl"><b>1,61</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl05_qaOdtok"><b>0,33</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl05_q1Odtok"><b>4,30</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl05_q5Odtok"><b>8,10</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl05_q20Odtok"><b>16,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl05_q100Odtok"><b>33,50</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl05_Label6"></span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl06_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=6&amp;oid=2">VD Brno</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl06_Label1"><b>Svratka</b></span>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl06_UcelLbl">Víceúčelová</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl06_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl06_hladinaLbl"><b>226,87</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl06_objemLbl"><b>10,33</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl06_pritokLbl"><b>2,36</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl06_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl06_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl06_teplotaLbl"><b>1,40</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl06_qaOdtok"><b>7,68</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl06_q1Odtok"><b>65,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl06_q5Odtok"><b>132,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl06_q20Odtok"><b>202,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl06_q100Odtok"><b>282,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl06_Label6"> </span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl07_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=24&amp;oid=1">VD Bystřička</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl07_Label1"><b>Bystřička</b></span>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl07_UcelLbl">Víceúčelová</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl07_casSLbl">22.11.2026 09:00</span>
+                    </td><td title="v ochranném prostoru" class="bunkaGridu" align="center" bgcolor="#009900" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl07_hladinaLbl"><b>376,83</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl07_objemLbl"><b>1,70</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl07_pritokLbl"><b>0,70</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl07_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl07_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl07_teplotaLbl"><b>2,30</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl07_qaOdtok"><b>0,88</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl07_q1Odtok"><b>15,30</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl07_q5Odtok"><b>42,20</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl07_q20Odtok"><b>77,80</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl07_q100Odtok"><b>134,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl07_Label6"> </span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl08_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=14&amp;oid=2">VD Dalešice</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl08_Label1"><b>Jihlava</b></span>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl08_UcelLbl">Víceúčelová</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl08_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl08_hladinaLbl"><b>374,23</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl08_objemLbl"><b>95,76</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl08_pritokLbl"><b>1,72</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl08_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl08_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl08_teplotaLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl08_qaOdtok"><b>5,18</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl08_q1Odtok"><b>62,10</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl08_q5Odtok"><b>131,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl08_q20Odtok"><b>207,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl08_q100Odtok"><b>310,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl08_Label6"> </span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl09_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=29&amp;oid=2">VD Dalešice - přepočítaná</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl09_Label1"><b>Jihlava</b></span>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl09_UcelLbl">Víceúčelová</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl09_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl09_hladinaLbl"><b>374,41</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl09_objemLbl"><b>96,45</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl09_pritokLbl"><b>1,72</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl09_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl09_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl09_teplotaLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl09_qaOdtok"><b>5,18</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl09_q1Odtok"><b>62,10</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl09_q5Odtok"><b>131,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl09_q20Odtok"><b>207,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl09_q100Odtok"><b>310,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl09_Label6"></span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl10_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=17&amp;oid=3">VD Fryšták</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl10_Label1"><b>Fryštácký potok</b></span>
+                    </td><td class="bunkaGridu" align="left" bgcolor="#D6EAF8" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl10_UcelLbl">Vodárenská</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl10_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl10_hladinaLbl"><b>244,53</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl10_objemLbl"><b>1,28</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl10_pritokLbl"><b>0,71</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl10_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl10_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl10_teplotaLbl"><b>2,64</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl10_qaOdtok"><b>0,24</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl10_q1Odtok"><b>6,40</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl10_q5Odtok"><b>20,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl10_q20Odtok"><b>39,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl10_q100Odtok"><b>70,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl10_Label6"></span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl11_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=23&amp;oid=1">VD Horní Bečva</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl11_Label1"><b>Rožnovská Bečva</b></span>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl11_UcelLbl">Víceúčelová</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl11_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl11_hladinaLbl"><b>560,94</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl11_objemLbl"><b>0,42</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl11_pritokLbl"><b>0,06</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl11_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl11_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl11_teplotaLbl"><b>1,60</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl11_qaOdtok"><b>0,29</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl11_q1Odtok"><b>7,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl11_q5Odtok"><b>18,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl11_q20Odtok"><b>32,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl11_q100Odtok"><b>54,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl11_Label6"></span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl12_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=9&amp;oid=2">VD Hubenov</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl12_Label1"><b>Maršovský potok</b></span>
+                    </td><td class="bunkaGridu" align="left" bgcolor="#D6EAF8" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl12_UcelLbl">Vodárenská</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl12_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl12_hladinaLbl"><b>519,34</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl12_objemLbl"><b>1,87</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl12_pritokLbl"><b>0,05</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl12_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl12_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl12_teplotaLbl"><b>0,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl12_qaOdtok"><b>0,13</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl12_q1Odtok"><b>1,70</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl12_q5Odtok"><b>6,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl12_q20Odtok"><b>13,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl12_q100Odtok"><b>23,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl12_Label6"> </span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl13_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=12&amp;oid=2">VD Jevišovice</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl13_Label1"><b>Jevišovka</b></span>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl13_UcelLbl">Víceúčelová</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl13_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl13_hladinaLbl"><b>327,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl13_objemLbl"><b>0,17</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl13_pritokLbl"><b>0,01</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl13_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl13_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl13_teplotaLbl"><b>0,79</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl13_qaOdtok"><b>0,26</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl13_q1Odtok"><b>4,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl13_q5Odtok"><b>12,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl13_q20Odtok"><b>24,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl13_q100Odtok"><b>43,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl13_Label6"> </span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl14_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=26&amp;oid=1">VD Karolinka</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl14_Label1"><b>Stanovnice</b></span>
+                    </td><td class="bunkaGridu" align="left" bgcolor="#D6EAF8" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl14_UcelLbl">Vodárenská</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl14_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl14_hladinaLbl"><b>514,11</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl14_objemLbl"><b>4,43</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl14_pritokLbl"><b>0,12</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl14_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl14_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl14_teplotaLbl"><b>2,62</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl14_qaOdtok"><b>0,36</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl14_q1Odtok"><b>12,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl14_q5Odtok"><b>23,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl14_q20Odtok"><b>36,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl14_q100Odtok"><b>87,40</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl14_Label6"> </span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl15_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=21&amp;oid=3">VD Koryčany</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl15_Label1"><b>Kyjovka</b></span>
+                    </td><td class="bunkaGridu" align="left" bgcolor="#D6EAF8" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl15_UcelLbl">Vodárenská</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl15_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl15_hladinaLbl"><b>301,53</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl15_objemLbl"><b>1,11</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl15_pritokLbl"><b>0,01</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl15_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl15_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl15_teplotaLbl"><b>4,20</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl15_qaOdtok"><b>0,13</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl15_q1Odtok"><b>3,10</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl15_q5Odtok"><b>11,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl15_q20Odtok"><b>22,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl15_q100Odtok"><b>42,50</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl15_Label6"></span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl16_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=11&amp;oid=2">VD Landštejn</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl16_Label1"><b>Pstruhovec</b></span>
+                    </td><td class="bunkaGridu" align="left" bgcolor="#D6EAF8" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl16_UcelLbl">Vodárenská</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl16_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl16_hladinaLbl"><b>570,57</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl16_objemLbl"><b>2,28</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl16_pritokLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl16_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl16_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl16_teplotaLbl"><b>-3,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl16_qaOdtok"><b>0,09</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl16_q1Odtok"><b>3,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl16_q5Odtok"><b>8,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl16_q20Odtok"><b>13,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl16_q100Odtok"><b>20,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl16_Label6"> </span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl17_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=10&amp;oid=2">VD Letovice</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl17_Label1"><b>Křetínka</b></span>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl17_UcelLbl">Víceúčelová</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl17_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl17_hladinaLbl"><b>357,28</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl17_objemLbl"><b>7,88</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl17_pritokLbl"><b>0,13</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl17_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl17_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl17_teplotaLbl"><b>2,90</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl17_qaOdtok"><b>0,64</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl17_q1Odtok"><b>7,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl17_q5Odtok"><b>18,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl17_q20Odtok"><b>30,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl17_q100Odtok"><b>50,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl17_Label6"> </span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl18_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=19&amp;oid=3">VD Ludkovice</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl18_Label1"><b>Ludkovický potok</b></span>
+                    </td><td class="bunkaGridu" align="left" bgcolor="#D6EAF8" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl18_UcelLbl">Vodárenská</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl18_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl18_hladinaLbl"><b>280,76</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl18_objemLbl"><b>0,27</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl18_pritokLbl"><b>0,02</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl18_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl18_srazkyLbl"><b>0,10</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl18_teplotaLbl"><b>3,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl18_qaOdtok"><b>0,09</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl18_q1Odtok"><b>3,40</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl18_q5Odtok"><b>11,20</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl18_q20Odtok"><b>22,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl18_q100Odtok"><b>42,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl18_Label6"> </span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl19_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=18&amp;oid=3">VD Luhačovice</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl19_Label1"><b>Luhačovický potok</b></span>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl19_UcelLbl">Víceúčelová</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl19_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl19_hladinaLbl"><b>277,18</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl19_objemLbl"><b>0,58</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl19_pritokLbl"><b>0,06</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl19_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl19_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl19_teplotaLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl19_qaOdtok"><b>0,31</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl19_q1Odtok"><b>8,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl19_q5Odtok"><b>25,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl19_q20Odtok"><b>45,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl19_q100Odtok"><b>89,50</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl19_Label6"> </span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl20_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=30&amp;oid=2">VD Mohelno</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl20_Label1"><b>Jihlava</b></span>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl20_UcelLbl">Víceúčelová</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl20_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl20_hladinaLbl"><b>291,86</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl20_objemLbl"><b>6,39</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl20_pritokLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl20_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl20_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl20_teplotaLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl20_qaOdtok"><b>5,35</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl20_q1Odtok"><b>26,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl20_q5Odtok"><b>61,30</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl20_q20Odtok"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl20_q100Odtok"><b>192,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl20_Label6"></span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl21_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=7&amp;oid=2">VD Mostiště</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl21_Label1"><b>Oslava</b></span>
+                    </td><td class="bunkaGridu" align="left" bgcolor="#D6EAF8" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl21_UcelLbl">Vodárenská</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl21_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl21_hladinaLbl"><b>475,01</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl21_objemLbl"><b>8,85</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl21_pritokLbl"><b>0,62</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl21_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl21_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl21_teplotaLbl"><b>-0,20</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl21_qaOdtok"><b>1,39</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl21_q1Odtok"><b>16,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl21_q5Odtok"><b>34,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl21_q20Odtok"><b>54,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl21_q100Odtok"><b>82,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl21_Label6"></span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl22_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=13&amp;oid=2">VD Nová Říše</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl22_Label1"><b>Olšanský potok</b></span>
+                    </td><td class="bunkaGridu" align="left" bgcolor="#D6EAF8" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl22_UcelLbl">Vodárenská</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl22_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl22_hladinaLbl"><b>553,03</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl22_objemLbl"><b>1,90</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl22_pritokLbl"><b>0,04</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl22_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl22_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl22_teplotaLbl"><b>1,10</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl22_qaOdtok"><b>0,11</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl22_q1Odtok"><b>3,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl22_q5Odtok"><b>7,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl22_q20Odtok"><b>12,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl22_q100Odtok"><b>20,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl22_Label6"> </span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl23_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=5&amp;oid=3">VD Nové Mlýny - Dolní nádrž</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl23_Label1"><b>Dyje</b></span>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl23_UcelLbl">Víceúčelová</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl23_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl23_hladinaLbl"><b>169,11</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl23_objemLbl"><b>51,22</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl23_pritokLbl"><b>9,89</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl23_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl23_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl23_teplotaLbl"><b>2,90</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl23_qaOdtok"><b>41,06</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl23_q1Odtok"><b>172,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl23_q5Odtok"><b>380,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl23_q20Odtok"><b>612,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl23_q100Odtok"><b>940,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl23_Label6"></span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl24_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=3&amp;oid=3">VD Nové Mlýny - Horní nádrž</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl24_Label1"><b>Dyje</b></span>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl24_UcelLbl">Víceúčelová</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl24_casSLbl">22.11.2026 09:00</span>
+                    </td><td title="v ochranném prostoru" class="bunkaGridu" align="center" bgcolor="#009900" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl24_hladinaLbl"><b>171,48</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl24_objemLbl"><b>14,03</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl24_pritokLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl24_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl24_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl24_teplotaLbl"><b>4,30</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl24_qaOdtok"><b>13,33</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl24_q1Odtok"><b>73,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl24_q5Odtok"><b>140,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl24_q20Odtok"><b>205,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl24_q100Odtok"><b>280,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl24_Label6"></span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl25_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=4&amp;oid=3">VD Nové Mlýny - Střední nádrž</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl25_Label1"><b>Dyje</b></span>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl25_UcelLbl">Víceúčelová</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl25_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl25_hladinaLbl"><b>169,98</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl25_objemLbl"><b>17,35</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl25_pritokLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl25_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl25_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl25_teplotaLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl25_qaOdtok"><b>40,86</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl25_q1Odtok"><b>172,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl25_q5Odtok"><b>380,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl25_q20Odtok"><b>612,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl25_q100Odtok"><b>940,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl25_Label6"></span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl26_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=16&amp;oid=3">VD Opatovice</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl26_Label1"><b>Malá Haná</b></span>
+                    </td><td class="bunkaGridu" align="left" bgcolor="#D6EAF8" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl26_UcelLbl">Vodárenská</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl26_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl26_hladinaLbl"><b>329,37</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl26_objemLbl"><b>7,03</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl26_pritokLbl"><b>0,06</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl26_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl26_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl26_teplotaLbl"><b>2,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl26_qaOdtok"><b>0,21</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl26_q1Odtok"><b>3,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl26_q5Odtok"><b>7,90</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl26_q20Odtok"><b>14,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl26_q100Odtok"><b>26,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl26_Label6"> </span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl27_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=25&amp;oid=1">VD Plumlov</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl27_Label1"><b>Hloučela</b></span>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl27_UcelLbl">Víceúčelová</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl27_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl27_hladinaLbl"><b>269,65</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl27_objemLbl"><b>1,35</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl27_pritokLbl"><b>0,02</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl27_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl27_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl27_teplotaLbl"><b>1,12</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl27_qaOdtok"><b>0,65</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl27_q1Odtok"><b>7,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl27_q5Odtok"><b>16,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl27_q20Odtok"><b>26,60</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl27_q100Odtok"><b>41,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl27_Label6"> </span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl28_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=22&amp;oid=3">VD Slušovice</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl28_Label1"><b>Dřevnice</b></span>
+                    </td><td class="bunkaGridu" align="left" bgcolor="#D6EAF8" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl28_UcelLbl">Vodárenská</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl28_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl28_hladinaLbl"><b>311,64</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl28_objemLbl"><b>5,71</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl28_pritokLbl"><b>0,10</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl28_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl28_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl28_teplotaLbl"><b>2,40</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl28_qaOdtok"><b>0,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl28_q1Odtok"><b>6,10</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl28_q5Odtok"><b>21,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl28_q20Odtok"><b>42,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl28_q100Odtok"><b>80,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl28_Label6"> </span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl29_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=8&amp;oid=2">VD Vír I</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl29_Label1"><b>Svratka</b></span>
+                    </td><td class="bunkaGridu" align="left" bgcolor="#D6EAF8" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl29_UcelLbl">Vodárenská</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl29_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl29_hladinaLbl"><b>446,63</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl29_objemLbl"><b>21,21</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl29_pritokLbl"><b>0,86</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl29_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl29_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl29_teplotaLbl"><b>0,10</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl29_qaOdtok"><b>3,60</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl29_q1Odtok"><b>39,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl29_q5Odtok"><b>75,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl29_q20Odtok"><b>112,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl29_q100Odtok"><b>160,50</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl29_Label6"> </span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl30_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=1&amp;oid=2">VD Vranov</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl30_Label1"><b>Dyje</b></span>
+                    </td><td class="bunkaGridu" align="left" bgcolor="#D6EAF8" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl30_UcelLbl">Vodárenská</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl30_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl30_hladinaLbl"><b>337,15</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl30_objemLbl"><b>46,07</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl30_pritokLbl"><b>2,19</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl30_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl30_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl30_teplotaLbl"><b>-1,90</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl30_qaOdtok"><b>9,74</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl30_q1Odtok"><b>108,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl30_q5Odtok"><b>188,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl30_q20Odtok"><b>263,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl30_q100Odtok"><b>355,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl30_Label6"> </span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl31_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=15&amp;oid=2">VD Výrovice</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl31_Label1"><b>Jevišovka</b></span>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl31_UcelLbl">Víceúčelová</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl31_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl31_hladinaLbl"><b>230,36</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl31_objemLbl"><b>1,94</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl31_pritokLbl"><b>0,06</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl31_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl31_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl31_teplotaLbl"><b>0,60</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl31_qaOdtok"><b>0,57</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl31_q1Odtok"><b>7,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl31_q5Odtok"><b>20,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl31_q20Odtok"><b>35,50</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl31_q100Odtok"><b>60,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl31_Label6"> </span>
+                    </td>
+		</tr><tr bgcolor="#FFFFFF">
+			<td class="bunkaGridu" align="left" height="20" width="150" nowrap="nowrap">
+                        &nbsp;<a id="ctl00_ObsahCPH_DataMereniGV_ctl32_JazykTemaLink1" class="odkazNaStaniciVPrehledu" href="Mereni.aspx?id=2&amp;oid=2">VD Znojmo</a>
+                    </td><td class="bunkaGridu" align="left" width="100" nowrap="nowrap">
+                        &nbsp;<span id="ctl00_ObsahCPH_DataMereniGV_ctl32_Label1"><b>Dyje</b></span>
+                    </td><td class="bunkaGridu" align="left" bgcolor="#D6EAF8" width="100" nowrap="nowrap">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl32_UcelLbl">Vodárenská</span>
+                    </td><td class="bunkaGridu" align="center" width="100">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl32_casSLbl">22.11.2026 09:00</span>
+                    </td><td class="bunkaGridu" align="center" bgcolor="#FFFFFF" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl32_hladinaLbl"><b>225,43</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl32_objemLbl"><b>3,48</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl32_pritokLbl"><b>2,51</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl32_srazkyLbl"></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl32_srazkyLbl"><b>0,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl32_teplotaLbl"><b>2,40</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl32_qaOdtok"><b>10,25</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl32_q1Odtok"><b>78,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl32_q5Odtok"><b>133,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl32_q20Odtok"><b>183,00</b></span>
+                    </td><td class="bunkaGridu" align="center" width="75">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl32_q100Odtok"><b>244,00</b></span>
+                    </td><td class="bunkaGridu" align="left" width="165">
+                        <span id="ctl00_ObsahCPH_DataMereniGV_ctl32_Label6"> </span>
+                    </td>
+		</tr>
+	</table>
+</div>
+    </div>
+
+                    </div>
+                    
+                    <div id="ctl00_logaDiv" style="width: 100%; border-top: 1px solid #AAAAAA; padding-top: 5px; display: block; height: 40px;">
+                        <span id="ctl00_logoPovodiSpan" style="float: left; text-align: left; width: 20%;">
+                            <a id="ctl00_MaleLogoPovodiHL" href="https://www.pmo.cz" target="_blank" style="display:inline-block;vertical-align: text-bottom"><img src="../../Images/logo_male_5.gif" alt="" border="0" /></a>&nbsp;
+                            <span id="ctl00_PovodiLbl" class="text1">Povodí Moravy</span><span class="text1">, státní podnik</span>
+                            <span id="ctl00_PovodiCopyLbl" class="text1">©</span>
+                            <span id="ctl00_PovodiRokLbl" class="text1">2026</span>
+                        </span>
+                        <span id="ctl00_logoChmuSpan" style="float: left; text-align: center; width: 45%;">
+                            <span id="ctl00_System1Lbl" class="text1">Systém využívá i data z měřících stanic</span>
+                            <a id="ctl00_ChmuLogoHL" href="http://www.chmi.cz/" target="_blank" style="display:inline-block;vertical-align: text-bottom"><img src="../../Images/chmu_male.gif" alt="" border="0" /></a>&nbsp;
+                            <span id="ctl00_System2Lbl" class="text1">Českého hydrometeorologického ústavu &copy;</span>
+                            <span id="ctl00_SystemRokLbl" class="text1">2026</span>
+                        </span>
+                        <span id="ctl00_logoMgeSpan" style="float: right; text-align: right; width: 30%;">
+                            <span id="ctl00_Vyrobeno1Lbl" class="text1">Aplikace vyrobena firmou</span>
+                            <a id="ctl00_MgeLogoHL" target="_blank" style="display:inline-block;vertical-align: text-bottom"><img src="../../Images/mgedata_male.gif" alt="" border="0" /></a>&nbsp;
+                            <span id="ctl00_Vyrobeno2Lbl" title="Verze 6.01; DB 4.81; Pavel Staněk : OMDAC a FW4; Jakub Štambachr, Jakub Hýl: design aplikace a programování; Miroslav Hýl : db model a procedury; Jan Řičica : původní aplikace a grafické knihovny; Ali Harmim : mapové podklady;" class="text1" style="cursor: help;">MGE Data s.r.o. &copy; 1996 -</span>
+                            <span id="ctl00_VyrobenoRokLbl" class="text1">2026</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
