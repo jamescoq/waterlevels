@@ -1,0 +1,3292 @@
+{
+  "schemaVersion": 1,
+  "stations": [
+    {
+      "id": "pla-bedrichov",
+      "kind": "reservoir",
+      "name": "Bedřichov",
+      "source": "pla",
+      "basin": "labe",
+      "river": "Černá Nisa",
+      "portalId": {
+        "id": "100",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pla.cz/portal/nadrze/cz/pc/Mereni.aspx?id=100&oid=1",
+      "lat": 50.81556,
+      "lon": 15.13556,
+      "coordinateSource": "wikidata:Q2390727",
+      "levels": {
+        "crest": 775.26,
+        "spillway": 774.08,
+        "maxRetention": 774.38,
+        "storage": 773.48,
+        "permanent": 764.48
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 1.71,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pla-fojtka",
+      "kind": "reservoir",
+      "name": "Fojtka",
+      "source": "pla",
+      "basin": "labe",
+      "river": "Fojtka",
+      "portalId": {
+        "id": "101",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pla.cz/portal/nadrze/cz/pc/Mereni.aspx?id=101&oid=1",
+      "lat": 50.82728,
+      "lon": 15.05784,
+      "coordinateSource": "osm:way/495245441",
+      "levels": {
+        "crest": 393.1,
+        "spillway": 392.1,
+        "maxRetention": 393,
+        "storage": 389.5,
+        "permanent": 385.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.12,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pla-hamry",
+      "kind": "reservoir",
+      "name": "Hamry",
+      "source": "pla",
+      "basin": "labe",
+      "river": "Chrudimka",
+      "portalId": {
+        "id": "102",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pla.cz/portal/nadrze/cz/pc/Mereni.aspx?id=102&oid=2",
+      "lat": 49.73119,
+      "lon": 15.91714,
+      "coordinateSource": "wikidata:Q30938704",
+      "levels": {
+        "crest": 602.88,
+        "spillway": 600.06,
+        "maxRetention": 601.6,
+        "storage": 597.9,
+        "permanent": 592.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 1.48,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pla-harcov",
+      "kind": "reservoir",
+      "name": "Harcov",
+      "source": "pla",
+      "basin": "labe",
+      "river": "Harcovský potok",
+      "portalId": {
+        "id": "103",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pla.cz/portal/nadrze/cz/pc/Mereni.aspx?id=103&oid=1",
+      "lat": 50.76861,
+      "lon": 15.07083,
+      "coordinateSource": "wikidata:Q1702626",
+      "levels": {
+        "crest": 373.9,
+        "spillway": 372.5,
+        "maxRetention": 373.4,
+        "storage": 370.5,
+        "permanent": 364.9
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.37,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pla-josefuv-dul",
+      "kind": "reservoir",
+      "name": "Josefův Důl",
+      "source": "pla",
+      "basin": "labe",
+      "river": "Kamenice",
+      "portalId": {
+        "id": "104",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pla.cz/portal/nadrze/cz/pc/Mereni.aspx?id=104&oid=1",
+      "lat": 50.79879,
+      "lon": 15.1847,
+      "coordinateSource": "wikidata:Q96158099",
+      "levels": {
+        "crest": 735,
+        "spillway": 732.2,
+        "maxRetention": 733.2,
+        "storage": 731,
+        "permanent": 704
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 19.14,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pla-krizanovice",
+      "kind": "reservoir",
+      "name": "Křižanovice",
+      "source": "pla",
+      "basin": "labe",
+      "river": "Chrudimka",
+      "portalId": {
+        "id": "105",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pla.cz/portal/nadrze/cz/pc/Mereni.aspx?id=105&oid=2",
+      "lat": 49.85869,
+      "lon": 15.77481,
+      "coordinateSource": "osm:way/702058216",
+      "levels": {
+        "crest": 405.82,
+        "spillway": 404.1,
+        "maxRetention": 404.1,
+        "storage": 404.1,
+        "permanent": 396.1
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 1.46,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pla-labska",
+      "kind": "reservoir",
+      "name": "Labská",
+      "source": "pla",
+      "basin": "labe",
+      "river": "Labe",
+      "portalId": {
+        "id": "106",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pla.cz/portal/nadrze/cz/pc/Mereni.aspx?id=106&oid=1",
+      "lat": 50.71722,
+      "lon": 15.58694,
+      "coordinateSource": "wikidata:Q33037945",
+      "levels": {
+        "crest": 694.16,
+        "spillway": 691.26,
+        "maxRetention": 692.36,
+        "storage": 684.62,
+        "permanent": 678.66
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.76,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pla-les-kralovstvi",
+      "kind": "reservoir",
+      "name": "Les Království",
+      "source": "pla",
+      "basin": "labe",
+      "river": "Labe",
+      "portalId": {
+        "id": "107",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pla.cz/portal/nadrze/cz/pc/Mereni.aspx?id=107&oid=1",
+      "lat": 50.45908,
+      "lon": 15.76463,
+      "coordinateSource": "wikidata:Q750137",
+      "levels": {
+        "crest": 327.31,
+        "spillway": 323.4,
+        "maxRetention": 324.85,
+        "storage": 314.6,
+        "permanent": 307.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 1.42,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pla-mlynice",
+      "kind": "reservoir",
+      "name": "Mlýnice",
+      "source": "pla",
+      "basin": "labe",
+      "river": "Albrechtický potok",
+      "portalId": {
+        "id": "108",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pla.cz/portal/nadrze/cz/pc/Mereni.aspx?id=108&oid=1",
+      "lat": 50.8423,
+      "lon": 15.0297,
+      "coordinateSource": "wikidata:Q2390902",
+      "levels": {
+        "crest": 393.65,
+        "spillway": 392.53,
+        "maxRetention": 393.53,
+        "storage": 389.45,
+        "permanent": 383.95
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.09,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pla-mseno",
+      "kind": "reservoir",
+      "name": "Mšeno",
+      "source": "pla",
+      "basin": "labe",
+      "river": "Mšenský potok",
+      "portalId": {
+        "id": "109",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pla.cz/portal/nadrze/cz/pc/Mereni.aspx?id=109&oid=1",
+      "lat": 50.73361,
+      "lon": 15.17306,
+      "coordinateSource": "wikidata:Q57241416",
+      "levels": {
+        "crest": 513,
+        "spillway": 512,
+        "maxRetention": 512.25,
+        "storage": 510,
+        "permanent": 499.85
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 1.9,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pla-parizov",
+      "kind": "reservoir",
+      "name": "Pařížov",
+      "source": "pla",
+      "basin": "labe",
+      "river": "Doubrava",
+      "portalId": {
+        "id": "111",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pla.cz/portal/nadrze/cz/pc/Mereni.aspx?id=111&oid=2",
+      "lat": 49.82898,
+      "lon": 15.572,
+      "coordinateSource": "wikidata:Q115750038",
+      "levels": {
+        "crest": 325.9,
+        "spillway": 324.03,
+        "maxRetention": 324.81,
+        "storage": 314.83,
+        "permanent": 309.31
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.26,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pla-pastviny",
+      "kind": "reservoir",
+      "name": "Pastviny",
+      "source": "pla",
+      "basin": "labe",
+      "river": "Divoká Orlice",
+      "portalId": {
+        "id": "110",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pla.cz/portal/nadrze/cz/pc/Mereni.aspx?id=110&oid=2",
+      "lat": 50.08801,
+      "lon": 16.56059,
+      "coordinateSource": "wikidata:Q3505514",
+      "levels": {
+        "crest": 474.14,
+        "spillway": 470.24,
+        "maxRetention": 472.6,
+        "storage": 467.6,
+        "permanent": 454.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 6.24,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pla-rozkos",
+      "kind": "reservoir",
+      "name": "Rozkoš",
+      "source": "pla",
+      "basin": "labe",
+      "river": "Rozkošský potok",
+      "portalId": {
+        "id": "112",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pla.cz/portal/nadrze/cz/pc/Mereni.aspx?id=112&oid=1",
+      "lat": 50.3772,
+      "lon": 16.0697,
+      "coordinateSource": "wikidata:Q11726745",
+      "levels": {
+        "crest": 285.1,
+        "spillway": 282.6,
+        "maxRetention": 282.6,
+        "storage": 279.6,
+        "permanent": 271.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 45.95,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pla-sec",
+      "kind": "reservoir",
+      "name": "Seč",
+      "source": "pla",
+      "basin": "labe",
+      "river": "Chrudimka",
+      "portalId": {
+        "id": "113",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pla.cz/portal/nadrze/cz/pc/Mereni.aspx?id=113&oid=2",
+      "lat": 49.82833,
+      "lon": 15.64333,
+      "coordinateSource": "wikidata:Q96161239",
+      "levels": {
+        "crest": 491.11,
+        "spillway": 488.61,
+        "maxRetention": 490.11,
+        "storage": 486.81,
+        "permanent": 469.61
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 14.01,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pla-sous",
+      "kind": "reservoir",
+      "name": "Souš",
+      "source": "pla",
+      "basin": "labe",
+      "river": "Černá Desná",
+      "portalId": {
+        "id": "114",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pla.cz/portal/nadrze/cz/pc/Mereni.aspx?id=114&oid=1",
+      "lat": 50.79626,
+      "lon": 15.31349,
+      "coordinateSource": "wikidata:Q1166687",
+      "levels": {
+        "crest": 771.29,
+        "spillway": 768.17,
+        "maxRetention": 769.65,
+        "storage": 766.45,
+        "permanent": 756.05
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 4.58,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pla-vrchlice",
+      "kind": "reservoir",
+      "name": "Vrchlice",
+      "source": "pla",
+      "basin": "labe",
+      "river": "Vrchlice",
+      "portalId": {
+        "id": "115",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pla.cz/portal/nadrze/cz/pc/Mereni.aspx?id=115&oid=2",
+      "lat": 49.92694,
+      "lon": 15.22694,
+      "coordinateSource": "wikidata:Q2535028",
+      "levels": {
+        "crest": 325.8,
+        "spillway": 323.8,
+        "maxRetention": 325.22,
+        "storage": 323.8,
+        "permanent": 304
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 7.89,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pmo-bojkovice",
+      "kind": "reservoir",
+      "name": "VD Bojkovice",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Kolelačský potok",
+      "portalId": {
+        "id": "20",
+        "oid": "3"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=20&oid=3",
+      "lat": 49.05218,
+      "lon": 17.84814,
+      "coordinateSource": "wikidata:Q90838448",
+      "levels": {
+        "crest": 322.7,
+        "spillway": 320.86,
+        "maxRetention": 321.9,
+        "storage": 320.86,
+        "permanent": 311.4
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.77,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pmo-boskovice",
+      "kind": "reservoir",
+      "name": "VD Boskovice",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Bělá",
+      "portalId": {
+        "id": "27",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=27&oid=2",
+      "lat": 49.4955,
+      "lon": 16.6984,
+      "coordinateSource": "wikidata:Q11922900",
+      "levels": {
+        "crest": 432.5,
+        "spillway": 430,
+        "maxRetention": 430.8,
+        "storage": 430,
+        "permanent": 407
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 6.15,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pmo-brno",
+      "kind": "reservoir",
+      "name": "VD Brno",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Svratka",
+      "portalId": {
+        "id": "6",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=6&oid=2",
+      "lat": 49.25201,
+      "lon": 16.48461,
+      "coordinateSource": "osm:relation/13273888",
+      "levels": {
+        "crest": 232.48,
+        "spillway": 229.08,
+        "maxRetention": 230.08,
+        "storage": 229.08,
+        "permanent": 219
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 12.66,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pmo-bystricka",
+      "kind": "reservoir",
+      "name": "VD Bystřička",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Bystřička",
+      "portalId": {
+        "id": "24",
+        "oid": "1"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=24&oid=1",
+      "lat": 49.4228,
+      "lon": 18.02,
+      "coordinateSource": "wikidata:Q11922921",
+      "levels": {
+        "crest": 386.6,
+        "spillway": 384.15,
+        "maxRetention": 386.01,
+        "storage": 376.6,
+        "permanent": 372
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 1.64,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pmo-dalesice",
+      "kind": "reservoir",
+      "name": "VD Dalešice",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Jihlava",
+      "portalId": {
+        "id": "14",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=14&oid=2",
+      "lat": 49.1388,
+      "lon": 16.10464,
+      "coordinateSource": "wikidata:Q5210826",
+      "levels": {
+        "crest": 384,
+        "spillway": 381.5,
+        "maxRetention": 380.5,
+        "storage": 380.5,
+        "permanent": 362.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 116.26,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pmo-frystak",
+      "kind": "reservoir",
+      "name": "VD Fryšták",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Fryštácký potok",
+      "portalId": {
+        "id": "17",
+        "oid": "3"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=17&oid=3",
+      "lat": 49.26359,
+      "lon": 17.6911,
+      "coordinateSource": "wikidata:Q31148672",
+      "levels": {
+        "crest": 249.15,
+        "spillway": 246.85,
+        "maxRetention": 247.95,
+        "storage": 245.75,
+        "permanent": 243.15
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.9,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pmo-horni-becva",
+      "kind": "reservoir",
+      "name": "VD Horní Bečva",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Rožnovská Bečva",
+      "portalId": {
+        "id": "23",
+        "oid": "1"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=23&oid=1",
+      "lat": 49.42194,
+      "lon": 18.31611,
+      "coordinateSource": "wikidata:Q12020139",
+      "levels": {
+        "crest": 564.6,
+        "spillway": 562.1,
+        "maxRetention": 563.6,
+        "storage": 561.1,
+        "permanent": 554.1
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.39,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pmo-hubenov",
+      "kind": "reservoir",
+      "name": "VD Hubenov",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Maršovský potok",
+      "portalId": {
+        "id": "9",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=9&oid=2",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 523.58,
+        "spillway": 522.08,
+        "maxRetention": 522.68,
+        "storage": 522.08,
+        "permanent": 514.88
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 2.4,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pmo-jevisovice",
+      "kind": "reservoir",
+      "name": "VD Jevišovice",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Jevišovka",
+      "portalId": {
+        "id": "12",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=12&oid=2",
+      "lat": 48.99162,
+      "lon": 15.97922,
+      "coordinateSource": "wikidata:Q90876282",
+      "levels": {
+        "crest": 334.6,
+        "spillway": 330.58,
+        "maxRetention": 332.5,
+        "storage": 328.65,
+        "permanent": 326
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.13,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pmo-karolinka",
+      "kind": "reservoir",
+      "name": "VD Karolinka",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Stanovnice",
+      "portalId": {
+        "id": "26",
+        "oid": "1"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=26&oid=1",
+      "lat": 49.34139,
+      "lon": 18.24231,
+      "coordinateSource": "wikidata:Q12056068",
+      "levels": {
+        "crest": 522.7,
+        "spillway": 519.82,
+        "maxRetention": 521.2,
+        "storage": 519.82,
+        "permanent": 500
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 5.81,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pmo-korycany",
+      "kind": "reservoir",
+      "name": "VD Koryčany",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Kyjovka",
+      "portalId": {
+        "id": "21",
+        "oid": "3"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=21&oid=3",
+      "lat": 49.1167,
+      "lon": 17.1964,
+      "coordinateSource": "wikidata:Q11923252",
+      "levels": {
+        "crest": 308.14,
+        "spillway": 306.2,
+        "maxRetention": 307.2,
+        "storage": 306.2,
+        "permanent": 293.1
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 2.13,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pmo-landstejn",
+      "kind": "reservoir",
+      "name": "VD Landštejn",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Pstruhovec",
+      "portalId": {
+        "id": "11",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=11&oid=2",
+      "lat": 49.0236,
+      "lon": 15.24151,
+      "coordinateSource": "wikidata:Q23824342",
+      "levels": {
+        "crest": 575.7,
+        "spillway": 572.7,
+        "maxRetention": 573.3,
+        "storage": 572.7,
+        "permanent": 560.8
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 2.59,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pmo-letovice",
+      "kind": "reservoir",
+      "name": "VD Letovice",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Křetínka",
+      "portalId": {
+        "id": "10",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=10&oid=2",
+      "lat": 49.55663,
+      "lon": 16.54177,
+      "coordinateSource": "osm:relation/7506384",
+      "levels": {
+        "crest": 362.3,
+        "spillway": 360.1,
+        "maxRetention": 361.1,
+        "storage": 360.1,
+        "permanent": 346.9
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 9.01,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pmo-ludkovice",
+      "kind": "reservoir",
+      "name": "VD Ludkovice",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Ludkovický potok",
+      "portalId": {
+        "id": "19",
+        "oid": "3"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=19&oid=3",
+      "lat": 49.1231,
+      "lon": 17.7284,
+      "coordinateSource": "wikidata:Q1744717",
+      "levels": {
+        "crest": 285.5,
+        "spillway": 284.15,
+        "maxRetention": 285.05,
+        "storage": 284.15,
+        "permanent": 277.05
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.5,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pmo-luhacovice",
+      "kind": "reservoir",
+      "name": "VD Luhačovice",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Luhačovický potok",
+      "portalId": {
+        "id": "18",
+        "oid": "3"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=18&oid=3",
+      "lat": 49.12384,
+      "lon": 17.77876,
+      "coordinateSource": "osm:relation/19960174",
+      "levels": {
+        "crest": 286.47,
+        "spillway": 283.27,
+        "maxRetention": 284.7,
+        "storage": 279.75,
+        "permanent": 275
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.89,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pmo-mohelno",
+      "kind": "reservoir",
+      "name": "VD Mohelno",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Jihlava",
+      "portalId": {
+        "id": "30",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=30&oid=2",
+      "lat": 49.1019,
+      "lon": 16.1775,
+      "coordinateSource": "wikidata:Q11923431",
+      "levels": {
+        "crest": 307.15,
+        "spillway": null,
+        "maxRetention": 303.3,
+        "storage": 303.2,
+        "permanent": 290.8
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 11.31,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pmo-mostiste",
+      "kind": "reservoir",
+      "name": "VD Mostiště",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Oslava",
+      "portalId": {
+        "id": "7",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=7&oid=2",
+      "lat": 49.395,
+      "lon": 16.01333,
+      "coordinateSource": "wikidata:Q2390905",
+      "levels": {
+        "crest": 479.85,
+        "spillway": 477.6,
+        "maxRetention": 478.64,
+        "storage": 476.9,
+        "permanent": 458.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 9.34,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pmo-nova-rise",
+      "kind": "reservoir",
+      "name": "VD Nová Říše",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Olšanský potok",
+      "portalId": {
+        "id": "13",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=13&oid=2",
+      "lat": 49.15587,
+      "lon": 15.54364,
+      "coordinateSource": "wikidata:Q28100374",
+      "levels": {
+        "crest": 556.4,
+        "spillway": 554.6,
+        "maxRetention": 555.6,
+        "storage": 554.6,
+        "permanent": 545.3
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 2.24,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pmo-nove-mlyny-dolni-nadrz",
+      "kind": "reservoir",
+      "name": "VD Nové Mlýny - Dolní nádrž",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Dyje",
+      "portalId": {
+        "id": "5",
+        "oid": "3"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=5&oid=3",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 173.5,
+        "spillway": 171.24,
+        "maxRetention": 171.24,
+        "storage": 170,
+        "permanent": 167.2
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 40.61,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pmo-nove-mlyny-horni-nadrz",
+      "kind": "reservoir",
+      "name": "VD Nové Mlýny - Horní nádrž",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Dyje",
+      "portalId": {
+        "id": "3",
+        "oid": "3"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=3&oid=3",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 173.6,
+        "spillway": 171.54,
+        "maxRetention": 171.54,
+        "storage": 171.42,
+        "permanent": 170.7
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 13.74,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pmo-nove-mlyny-stredni-nadrz",
+      "kind": "reservoir",
+      "name": "VD Nové Mlýny - Střední nádrž",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Dyje",
+      "portalId": {
+        "id": "4",
+        "oid": "3"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=4&oid=3",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 173.1,
+        "spillway": 171.42,
+        "maxRetention": 171.42,
+        "storage": 170,
+        "permanent": 170
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 17.55,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pmo-opatovice",
+      "kind": "reservoir",
+      "name": "VD Opatovice",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Malá Haná",
+      "portalId": {
+        "id": "16",
+        "oid": "3"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=16&oid=3",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 335.1,
+        "spillway": 333.4,
+        "maxRetention": 334.85,
+        "storage": 333.4,
+        "permanent": 315.5
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 7.84,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pmo-plumlov",
+      "kind": "reservoir",
+      "name": "VD Plumlov",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Hloučela",
+      "portalId": {
+        "id": "25",
+        "oid": "1"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=25&oid=1",
+      "lat": 49.4693,
+      "lon": 17.0328,
+      "coordinateSource": "wikidata:Q11923581",
+      "levels": {
+        "crest": 278.63,
+        "spillway": 276.43,
+        "maxRetention": 277.58,
+        "storage": 273.58,
+        "permanent": 266.38
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 2.89,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pmo-slusovice",
+      "kind": "reservoir",
+      "name": "VD Slušovice",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Dřevnice",
+      "portalId": {
+        "id": "22",
+        "oid": "3"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=22&oid=3",
+      "lat": 49.2766,
+      "lon": 17.80449,
+      "coordinateSource": "wikidata:Q90919702",
+      "levels": {
+        "crest": 319,
+        "spillway": 316.41,
+        "maxRetention": 317.9,
+        "storage": 316.4,
+        "permanent": 302
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 7.24,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pmo-vir-i",
+      "kind": "reservoir",
+      "name": "VD Vír I",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Svratka",
+      "portalId": {
+        "id": "8",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=8&oid=2",
+      "lat": 49.56417,
+      "lon": 16.30972,
+      "coordinateSource": "wikidata:Q2390989",
+      "levels": {
+        "crest": 470.45,
+        "spillway": 467.05,
+        "maxRetention": 468.45,
+        "storage": 464.45,
+        "permanent": 421.45
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 44.05,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pmo-vranov",
+      "kind": "reservoir",
+      "name": "VD Vranov",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Dyje",
+      "portalId": {
+        "id": "1",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=1&oid=2",
+      "lat": 48.91099,
+      "lon": 15.80986,
+      "coordinateSource": "wikidata:Q23809171",
+      "levels": {
+        "crest": 353.39,
+        "spillway": 350.1,
+        "maxRetention": 351.45,
+        "storage": 348.45,
+        "permanent": 331.45
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 74.21,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pmo-vyrovice",
+      "kind": "reservoir",
+      "name": "VD Výrovice",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Jevišovka",
+      "portalId": {
+        "id": "15",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=15&oid=2",
+      "lat": 48.92745,
+      "lon": 16.09757,
+      "coordinateSource": "wikidata:Q94574421",
+      "levels": {
+        "crest": 236.3,
+        "spillway": 233.7,
+        "maxRetention": 234.8,
+        "storage": 233,
+        "permanent": 224.4
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 2.99,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pmo-znojmo",
+      "kind": "reservoir",
+      "name": "VD Znojmo",
+      "source": "pmo",
+      "basin": "moravy",
+      "river": "Dyje",
+      "portalId": {
+        "id": "2",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=2&oid=2",
+      "lat": 48.8528,
+      "lon": 16.0361,
+      "coordinateSource": "wikidata:Q14970374",
+      "levels": {
+        "crest": 228.49,
+        "spillway": 226.99,
+        "maxRetention": 226.99,
+        "storage": 225.59,
+        "permanent": 219.59
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 2.45,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pod-kruzberk",
+      "kind": "reservoir",
+      "name": "VD Kružberk",
+      "source": "pod",
+      "basin": "odry",
+      "river": "Moravice",
+      "portalId": {
+        "id": "300044836",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pod.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=300044836&oid=1",
+      "lat": 49.82306,
+      "lon": 17.6625,
+      "coordinateSource": "wikidata:Q11923305",
+      "levels": {
+        "crest": 434.6,
+        "spillway": 428.1,
+        "maxRetention": 431.1,
+        "storage": 428.5,
+        "permanent": 413.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 24.58,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pod-moravka",
+      "kind": "reservoir",
+      "name": "VD Morávka",
+      "source": "pod",
+      "basin": "odry",
+      "river": "Morávka",
+      "portalId": {
+        "id": "300021298",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pod.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=300021298&oid=2",
+      "lat": 49.58056,
+      "lon": 18.5375,
+      "coordinateSource": "wikidata:Q3508155",
+      "levels": {
+        "crest": 518.4,
+        "spillway": 515.22,
+        "maxRetention": 516.9,
+        "storage": 506.8,
+        "permanent": 491.1
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 4.96,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pod-olesna",
+      "kind": "reservoir",
+      "name": "VD Olešná",
+      "source": "pod",
+      "basin": "odry",
+      "river": "Olešná",
+      "portalId": {
+        "id": "300021290",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pod.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=300021290&oid=2",
+      "lat": 49.6639,
+      "lon": 18.3167,
+      "coordinateSource": "wikidata:Q9388511",
+      "levels": {
+        "crest": 305.63,
+        "spillway": 303.31,
+        "maxRetention": 304.39,
+        "storage": 302.8,
+        "permanent": 295.5
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 2.82,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pod-slezska-harta",
+      "kind": "reservoir",
+      "name": "VD Slezská Harta",
+      "source": "pod",
+      "basin": "odry",
+      "river": "Moravice",
+      "portalId": {
+        "id": "300021251",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pod.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=300021251&oid=1",
+      "lat": 49.91222,
+      "lon": 17.50889,
+      "coordinateSource": "wikidata:Q106180742",
+      "levels": {
+        "crest": 500.8,
+        "spillway": 496.83,
+        "maxRetention": 498.8,
+        "storage": 496,
+        "permanent": 452
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 186.23,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pod-sance",
+      "kind": "reservoir",
+      "name": "VD Šance",
+      "source": "pod",
+      "basin": "odry",
+      "river": "Ostravice",
+      "portalId": {
+        "id": "300021326",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pod.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=300021326&oid=2",
+      "lat": 49.51028,
+      "lon": 18.41583,
+      "coordinateSource": "wikidata:Q47192200",
+      "levels": {
+        "crest": 508.1,
+        "spillway": 504.2,
+        "maxRetention": 506.91,
+        "storage": 502.01,
+        "permanent": 469.71
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 40.51,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "pod-terlicko",
+      "kind": "reservoir",
+      "name": "VD Těrlicko",
+      "source": "pod",
+      "basin": "odry",
+      "river": "Stonávka",
+      "portalId": {
+        "id": "300020244",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pod.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=300020244&oid=2",
+      "lat": 49.75472,
+      "lon": 18.49611,
+      "coordinateSource": "wikidata:Q1329851",
+      "levels": {
+        "crest": 279.1,
+        "spillway": 276.2,
+        "maxRetention": 277.46,
+        "storage": 275.6,
+        "permanent": 258.2
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 22.01,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pod-zermanice",
+      "kind": "reservoir",
+      "name": "VD Žermanice",
+      "source": "pod",
+      "basin": "odry",
+      "river": "Lučina",
+      "portalId": {
+        "id": "300021282",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pod.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=300021282&oid=2",
+      "lat": 49.71944,
+      "lon": 18.46194,
+      "coordinateSource": "wikidata:Q369173",
+      "levels": {
+        "crest": 295.68,
+        "spillway": 291.26,
+        "maxRetention": 293.5,
+        "storage": 291.1,
+        "permanent": 274.3
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 18.47,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "poh-blatno-f-m",
+      "kind": "reservoir",
+      "name": "VD Blatno F-M",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Podvinecký potok",
+      "portalId": {
+        "id": "5003",
+        "oid": "3"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=5003&oid=3",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 406.4,
+        "spillway": 404.8,
+        "maxRetention": 405.3,
+        "storage": 404.8,
+        "permanent": 401.5
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.73,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "poh-brezova",
+      "kind": "reservoir",
+      "name": "VD Březová",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Teplá",
+      "portalId": {
+        "id": "1011",
+        "oid": "1"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=1011&oid=1",
+      "lat": 50.19954,
+      "lon": 12.85506,
+      "coordinateSource": "wikidata:Q1572299",
+      "levels": {
+        "crest": 433.95,
+        "spillway": 430.15,
+        "maxRetention": 431.4,
+        "storage": 424.5,
+        "permanent": 422.7
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.52,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "poh-flaje",
+      "kind": "reservoir",
+      "name": "VD Fláje",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Flájský potok",
+      "portalId": {
+        "id": "2037",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=2037&oid=2",
+      "lat": 50.68667,
+      "lon": 13.58222,
+      "coordinateSource": "wikidata:Q2390773",
+      "levels": {
+        "crest": 739.31,
+        "spillway": 737.31,
+        "maxRetention": 738.31,
+        "storage": 735.6,
+        "permanent": 710.81
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 17.5,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "poh-horka",
+      "kind": "reservoir",
+      "name": "VD Horka",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Libocký potok",
+      "portalId": {
+        "id": "1091",
+        "oid": "1"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=1091&oid=1",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 507.3,
+        "spillway": 504.7,
+        "maxRetention": 506.32,
+        "storage": 504.49,
+        "permanent": 481.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 16.54,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "poh-chribska",
+      "kind": "reservoir",
+      "name": "VD Chřibská",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Chřibská Kamenice",
+      "portalId": {
+        "id": "3092",
+        "oid": "3"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=3092&oid=3",
+      "lat": 50.85,
+      "lon": 14.52528,
+      "coordinateSource": "wikidata:Q2802725",
+      "levels": {
+        "crest": 440.59,
+        "spillway": 438.6,
+        "maxRetention": 439.1,
+        "storage": 436.85,
+        "permanent": 426.06
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.84,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "poh-janov",
+      "kind": "reservoir",
+      "name": "VD Janov",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Loupnice",
+      "portalId": {
+        "id": "2036",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=2036&oid=2",
+      "lat": 50.61147,
+      "lon": 13.55585,
+      "coordinateSource": "osm:relation/6583063",
+      "levels": {
+        "crest": 493.52,
+        "spillway": 492.92,
+        "maxRetention": 493.72,
+        "storage": 489.24,
+        "permanent": 459.57
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 1.24,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "poh-jesenice",
+      "kind": "reservoir",
+      "name": "VD Jesenice",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Odrava",
+      "portalId": {
+        "id": "1002",
+        "oid": "1"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=1002&oid=1",
+      "lat": 50.0628,
+      "lon": 12.4517,
+      "coordinateSource": "wikidata:Q958466",
+      "levels": {
+        "crest": 443.07,
+        "spillway": 439.7,
+        "maxRetention": 440.7,
+        "storage": 438.84,
+        "permanent": 427.3
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 44.8,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "poh-jezeri-f-m",
+      "kind": "reservoir",
+      "name": "VD Jezeří F-M",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Vesnický potok",
+      "portalId": {
+        "id": "2035",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=2035&oid=2",
+      "lat": 50.54694,
+      "lon": 13.47694,
+      "coordinateSource": "wikidata:Q2390824",
+      "levels": {
+        "crest": 471.69,
+        "spillway": 470.57,
+        "maxRetention": 471.26,
+        "storage": 470.57,
+        "permanent": 454.5
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.04,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "poh-jirkov",
+      "kind": "reservoir",
+      "name": "VD Jirkov",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Bílina",
+      "portalId": {
+        "id": "2034",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=2034&oid=2",
+      "lat": 50.50944,
+      "lon": 13.40917,
+      "coordinateSource": "wikidata:Q2390828",
+      "levels": {
+        "crest": 454.8,
+        "spillway": 451.18,
+        "maxRetention": 452.9,
+        "storage": 447.6,
+        "permanent": 420.5
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 1.91,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "poh-kadan",
+      "kind": "reservoir",
+      "name": "VD Kadaň",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Ohře",
+      "portalId": {
+        "id": "2001",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=2001&oid=2",
+      "lat": 50.3782,
+      "lon": 13.2557,
+      "coordinateSource": "wikidata:Q18006367",
+      "levels": {
+        "crest": 289.55,
+        "spillway": 282,
+        "maxRetention": 286.2,
+        "storage": 286,
+        "permanent": 281
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 2.13,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "poh-kamenicka",
+      "kind": "reservoir",
+      "name": "VD Kamenička",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Kamenička",
+      "portalId": {
+        "id": "2033",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=2033&oid=2",
+      "lat": 50.51178,
+      "lon": 13.33061,
+      "coordinateSource": "wikidata:Q1426798",
+      "levels": {
+        "crest": 597.05,
+        "spillway": 595.2,
+        "maxRetention": 596.3,
+        "storage": 595.2,
+        "permanent": 577.45
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.59,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "poh-krimov",
+      "kind": "reservoir",
+      "name": "VD Křímov",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Křímovský potok",
+      "portalId": {
+        "id": "2032",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=2032&oid=2",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 569,
+        "spillway": 566.88,
+        "maxRetention": 567.71,
+        "storage": 566.88,
+        "permanent": 544.71
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 1.26,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "poh-marianske-lazne",
+      "kind": "reservoir",
+      "name": "VD Mariánské Lázně",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Úšovický potok",
+      "portalId": {
+        "id": "1022",
+        "oid": "1"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=1022&oid=1",
+      "lat": 49.9981,
+      "lon": 12.7064,
+      "coordinateSource": "wikidata:Q11923411",
+      "levels": {
+        "crest": 732.53,
+        "spillway": 731.72,
+        "maxRetention": 732.2,
+        "storage": 731.72,
+        "permanent": 725
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.2,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "poh-myslivny-f-m",
+      "kind": "reservoir",
+      "name": "VD Myslivny F-M",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Černá",
+      "portalId": {
+        "id": "1092",
+        "oid": "1"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=1092&oid=1",
+      "lat": 50.4133,
+      "lon": 12.8717,
+      "coordinateSource": "wikidata:Q2334723",
+      "levels": {
+        "crest": 959.11,
+        "spillway": 957.77,
+        "maxRetention": 958.45,
+        "storage": 957.77,
+        "permanent": 955.1
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.04,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "poh-nechranice",
+      "kind": "reservoir",
+      "name": "VD Nechranice",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Ohře",
+      "portalId": {
+        "id": "2002",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=2002&oid=2",
+      "lat": 50.3631,
+      "lon": 13.3947,
+      "coordinateSource": "wikidata:Q2334736",
+      "levels": {
+        "crest": 274.5,
+        "spillway": 271.9,
+        "maxRetention": 273.05,
+        "storage": 269,
+        "permanent": 235.4
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 233.22,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "poh-podhora",
+      "kind": "reservoir",
+      "name": "VD Podhora",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Teplá",
+      "portalId": {
+        "id": "1021",
+        "oid": "1"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=1021&oid=1",
+      "lat": 49.9633,
+      "lon": 12.8133,
+      "coordinateSource": "wikidata:Q11923601",
+      "levels": {
+        "crest": 693.49,
+        "spillway": 691.18,
+        "maxRetention": 692.17,
+        "storage": 691.18,
+        "permanent": 686.7
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 2.04,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "poh-prisecnice",
+      "kind": "reservoir",
+      "name": "VD Přísečnice",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Přísečnice",
+      "portalId": {
+        "id": "2031",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=2031&oid=2",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 735.9,
+        "spillway": 733.07,
+        "maxRetention": 734.28,
+        "storage": 732.8,
+        "permanent": 705
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 46.67,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "poh-sedlec-f-m",
+      "kind": "reservoir",
+      "name": "VD Sedlec F-M",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Dubá I.",
+      "portalId": {
+        "id": "5001",
+        "oid": "3"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=5001&oid=3",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 422,
+        "spillway": 420.51,
+        "maxRetention": 421,
+        "storage": 420.51,
+        "permanent": 417
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.73,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "poh-skalka",
+      "kind": "reservoir",
+      "name": "VD Skalka",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Ohře",
+      "portalId": {
+        "id": "1001",
+        "oid": "1"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=1001&oid=1",
+      "lat": 50.07915,
+      "lon": 12.3536,
+      "coordinateSource": "wikidata:Q939293",
+      "levels": {
+        "crest": 444.6,
+        "spillway": 442.6,
+        "maxRetention": 443.6,
+        "storage": 438.48,
+        "permanent": 435.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 4.15,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "poh-stanovice",
+      "kind": "reservoir",
+      "name": "VD Stanovice",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Lomnický potok",
+      "portalId": {
+        "id": "1012",
+        "oid": "1"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=1012&oid=1",
+      "lat": 50.1764,
+      "lon": 12.8781,
+      "coordinateSource": "wikidata:Q11923705",
+      "levels": {
+        "crest": 519.5,
+        "spillway": 515.3,
+        "maxRetention": 518,
+        "storage": 512.24,
+        "permanent": 483
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 18.89,
+      "portalPurpose": "Vodárenská",
+      "purposes": ["drinking"],
+      "hidden": false
+    },
+    {
+      "id": "poh-straz-pod-ralskem",
+      "kind": "reservoir",
+      "name": "VD Stráž pod Ralskem",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Ploučnice",
+      "portalId": {
+        "id": "3091",
+        "oid": "3"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=3091&oid=3",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 310.05,
+        "spillway": 308.53,
+        "maxRetention": 308.98,
+        "storage": 306.83,
+        "permanent": 306.83
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": null,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "poh-ujezd",
+      "kind": "reservoir",
+      "name": "VD Újezd",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Bílina",
+      "portalId": {
+        "id": "2043",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=2043&oid=2",
+      "lat": 50.50134,
+      "lon": 13.47658,
+      "coordinateSource": "wikidata:Q1275673",
+      "levels": {
+        "crest": 285.9,
+        "spillway": 284.72,
+        "maxRetention": 285.9,
+        "storage": 282.28,
+        "permanent": 275.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 3.74,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "poh-vidhostice-f-m",
+      "kind": "reservoir",
+      "name": "VD Vidhostice F-M",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Mlýnecký potok",
+      "portalId": {
+        "id": "5002",
+        "oid": "3"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=5002&oid=3",
+      "lat": 50.16118,
+      "lon": 13.39499,
+      "coordinateSource": "wikidata:Q100479486",
+      "levels": {
+        "crest": null,
+        "spillway": 324.9,
+        "maxRetention": 325.69,
+        "storage": 324.9,
+        "permanent": 318
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.86,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "poh-vsechlapy",
+      "kind": "reservoir",
+      "name": "VD Všechlapy",
+      "source": "poh",
+      "basin": "ohre",
+      "river": "Bouřlivec",
+      "portalId": {
+        "id": "2091",
+        "oid": "2"
+      },
+      "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=2091&oid=2",
+      "lat": 50.6111,
+      "lon": 13.784,
+      "coordinateSource": "wikidata:Q15631248",
+      "levels": {
+        "crest": 215.52,
+        "spillway": 213.24,
+        "maxRetention": 214.57,
+        "storage": 211.6,
+        "permanent": 208.1
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.48,
+      "portalPurpose": "Víceúčelová",
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-bilsko",
+      "kind": "reservoir",
+      "name": "VD Bílsko",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Bílský potok",
+      "portalId": {
+        "id": "BIBI",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=BIBI&oid=1",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 471.7,
+        "spillway": 470.5,
+        "maxRetention": 471.6,
+        "storage": 464.03,
+        "permanent": 463.03
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": null,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-ceske-udoli",
+      "kind": "reservoir",
+      "name": "VD České Údolí",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Radbuza",
+      "portalId": {
+        "id": "RACU",
+        "oid": "3"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=RACU&oid=3",
+      "lat": 49.7181,
+      "lon": 13.3583,
+      "coordinateSource": "wikidata:Q11292059",
+      "levels": {
+        "crest": 315.8,
+        "spillway": 310.6,
+        "maxRetention": 315.2,
+        "storage": 313.6,
+        "permanent": 310.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 2.5,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-cihadla",
+      "kind": "reservoir",
+      "name": "VD Čihadla",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Rokytka",
+      "portalId": {
+        "id": "ROCI",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=ROCI&oid=2",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 210,
+        "spillway": 200,
+        "maxRetention": 201,
+        "storage": 205,
+        "permanent": 202
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": null,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-dolejsi-padrtsky-rybnik",
+      "kind": "reservoir",
+      "name": "VD Dolejší Padrťský rybník",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Klabava",
+      "portalId": {
+        "id": "KLDP",
+        "oid": "3"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=KLDP&oid=3",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 635.26,
+        "spillway": 632.89,
+        "maxRetention": 634.29,
+        "storage": 632.89,
+        "permanent": 632.69
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": null,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-dratenik",
+      "kind": "reservoir",
+      "name": "VD Dráteník",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Červený potok (BE)",
+      "portalId": {
+        "id": "CPDR",
+        "oid": "3"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=CPDR&oid=3",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 418.24,
+        "spillway": 416.76,
+        "maxRetention": 417.91,
+        "storage": 416.68,
+        "permanent": 413.75
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.08,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-hnevkovice",
+      "kind": "reservoir",
+      "name": "VD Hněvkovice",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Vltava",
+      "portalId": {
+        "id": "VLHN",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=VLHN&oid=1",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 372.6,
+        "spillway": 364.6,
+        "maxRetention": 370.1,
+        "storage": 370.1,
+        "permanent": 364.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 12.16,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-horejsi-padrtsky-rybnik",
+      "kind": "reservoir",
+      "name": "VD Hořejší Padrťský rybník",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Klabava",
+      "portalId": {
+        "id": "KLHP",
+        "oid": "3"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=KLHP&oid=3",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 638.17,
+        "spillway": 636.36,
+        "maxRetention": 637.56,
+        "storage": 636.36,
+        "permanent": 635.76
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": null,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-hracholusky",
+      "kind": "reservoir",
+      "name": "VD Hracholusky",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Mže",
+      "portalId": {
+        "id": "MZHR",
+        "oid": "3"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=MZHR&oid=3",
+      "lat": 49.7934,
+      "lon": 13.1702,
+      "coordinateSource": "wikidata:Q11923119",
+      "levels": {
+        "crest": 359,
+        "spillway": 355.2,
+        "maxRetention": 357.97,
+        "storage": 354.1,
+        "permanent": 339.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 32.02,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-humenice",
+      "kind": "reservoir",
+      "name": "VD Humenice",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Stropnice",
+      "portalId": {
+        "id": "SCHU",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=SCHU&oid=1",
+      "lat": 48.77133,
+      "lon": 14.74075,
+      "coordinateSource": "wikidata:Q26257991",
+      "levels": {
+        "crest": 545,
+        "spillway": 542.7,
+        "maxRetention": 544,
+        "storage": 536,
+        "permanent": 531
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.12,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-husinec",
+      "kind": "reservoir",
+      "name": "VD Husinec",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Blanice (PI)",
+      "portalId": {
+        "id": "BLHU",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=BLHU&oid=1",
+      "lat": 49.03592,
+      "lon": 13.98423,
+      "coordinateSource": "wikidata:Q11923136",
+      "levels": {
+        "crest": 531.72,
+        "spillway": 528.33,
+        "maxRetention": 529.88,
+        "storage": 522.33,
+        "permanent": 515.33
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 2.06,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-jince",
+      "kind": "reservoir",
+      "name": "VD Jince",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Ohrazenický potok",
+      "portalId": {
+        "id": "OPJI",
+        "oid": "3"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=OPJI&oid=3",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 550.5,
+        "spillway": 549,
+        "maxRetention": 549.4,
+        "storage": 549,
+        "permanent": 543.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": null,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-kamyk",
+      "kind": "reservoir",
+      "name": "VD Kamýk",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Vltava",
+      "portalId": {
+        "id": "VLKA",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=VLKA&oid=2",
+      "lat": 49.6334,
+      "lon": 14.2469,
+      "coordinateSource": "wikidata:Q2551146",
+      "levels": {
+        "crest": 287.1,
+        "spillway": 279.1,
+        "maxRetention": 284.6,
+        "storage": 284.6,
+        "permanent": 282.1
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 4.65,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-karhof",
+      "kind": "reservoir",
+      "name": "VD Karhof",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Studenský potok",
+      "portalId": {
+        "id": "SPKA",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=SPKA&oid=1",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 669.7,
+        "spillway": 668.4,
+        "maxRetention": 669.1,
+        "storage": 668.4,
+        "permanent": 666.8
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.29,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-klabava",
+      "kind": "reservoir",
+      "name": "VD Klabava",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Klabava",
+      "portalId": {
+        "id": "KLKL",
+        "oid": "3"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=KLKL&oid=3",
+      "lat": 49.7511,
+      "lon": 13.54741,
+      "coordinateSource": "wikidata:Q90878125",
+      "levels": {
+        "crest": 352.2,
+        "spillway": 345.7,
+        "maxRetention": 351.1,
+        "storage": 345.7,
+        "permanent": 344.4
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.42,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-klicava",
+      "kind": "reservoir",
+      "name": "VD Klíčava",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Klíčava",
+      "portalId": {
+        "id": "KCKC",
+        "oid": "3"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=KCKC&oid=3",
+      "lat": 50.0644,
+      "lon": 13.9339,
+      "coordinateSource": "wikidata:Q11923237",
+      "levels": {
+        "crest": 298.8,
+        "spillway": 294.6,
+        "maxRetention": 296.91,
+        "storage": 293.7,
+        "permanent": 267.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 7.86,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-korensko",
+      "kind": "reservoir",
+      "name": "VD Kořensko",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Vltava",
+      "portalId": {
+        "id": "VLKO",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=VLKO&oid=1",
+      "lat": 49.2408,
+      "lon": 14.37916,
+      "coordinateSource": "wikidata:Q1669033",
+      "levels": {
+        "crest": null,
+        "spillway": null,
+        "maxRetention": 353.6,
+        "storage": 352.6,
+        "permanent": 347.8
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 1.73,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-laz",
+      "kind": "reservoir",
+      "name": "VD Láz",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Litavka",
+      "portalId": {
+        "id": "LILA",
+        "oid": "3"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=LILA&oid=3",
+      "lat": 49.66,
+      "lon": 13.895,
+      "coordinateSource": "wikidata:Q11923379",
+      "levels": {
+        "crest": 643.26,
+        "spillway": 641.35,
+        "maxRetention": 642.15,
+        "storage": 641.35,
+        "permanent": 630
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.81,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-lipno-1",
+      "kind": "reservoir",
+      "name": "VD Lipno 1",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Vltava",
+      "portalId": {
+        "id": "VLL1",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=VLL1&oid=1",
+      "lat": 48.71201,
+      "lon": 14.05651,
+      "coordinateSource": "osm:relation/1346653",
+      "levels": {
+        "crest": 728.62,
+        "spillway": 723.27,
+        "maxRetention": 725.6,
+        "storage": 724.9,
+        "permanent": 716.1
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 252.99,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-lipno-2",
+      "kind": "reservoir",
+      "name": "VD Lipno 2",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Vltava",
+      "portalId": {
+        "id": "VLL2",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=VLL2&oid=1",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 564.11,
+        "spillway": 559.86,
+        "maxRetention": 563.35,
+        "storage": 562.7,
+        "permanent": 557.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 1.44,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-lucina",
+      "kind": "reservoir",
+      "name": "VD Lučina",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Mže",
+      "portalId": {
+        "id": "MZLU",
+        "oid": "3"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=MZLU&oid=3",
+      "lat": 49.80611,
+      "lon": 12.58203,
+      "coordinateSource": "wikidata:Q1697516",
+      "levels": {
+        "crest": 535.8,
+        "spillway": 533.25,
+        "maxRetention": 534.68,
+        "storage": 532.1,
+        "permanent": 523
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 3.45,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-nemcice",
+      "kind": "reservoir",
+      "name": "VD Němčice",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Sedlický potok",
+      "portalId": {
+        "id": "SPNE",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=SPNE&oid=2",
+      "lat": 49.6736,
+      "lon": 15.0956,
+      "coordinateSource": "wikidata:Q11923494",
+      "levels": {
+        "crest": 387.2,
+        "spillway": 385,
+        "maxRetention": 386.4,
+        "storage": 385,
+        "permanent": 384.5
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.1,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-nyrsko",
+      "kind": "reservoir",
+      "name": "VD Nýrsko",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Úhlava",
+      "portalId": {
+        "id": "UHNY",
+        "oid": "3"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=UHNY&oid=3",
+      "lat": 49.25758,
+      "lon": 13.14621,
+      "coordinateSource": "wikidata:Q23813924",
+      "levels": {
+        "crest": 525.21,
+        "spillway": 523,
+        "maxRetention": 524.25,
+        "storage": 521.55,
+        "permanent": 501.2
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 15.97,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-obecnice",
+      "kind": "reservoir",
+      "name": "VD Obecnice",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Obecnický potok",
+      "portalId": {
+        "id": "OPOB",
+        "oid": "3"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=OPOB&oid=3",
+      "lat": 49.71796,
+      "lon": 13.92489,
+      "coordinateSource": "osm:way/51556275",
+      "levels": {
+        "crest": 566.05,
+        "spillway": 564.55,
+        "maxRetention": 565.87,
+        "storage": 564.55,
+        "permanent": 555.65
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.53,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-orlik",
+      "kind": "reservoir",
+      "name": "VD Orlík",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Vltava",
+      "portalId": {
+        "id": "VLOR",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=VLOR&oid=2",
+      "lat": 49.42175,
+      "lon": 14.19686,
+      "coordinateSource": "osm:relation/11092220",
+      "levels": {
+        "crest": 361.1,
+        "spillway": 345.6,
+        "maxRetention": 353.6,
+        "storage": 349.9,
+        "permanent": 329.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 343.07,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-pilska-u-pribrame",
+      "kind": "reservoir",
+      "name": "VD Pilská (u Příbramě)",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Pilský potok",
+      "portalId": {
+        "id": "PPPI",
+        "oid": "3"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=PPPI&oid=3",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 673.7,
+        "spillway": 671.38,
+        "maxRetention": 672.7,
+        "storage": 671.4,
+        "permanent": 661.7
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 1.34,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-pilska-u-zdaru",
+      "kind": "reservoir",
+      "name": "VD Pilská u Žďáru",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Sázava",
+      "portalId": {
+        "id": "SAPI",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=SAPI&oid=2",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 578.31,
+        "spillway": 576.6,
+        "maxRetention": 577.3,
+        "storage": 576.6,
+        "permanent": 571.8
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 1.44,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-plzen-struncovy-sady",
+      "kind": "reservoir",
+      "name": "VD Plzeň-Štruncovy sady",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Mže",
+      "portalId": {
+        "id": "MZSS",
+        "oid": "3"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=MZSS&oid=3",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 319,
+        "spillway": 316,
+        "maxRetention": 318,
+        "storage": 315,
+        "permanent": 316
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": null,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-rimov",
+      "kind": "reservoir",
+      "name": "VD Římov",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Malše",
+      "portalId": {
+        "id": "MARI",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=MARI&oid=1",
+      "lat": 48.8472,
+      "lon": 14.4858,
+      "coordinateSource": "wikidata:Q8556873",
+      "levels": {
+        "crest": 473.3,
+        "spillway": 466.1,
+        "maxRetention": 471.48,
+        "storage": 470.65,
+        "permanent": 442.5
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 30.02,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-sedlice",
+      "kind": "reservoir",
+      "name": "VD Sedlice",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Želivka",
+      "portalId": {
+        "id": "HESE",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=HESE&oid=2",
+      "lat": 49.51389,
+      "lon": 15.26944,
+      "coordinateSource": "wikidata:Q2390952",
+      "levels": {
+        "crest": 453.9,
+        "spillway": 447.68,
+        "maxRetention": 448.64,
+        "storage": 447.4,
+        "permanent": 443.9
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.94,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-slapy",
+      "kind": "reservoir",
+      "name": "VD Slapy",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Vltava",
+      "portalId": {
+        "id": "VLSL",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=VLSL&oid=2",
+      "lat": 49.8237,
+      "lon": 14.4341,
+      "coordinateSource": "wikidata:Q1131722",
+      "levels": {
+        "crest": 279.2,
+        "spillway": 262.6,
+        "maxRetention": 270.6,
+        "storage": 270.6,
+        "permanent": 246.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 200.5,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-sobenov",
+      "kind": "reservoir",
+      "name": "VD Soběnov",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Černá",
+      "portalId": {
+        "id": "CRSO",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=CRSO&oid=1",
+      "lat": 48.7439,
+      "lon": 14.5514,
+      "coordinateSource": "wikidata:Q11923688",
+      "levels": {
+        "crest": 585.36,
+        "spillway": 582.21,
+        "maxRetention": 583.26,
+        "storage": 582.21,
+        "permanent": 579.81
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.06,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-staviste",
+      "kind": "reservoir",
+      "name": "VD Staviště",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Staviště",
+      "portalId": {
+        "id": "SVSV",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=SVSV&oid=2",
+      "lat": 49.5688,
+      "lon": 15.95496,
+      "coordinateSource": "wikidata:Q28101864",
+      "levels": {
+        "crest": 582.4,
+        "spillway": 580.6,
+        "maxRetention": 581.6,
+        "storage": 580.6,
+        "permanent": 574.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.39,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-strz",
+      "kind": "reservoir",
+      "name": "VD Strž",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Stržský potok",
+      "portalId": {
+        "id": "STST",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=STST&oid=2",
+      "lat": 49.60922,
+      "lon": 15.95385,
+      "coordinateSource": "wikidata:Q28101861",
+      "levels": {
+        "crest": 590.21,
+        "spillway": 588.6,
+        "maxRetention": 589.2,
+        "storage": 588.6,
+        "permanent": 586.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.3,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-suchomasty",
+      "kind": "reservoir",
+      "name": "VD Suchomasty",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Suchomastský potok",
+      "portalId": {
+        "id": "SMSM",
+        "oid": "3"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=SMSM&oid=3",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 261.65,
+        "spillway": 260.1,
+        "maxRetention": 260.9,
+        "storage": 260.1,
+        "permanent": 249.8
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.41,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-stechovice",
+      "kind": "reservoir",
+      "name": "VD Štěchovice",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Vltava",
+      "portalId": {
+        "id": "VLST",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=VLST&oid=2",
+      "lat": 49.85,
+      "lon": 14.43333,
+      "coordinateSource": "wikidata:Q1727768",
+      "levels": {
+        "crest": 220.8,
+        "spillway": 214.45,
+        "maxRetention": 219.4,
+        "storage": 219.4,
+        "permanent": 215.8
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 4.21,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-svihov-zelivka",
+      "kind": "reservoir",
+      "name": "VD Švihov (Želivka)",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Želivka",
+      "portalId": {
+        "id": "ZESV",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=ZESV&oid=2",
+      "lat": 49.65299,
+      "lon": 15.23838,
+      "coordinateSource": "osm:relation/6640987",
+      "levels": {
+        "crest": 381.7,
+        "spillway": 377,
+        "maxRetention": 379.8,
+        "storage": 377,
+        "permanent": 343.1
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 246.07,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-trnavka",
+      "kind": "reservoir",
+      "name": "VD Trnávka",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Trnava",
+      "portalId": {
+        "id": "TRTR",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=TRTR&oid=2",
+      "lat": 49.5228,
+      "lon": 15.2118,
+      "coordinateSource": "wikidata:Q11923973",
+      "levels": {
+        "crest": 417,
+        "spillway": 413,
+        "maxRetention": 414.5,
+        "storage": 413.2,
+        "permanent": 412
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 2.12,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-vrane",
+      "kind": "reservoir",
+      "name": "VD Vrané",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Vltava",
+      "portalId": {
+        "id": "VLVE",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=VLVE&oid=2",
+      "lat": 49.93814,
+      "lon": 14.37491,
+      "coordinateSource": "wikidata:Q2551202",
+      "levels": {
+        "crest": 203.6,
+        "spillway": null,
+        "maxRetention": 200.1,
+        "storage": 200.1,
+        "permanent": 199.1
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 2.53,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-vresnik",
+      "kind": "reservoir",
+      "name": "VD Vřesník",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Želivka",
+      "portalId": {
+        "id": "HEVR",
+        "oid": "2"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=HEVR&oid=2",
+      "lat": 49.5295,
+      "lon": 15.24335,
+      "coordinateSource": "wikidata:Q20719664",
+      "levels": {
+        "crest": 410.25,
+        "spillway": 407.6,
+        "maxRetention": 409.08,
+        "storage": 407.6,
+        "permanent": 406.85
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.06,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-zaskalska",
+      "kind": "reservoir",
+      "name": "VD Záskalská",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Červený potok (BE)",
+      "portalId": {
+        "id": "CPZA",
+        "oid": "3"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=CPZA&oid=3",
+      "lat": 49.79082,
+      "lon": 13.87837,
+      "coordinateSource": "wikidata:Q96156969",
+      "levels": {
+        "crest": 450.3,
+        "spillway": 448.84,
+        "maxRetention": 449.39,
+        "storage": 448.79,
+        "permanent": 440.54
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.6,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-zhejral",
+      "kind": "reservoir",
+      "name": "VD Zhejral",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Studenský potok",
+      "portalId": {
+        "id": "SPZH",
+        "oid": "1"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=SPZH&oid=1",
+      "lat": null,
+      "lon": null,
+      "coordinateSource": null,
+      "levels": {
+        "crest": 680,
+        "spillway": 678.76,
+        "maxRetention": 679.7,
+        "storage": 678.6,
+        "permanent": 675.2
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": 0.16,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    },
+    {
+      "id": "pvl-zlutice",
+      "kind": "reservoir",
+      "name": "VD Žlutice",
+      "source": "pvl",
+      "basin": "vltavy",
+      "river": "Střela",
+      "portalId": {
+        "id": "STZL",
+        "oid": "3"
+      },
+      "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=STZL&oid=3",
+      "lat": 50.0881,
+      "lon": 13.1281,
+      "coordinateSource": "wikidata:Q11924107",
+      "levels": {
+        "crest": 510.83,
+        "spillway": 507.95,
+        "maxRetention": 509.72,
+        "storage": 507.05,
+        "permanent": 493.6
+      },
+      "heightDatum": "Balt p.v.",
+      "storageVolume": null,
+      "portalPurpose": null,
+      "purposes": [],
+      "hidden": false
+    }
+  ],
+  "ignoredRows": [
+    {
+      "source": "pmo",
+      "portalId": {
+        "id": "29",
+        "oid": "2"
+      },
+      "name": "VD Dalešice - přepočítaná",
+      "reason": "Second row for VD Dalešice (id 14) with recalculated values; the registry keeps the plain row."
+    }
+  ]
+}

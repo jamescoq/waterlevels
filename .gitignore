@@ -3,3 +3,4 @@ dist/
 probe-out/
 .DS_Store
 *.log
+.cache/

@@ -23,15 +23,15 @@
 
 ## 4. Station registry
 
-- [ ] 4.1 Write `scripts/registry/` to read portal ids, zone levels and height datum from detail pages into `registry/stations.json`; verify every station has a portal id and explicit values or nulls for all levels
+- [x] 4.1 Write `scripts/registry/` to read portal ids, zone levels and height datum from detail pages into `registry/stations.json`; verify every station has a portal id and explicit values or nulls for all levels
 - [ ] 4.2 Add coordinates and river names to every station; verify a test that every station lies inside the Czechia bounding box
-- [ ] 4.3 Add the zod schemas for stations and overrides; verify the registry files validate in CI
-- [ ] 4.4 Collect purpose tags where known; verify the field is present on every station, even if empty
+- [x] 4.3 Add the zod schemas for stations and overrides; verify the registry files validate in CI
+- [x] 4.4 Collect purpose tags where known; verify the field is present on every station, even if empty
 
 ## 5. Daily collection
 
 - [ ] 5.1 Implement the polite HTTP client (User-Agent, robots.txt, 2 s spacing, 30 s timeout, two retries); verify mocked-server tests for the request budget, robots.txt blocking and retry scenarios
-- [ ] 5.2 Implement the run: scrape, match stations, contain source failures, apply validation guards, write the snapshot with every parsed value; verify tests for the layout-change, all-unreachable, one-portal-down, paused-source, unmatched-row and value-not-shown scenarios, including that a paused source receives no request
+- [ ] 5.2 Implement the run: scrape (fetching a page again after 30 s, at most twice, when the portal answers with its "Prosím, čekejte, načítám data" placeholder), match stations, contain source failures, apply validation guards, write the snapshot with every parsed value; verify tests for the layout-change, all-unreachable, one-portal-down, paused-source, unmatched-row and value-not-shown scenarios, including that a paused source receives no request
 - [ ] 5.3 Add `scrape.yml` with the schedule, the repository guard, the commit to `data`, `status/last-run.json` and the raw-page artifact with 90-day retention; verify a manual run commits a snapshot and uploads the artifact, and that the guard condition is on the scrape job
 - [ ] 5.4 Add `pnpm reparse --from <date>` that regenerates snapshots from raw-page artifacts; verify it reproduces a committed snapshot byte for byte
 - [ ] 5.5 Add the dead-man's-switch ping with its URL as a repository secret; verify the check service records a ping after a manual run

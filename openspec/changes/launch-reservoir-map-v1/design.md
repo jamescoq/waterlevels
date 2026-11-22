@@ -170,9 +170,17 @@ Alternative considered: MapLibre with vector tiles. Rejected for v1 because it a
 
 Names speak of **stations**, not reservoirs, so river gauges fit in for v2. Every file carries `schemaVersion`.
 
-`registry/stations.json` (hand-kept):
+`registry/stations.json`: built by `pnpm registry:build` from the detail pages, coordinates added by `pnpm registry:coordinates`, then kept by hand. The zod schema in `src/shared/registry.ts` is the exact definition.
 
 ```ts
+type StationsFile = {
+  schemaVersion: 1;
+  stations: Station[];
+  // Portal rows that are deliberately not stations, so they never count as unmatched,
+  // e.g. "VD Dalešice - přepočítaná", a second row for VD Dalešice.
+  ignoredRows: { source: SourceCode; portalId: { id: string; oid: string }; name: string; reason: string }[];
+};
+
 type Station = {
   id: string;                 // "pod-slezska-harta": source code + slug, never changes
   kind: "reservoir";          // v2 adds "river-gauge"
@@ -180,20 +188,23 @@ type Station = {
   source: "pmo" | "pod" | "poh" | "pvl" | "pla";
   basin: "moravy" | "odry" | "ohre" | "vltavy" | "labe";
   river: string;
-  portalId: { id: string; oid: string };   // from the Mereni.aspx link
+  portalId: { id: string; oid: string };   // from the Mereni.aspx link; id may be text ("BIBI")
   sourceUrl: string;
-  lat: number; lon: number;   // WGS84
-  levels: {                   // m a.s.l.; null if not defined for this dam
+  lat: number | null; lon: number | null;  // WGS84; null until placed
+  coordinateSource: string | null;         // "wikidata:Q…", "osm:way/…" or "manual"
+  levels: {                   // m a.s.l.; null if the portal gives none
     crest: number | null; spillway: number | null; maxRetention: number | null;
     storage: number | null; permanent: number | null;
   };
-  heightDatum: string;        // usually "Bpv"
-  storageVolume: number | null;   // mil. m³
+  heightDatum: string | null; // "Balt p.v." for every station today
+  storageVolume: number | null;   // mil. m³, filled + free storage when the registry was built
+  portalPurpose: string | null;   // "Vodárenská", "Víceúčelová", or null (Vltava publishes none)
   purposes: ("drinking" | "recreation" | "hydropower" | "flood")[];  // collected, not shown in v1
-  preferRow?: "default" | "recalculated";
-  hidden?: boolean;
+  hidden: boolean;
 };
 ```
+
+Coordinates come from Wikidata (CC0, no attribution needed) and, for the rest, OpenStreetMap (ODbL, credited on the methodology page). Each is checked to lie inside Czechia and roughly inside its Povodí. Stations neither source places are entered by hand from a map, with `coordinateSource: "manual"`.
 
 `registry/overrides.json` (hand-kept):
 

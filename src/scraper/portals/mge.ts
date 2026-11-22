@@ -218,6 +218,14 @@ function cellError(name: string, column: Column, err: unknown): LayoutError {
   return new LayoutError(`${name}, ${what}: ${err instanceof Error ? err.message : String(err)}`);
 }
 
+/**
+ * The portal sometimes answers with a "please wait, loading data" placeholder instead of the
+ * table (seen on Povodí Moravy, 2026-11-22). It is temporary: fetch the page again later.
+ */
+export function isLoadingPage(html: string): boolean {
+  return /Prosím,\s*čekejte,\s*načítám\s+data/.test(html) && !html.includes("Mereni.aspx?id=");
+}
+
 /** Parses Prehled.aspx. A page without station rows yields an empty list. */
 export function parseOverview(html: string): OverviewRow[] {
   const { columns, rows } = readTable(html);
