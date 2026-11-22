@@ -16,10 +16,10 @@
 
 ## 3. Parsers
 
-- [ ] 3.1 Save the overview, volumes and one detail page of every source as fixtures in `test/fixtures/<source>/`; verify 15 fixture files exist
-- [ ] 3.2 Implement Czech number and Prague time parsing; verify the decimal-comma and summer-time scenarios of `water-data-collection` pass as unit tests
-- [ ] 3.3 Implement the MGE overview and volumes parsers; verify fixture tests cover every source, blank versus dash cells, and the Dalešice duplicate row
-- [ ] 3.4 Implement the implausible-value bounds; verify the "Level far above the crest" and "Reservoir emptied for repairs" scenarios pass as unit tests
+- [x] 3.1 Save the overview, volumes and one detail page of every source as fixtures in `test/fixtures/<source>/`; verify 15 fixture files exist
+- [x] 3.2 Implement Czech number and Prague time parsing; verify the decimal-comma and summer-time scenarios of `water-data-collection` pass as unit tests
+- [x] 3.3 Implement the MGE overview and volumes parsers; verify fixture tests cover every source, blank versus dash cells, and the Dalešice duplicate row
+- [x] 3.4 Implement the implausible-value bounds; verify the "Level far above the crest" and "Reservoir emptied for repairs" scenarios pass as unit tests
 
 ## 4. Station registry
 
