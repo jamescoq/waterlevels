@@ -12,6 +12,7 @@
  * Stations it cannot place are listed; add them by hand with coordinateSource "manual".
  * Responses are cached in .cache/coordinates/.
  */
+import { createHash } from "node:crypto";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { CONTACT_EMAIL } from "../../src/scraper/config.ts";
@@ -47,9 +48,14 @@ const STOP_WORDS = new Set([
   "nad",
   "pod",
   "v",
+  // "v. n." abbreviates "vodní nádrž".
+  "n",
   "reservoir",
   "dam",
 ]);
+
+/** Roman numerals in names ("Lipno II") match the portals' digits ("Lipno 2"). */
+const ROMAN: Record<string, string> = { i: "1", ii: "2", iii: "3", iv: "4" };
 
 interface Candidate {
   source: string;
@@ -65,7 +71,8 @@ export function tokens(name: string): string[] {
     .replace(/\p{M}/gu, "")
     .toLowerCase()
     .split(/[^a-z0-9]+/)
-    .filter((t) => t && !STOP_WORDS.has(t));
+    .filter((t) => t && !STOP_WORDS.has(t))
+    .map((t) => ROMAN[t] ?? t);
 }
 
 /** Same words, ignoring order, generic words ("vodní nádrž", "přehrada") and diacritics. */
@@ -156,9 +163,10 @@ function pickWikidata(station: Station, candidates: Candidate[]): Candidate | "a
 const ALIASES: Record<string, string[]> = {
   "pmo-brno": ["Brněnská přehrada"],
   "pmo-luhacovice": ["Luhačovická přehrada"],
-  "pmo-nove-mlyny-horni-nadrz": ["Nové Mlýny horní nádrž", "Horní nádrž Nové Mlýny"],
-  "pmo-nove-mlyny-stredni-nadrz": ["Nové Mlýny střední nádrž", "Střední nádrž Nové Mlýny"],
-  "pmo-nove-mlyny-dolni-nadrz": ["Nové Mlýny dolní nádrž", "Dolní nádrž Nové Mlýny"],
+  // Nové Mlýny I, II and III are the upper, middle and lower basin.
+  "pmo-nove-mlyny-horni-nadrz": ["Nové Mlýny I", "Nové Mlýny horní nádrž"],
+  "pmo-nove-mlyny-stredni-nadrz": ["Nové Mlýny II", "Nové Mlýny-střed"],
+  "pmo-nove-mlyny-dolni-nadrz": ["Nové Mlýny III", "Nové Mlýny dolní nádrž"],
   "pvl-svihov-zelivka": ["Švihov", "Želivka"],
   "pvl-lipno-1": ["Lipno"],
   "pvl-lipno-2": ["Lipno II"],
@@ -173,6 +181,7 @@ export function containsName(found: string, wanted: string): boolean {
 }
 
 /** One Overpass query for every named reservoir and dam in and around Czechia. */
+/** One Overpass query for every named reservoir and dam in and around Czechia. */
 async function osmCandidates(): Promise<Candidate[]> {
   // A bounding box is far cheaper for Overpass than an area lookup; points across the border
   // are dropped by the basin check.
@@ -182,7 +191,8 @@ async function osmCandidates(): Promise<Candidate[]> {
       nwr["landuse"="reservoir"]["name"](${bbox});
       way["waterway"="dam"]["name"](${bbox}); );
     out center tags;`;
-  const body = await cached("overpass.json", async () => {
+  const key = createHash("sha256").update(query).digest("hex").slice(0, 12);
+  const body = await cached(`overpass-${key}.json`, async () => {
     // Public Overpass instances are often busy; try the next one on an error.
     let lastError: unknown;
     for (const endpoint of OVERPASS_ENDPOINTS) {
@@ -191,13 +201,19 @@ async function osmCandidates(): Promise<Candidate[]> {
           method: "POST",
           headers: {
             "User-Agent": USER_AGENT,
+            // overpass-api.de refuses requests without an Accept header (406).
+            Accept: "application/json",
             "Content-Type": "application/x-www-form-urlencoded",
           },
           body: `data=${encodeURIComponent(query)}`,
           signal: AbortSignal.timeout(240_000),
         });
-        if (response.ok) return response.text();
-        lastError = new Error(`${endpoint} returned ${response.status}`);
+        const text = response.ok ? await response.text() : "";
+        // A query that ran out of time answers 200 with no elements and a remark; never cache it.
+        if (response.ok && !/"remark":\s*"runtime error/.test(text)) return text;
+        lastError = new Error(
+          `${endpoint} returned ${response.status}${text ? " (query timed out)" : ""}`,
+        );
       } catch (err) {
         lastError = err;
       }

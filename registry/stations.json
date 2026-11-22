@@ -657,9 +657,9 @@
         "oid": "2"
       },
       "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=9&oid=2",
-      "lat": null,
-      "lon": null,
-      "coordinateSource": null,
+      "lat": 49.39546,
+      "lon": 15.48229,
+      "coordinateSource": "osm:way/460396128",
       "levels": {
         "crest": 523.58,
         "spillway": 522.08,
@@ -965,9 +965,9 @@
         "oid": "3"
       },
       "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=5&oid=3",
-      "lat": null,
-      "lon": null,
-      "coordinateSource": null,
+      "lat": 48.88168,
+      "lon": 16.6857,
+      "coordinateSource": "osm:way/51264639",
       "levels": {
         "crest": 173.5,
         "spillway": 171.24,
@@ -993,9 +993,9 @@
         "oid": "3"
       },
       "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=3&oid=3",
-      "lat": null,
-      "lon": null,
-      "coordinateSource": null,
+      "lat": 48.88408,
+      "lon": 16.54721,
+      "coordinateSource": "osm:relation/6803810",
       "levels": {
         "crest": 173.6,
         "spillway": 171.54,
@@ -1021,9 +1021,9 @@
         "oid": "3"
       },
       "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=4&oid=3",
-      "lat": null,
-      "lon": null,
-      "coordinateSource": null,
+      "lat": 48.89974,
+      "lon": 16.61613,
+      "coordinateSource": "osm:relation/6803809",
       "levels": {
         "crest": 173.1,
         "spillway": 171.42,
@@ -1049,9 +1049,9 @@
         "oid": "3"
       },
       "sourceUrl": "https://sap.pmo.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=16&oid=3",
-      "lat": null,
-      "lon": null,
-      "coordinateSource": null,
+      "lat": 49.31186,
+      "lon": 16.91873,
+      "coordinateSource": "osm:way/55982722",
       "levels": {
         "crest": 335.1,
         "spillway": 333.4,
@@ -1525,9 +1525,9 @@
         "oid": "1"
       },
       "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=1091&oid=1",
-      "lat": null,
-      "lon": null,
-      "coordinateSource": null,
+      "lat": 50.20478,
+      "lon": 12.49983,
+      "coordinateSource": "osm:way/51176442",
       "levels": {
         "crest": 507.3,
         "spillway": 504.7,
@@ -1749,9 +1749,9 @@
         "oid": "2"
       },
       "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=2032&oid=2",
-      "lat": null,
-      "lon": null,
-      "coordinateSource": null,
+      "lat": 50.49768,
+      "lon": 13.31458,
+      "coordinateSource": "osm:way/448681976",
       "levels": {
         "crest": 569,
         "spillway": 566.88,
@@ -1889,9 +1889,9 @@
         "oid": "2"
       },
       "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=2031&oid=2",
-      "lat": null,
-      "lon": null,
-      "coordinateSource": null,
+      "lat": 50.47331,
+      "lon": 13.12861,
+      "coordinateSource": "osm:relation/6543503",
       "levels": {
         "crest": 735.9,
         "spillway": 733.07,
@@ -2253,9 +2253,9 @@
         "oid": "1"
       },
       "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=VLHN&oid=1",
-      "lat": null,
-      "lon": null,
-      "coordinateSource": null,
+      "lat": 49.11517,
+      "lon": 14.45614,
+      "coordinateSource": "osm:relation/6827894",
       "levels": {
         "crest": 372.6,
         "spillway": 364.6,
@@ -2617,9 +2617,9 @@
         "oid": "1"
       },
       "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=VLL2&oid=1",
-      "lat": null,
-      "lon": null,
-      "coordinateSource": null,
+      "lat": 48.63048,
+      "lon": 14.29561,
+      "coordinateSource": "osm:way/519389964",
       "levels": {
         "crest": 564.11,
         "spillway": 559.86,
@@ -3037,9 +3037,9 @@
         "oid": "3"
       },
       "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=SMSM&oid=3",
-      "lat": null,
-      "lon": null,
-      "coordinateSource": null,
+      "lat": 49.93261,
+      "lon": 14.04522,
+      "coordinateSource": "osm:way/52069134",
       "levels": {
         "crest": 261.65,
         "spillway": 260.1,

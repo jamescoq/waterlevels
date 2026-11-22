@@ -4,7 +4,9 @@
 # Gives the registry time to pull compromised releases before they reach us.
 minimumReleaseAge: 20160
 
-# Dependencies allowed to run install scripts. esbuild (used by tsx and Vite) checks its
-# platform binary after install.
+# Install scripts: esbuild (used by tsx and Vite) checks its platform binary after install.
+# better-sqlite3 and msgpackr-extract come with mapshaper; the map pipeline needs neither.
 allowBuilds:
+  better-sqlite3: false
   esbuild: true
+  msgpackr-extract: false
