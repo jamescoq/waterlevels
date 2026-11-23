@@ -1,0 +1,23 @@
+{
+  "at": "2026-11-23T19:15:22.432Z",
+  "outcome": "stored",
+  "reason": null,
+  "date": "2026-11-23",
+  "sources": {
+    "pmo": "ok",
+    "pod": "ok",
+    "poh": "paused",
+    "pvl": "ok",
+    "pla": "ok"
+  },
+  "sourceReasons": {
+    "pmo": null,
+    "pod": null,
+    "poh": "Cloudflare bot challenge (403) for GitHub-hosted runners",
+    "pvl": null,
+    "pla": null
+  },
+  "stations": 93,
+  "unmatched": [],
+  "warnings": []
+}
