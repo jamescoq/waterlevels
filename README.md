@@ -18,6 +18,15 @@ pnpm test
 
 `pnpm probe` fetches robots.txt, the overview and the volumes page from each of the five portals (15 requests) and writes a report to `probe-out/`. Run it sparingly.
 
+## Deployment
+
+GitHub Actions publishes the site to GitHub Pages:
+
+- `scrape.yml` runs daily at 07:17 UTC, commits the snapshot to the `data` branch and calls `deploy.yml`.
+- `deploy.yml` builds `latest.json` from the `data` branch (`pnpm derive`), builds the site and deploys it. It also runs on every push to `main`.
+
+One-time setup in the repository settings: Pages source "GitHub Actions"; optionally the repository variable `GOATCOUNTER_HOST` (e.g. `stavvody.goatcounter.com`) to turn on visit counting, and the secret `HEALTHCHECK_URL` for the daily health-check ping.
+
 ## Data
 
 The data belongs to Povodí Moravy, Odry, Ohře, Vltavy and Labe and is published by them without guarantee. This project is not affiliated with them.

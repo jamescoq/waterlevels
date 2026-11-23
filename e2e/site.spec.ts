@@ -186,3 +186,30 @@ test.describe("visit counting (visit-statistics spec, tasks 8.11)", () => {
     expect(errors).toEqual([]);
   });
 });
+
+test.describe("methodology page (data-transparency spec, tasks 9.3)", () => {
+  test("is linked from the footer and covers every required topic", async ({ page }) => {
+    await page.goto("/");
+    await page.getByRole("link", { name: "Jak data vznikají a co znamenají barvy" }).click();
+    await expect(page).toHaveURL(/\/metodika\/$/);
+    const headings = await page.getByRole("heading", { level: 2 }).allTextContents();
+    expect(headings).toEqual([
+      "Neoficiální projekt",
+      "Odkud data pocházejí",
+      "Prostory v nádrži",
+      "Jak určujeme stav nádrže",
+      "Proč plánované snížení nehodnotíme",
+      "Souhrnná čísla",
+      "Změna od včerejška",
+      "Mapa",
+      "Počítání návštěv",
+      "Mapové podklady a licence",
+    ]);
+    await expect(page.getByText("přispěvatelé OpenStreetMap")).toBeVisible();
+    await expect(page.getByText(/Copernicus DEM GLO-90/)).toBeVisible();
+    const { violations } = await new AxeBuilder({ page })
+      .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
+      .analyze();
+    expect(violations.map((v) => `${v.id}: ${v.nodes.length}× ${v.help}`)).toEqual([]);
+  });
+});

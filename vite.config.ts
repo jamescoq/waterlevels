@@ -19,5 +19,12 @@ export default defineConfig({
     emptyOutDir: true,
     target: "es2022",
     assetsInlineLimit: 0,
+    rollupOptions: {
+      input: {
+        main: here("src/web/index.html"),
+        // Methodology page (data-transparency spec), served at /metodika/.
+        metodika: here("src/web/metodika/index.html"),
+      },
+    },
   },
 });
