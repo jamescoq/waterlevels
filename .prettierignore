@@ -9,3 +9,5 @@ raw-pages/
 public/data/
 public/map/
 dist/
+test-results/
+playwright-report/

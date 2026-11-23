@@ -26,8 +26,14 @@ const LABELLED_CITIES: Record<string, { label: string; end?: boolean }> = {
 const LABEL_MIN_DIAMETER = 29;
 const MIN_DIAMETER = 18;
 const MIN_HIT = 28;
+/** Phone map (station-map spec: 10 px minimum on phones); 24 px touch area like the design. */
+const PHONE_MIN_DIAMETER = 10;
+const PHONE_MIN_HIT = 24;
+const PHONE_FRAME_WIDTH = 358;
 
 export interface MapPanelProps {
+  /** Phone layout: phone circle positions, no hover preview, fewer labels. */
+  phone: boolean;
   stations: ViewStation[];
   selectedId: string | null;
   hoveredId: string | null;
@@ -57,6 +63,7 @@ export function MapPanel(props: MapPanelProps) {
 
 function MapView({
   geometry: g,
+  phone,
   stations,
   selectedId,
   hoveredId,
@@ -64,9 +71,16 @@ function MapView({
   onSelect,
 }: MapPanelProps & { geometry: MapGeometry }) {
   const { width: W, height: H } = g;
-  /** px at an 880 px map → length that scales with the map's actual width. */
-  const scaled = (px: number) => `calc(${px} * 100cqw / ${W})`;
-  const placed = stations.filter((s) => s.desktop !== null);
+  // Circles come pre-placed for the 880 px desktop map and the 358 px phone map; the map's
+  // own layers are drawn in the desktop frame and simply scale.
+  const frameW = phone ? PHONE_FRAME_WIDTH : W;
+  const frameH = (H * frameW) / W;
+  const minD = phone ? PHONE_MIN_DIAMETER : MIN_DIAMETER;
+  const minHit = phone ? PHONE_MIN_HIT : MIN_HIT;
+  const circleOf = (s: ViewStation) => (phone ? s.phone : s.desktop)!;
+  /** px in the circles' frame → length that scales with the map's actual width. */
+  const scaled = (px: number) => `calc(${px} * 100cqw / ${frameW})`;
+  const placed = stations.filter((s) => s.desktop !== null && s.phone !== null);
 
   return (
     <div class="map" style={{ aspectRatio: `${W} / ${H}` }}>
@@ -90,7 +104,7 @@ function MapView({
         />
         <path d={g.border} fill="url(#landfill)" />
         <image
-          href="/map/hillshade-1760.webp"
+          href={phone ? "/map/hillshade-880.webp" : "/map/hillshade-1760.webp"}
           x="0"
           y="0"
           width={W}
@@ -119,6 +133,7 @@ function MapView({
         <path d={g.border} fill="none" stroke="#3A6A98" stroke-opacity="0.7" stroke-width="1" />
         {g.cities
           .filter((c) => LABELLED_CITIES[c.name])
+          .filter(() => !phone)
           .map((c) => {
             const preferred = LABELLED_CITIES[c.name]!;
             // Try the preferred side, then the other; give way if both are taken.
@@ -150,9 +165,9 @@ function MapView({
       </svg>
 
       {placed.map((s) => {
-        const c = s.desktop!;
-        const d = Math.max(MIN_DIAMETER, c.r * 2);
-        const size = `max(${MIN_DIAMETER}px, ${scaled(c.r * 2)})`;
+        const c = circleOf(s);
+        const d = Math.max(minD, c.r * 2);
+        const size = `max(${minD}px, ${scaled(c.r * 2)})`;
         const hovered = hoveredId === s.id;
         const selected = selectedId === s.id;
         const fill = shownFill(s);
@@ -164,16 +179,17 @@ function MapView({
             aria-label={stationAria(s)}
             aria-pressed={selected}
             style={{
-              left: `${(c.x / W) * 100}%`,
-              top: `${(c.y / H) * 100}%`,
-              width: `max(${MIN_HIT}px, ${size})`,
-              height: `max(${MIN_HIT}px, ${size})`,
+              left: `${(c.x / frameW) * 100}%`,
+              top: `${(c.y / frameH) * 100}%`,
+              width: `max(${minHit}px, ${size})`,
+              height: `max(${minHit}px, ${size})`,
               zIndex: hovered ? 2050 : selected ? 2000 : Math.round(1000 - d),
             }}
-            onMouseEnter={() => onHover(s.id)}
-            onMouseLeave={() => onHover(null)}
-            onFocus={() => onHover(s.id)}
-            onBlur={() => onHover(null)}
+            // Phones have no preview (station-map spec, "Preview on desktop").
+            onMouseEnter={phone ? undefined : () => onHover(s.id)}
+            onMouseLeave={phone ? undefined : () => onHover(null)}
+            onFocus={phone ? undefined : () => onHover(s.id)}
+            onBlur={phone ? undefined : () => onHover(null)}
             onClick={() => onSelect(s.id)}
           >
             <Disc status={s.status} fill={fill} size={size} hovered={hovered} selected={selected} />
@@ -182,15 +198,17 @@ function MapView({
       })}
 
       {placed
-        .filter(
-          (s) =>
-            s.desktop!.r * 2 >= LABEL_MIN_DIAMETER || s.id === selectedId || s.id === hoveredId,
+        .filter((s) =>
+          // On phones only the selected station is named; the map is too small for more.
+          phone
+            ? s.id === selectedId
+            : s.desktop!.r * 2 >= LABEL_MIN_DIAMETER || s.id === selectedId || s.id === hoveredId,
         )
         .map((s) => {
-          const c = s.desktop!;
+          const c = circleOf(s);
           const hovered = s.id === hoveredId;
           const over = s.status === "above-storage";
-          const d = `max(${MIN_DIAMETER}px, ${scaled(c.r * 2)})`;
+          const d = `max(${minD}px, ${scaled(c.r * 2)})`;
           const offset = `calc(${d} / 2 + ${5 + (over ? 5 : 0)}px${hovered ? ` + ${d} * 0.125` : ""})`;
           return (
             <span
@@ -198,8 +216,8 @@ function MapView({
               class={`map-label${hovered ? " hovered" : ""}${s.id === selectedId ? " selected" : ""}`}
               aria-hidden="true"
               style={{
-                left: `${(c.x / W) * 100}%`,
-                top: `${(c.y / H) * 100}%`,
+                left: `${(c.x / frameW) * 100}%`,
+                top: `${(c.y / frameH) * 100}%`,
                 transform: `translate(-50%, ${offset})`,
               }}
             >

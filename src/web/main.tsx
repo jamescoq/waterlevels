@@ -12,5 +12,7 @@ import "@fontsource/outfit/latin-ext-600.css";
 import "./styles.css";
 import { render } from "preact";
 import { App } from "./App.tsx";
+import { countThisVisit } from "./visits.ts";
 
 render(<App />, document.getElementById("app")!);
+countThisVisit();
