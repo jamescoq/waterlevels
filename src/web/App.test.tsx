@@ -10,11 +10,16 @@ import { collect, type PageFetcher } from "../scraper/collect.ts";
 import { loadRegistry } from "../scraper/output.ts";
 import { SOURCES } from "../scraper/sources.ts";
 import type { Latest } from "../shared/latest.ts";
+import type { OverridesFile, StationsFile } from "../shared/registry.ts";
+import type { Snapshot } from "../shared/snapshot.ts";
 
 const root = join(import.meta.dirname, "../..");
 const now = new Date("2026-11-22T11:00:00+01:00");
 let latest: Latest;
 let geometry: string;
+let registry: StationsFile;
+let overrides: OverridesFile;
+let today: Snapshot;
 
 const fixtures: PageFetcher = {
   async get(url) {
@@ -40,7 +45,7 @@ const fixtures: PageFetcher = {
 };
 
 beforeAll(async () => {
-  const { registry, overrides } = await loadRegistry(join(root, "registry"));
+  ({ registry, overrides } = await loadRegistry(join(root, "registry")));
   const result = await collect({
     fetcher: fixtures,
     registry,
@@ -49,7 +54,8 @@ beforeAll(async () => {
     sleep: async () => {},
   });
   if (!result.ok) throw new Error(result.reason);
-  latest = buildLatest({ registry, overrides, snapshots: [result.snapshot], now });
+  today = result.snapshot;
+  latest = buildLatest({ registry, overrides, snapshots: [today], now });
   geometry = await readFile(join(root, "public/map/geometry.json"), "utf8");
 });
 
@@ -62,8 +68,8 @@ afterEach(() => {
   vi.unstubAllGlobals();
 });
 
-const renderApp = async () => {
-  render(<App load={async () => latest} now={() => now} />);
+const renderApp = async (data: Latest = latest, at: Date = now) => {
+  render(<App load={async () => data} now={() => at} />);
   await screen.findByRole("heading", { level: 1 });
 };
 const text = (el: Element) =>
@@ -155,5 +161,75 @@ describe("App", () => {
     expect(footer).toContain("Povodí Vltavy, Labe, Ohře, Moravy a Odry");
     expect(footer).toContain("Neoficiální projekt");
     expect(footer).toContain("bez záruky");
+  });
+});
+
+describe("App states (tasks 8.6)", () => {
+  it("shows a skeleton, not numbers, while the data loads (spec: Slow connection)", () => {
+    render(<App load={() => new Promise<Latest>(() => {})} now={() => now} />);
+    expect(document.querySelector('[aria-busy="true"]')).toBeTruthy();
+    expect(screen.queryByRole("heading", { level: 1 })).toBeNull();
+    expect(document.body.textContent).not.toMatch(/\d+ %/);
+  });
+
+  it("warns that the data is out of date and greys every station (spec: Old data)", async () => {
+    const later = new Date(now.getTime() + 40 * 3600_000);
+    await renderApp(latest, later);
+    expect(text(screen.getAllByRole("status")[0]!)).toMatch(
+      /^Data nejsou aktuální: poslední úspěšné stažení proběhlo 22\. 11\. 2026, \d+:\d\d\./,
+    );
+    expect(text(screen.getByRole("heading", { level: 1 }))).toBe(
+      "Aktuální data nejsou k dispozici.",
+    );
+  });
+
+  it("shows a notice and no numbers before the first collection (spec: Before the first collection)", async () => {
+    const empty = buildLatest({ registry, overrides, snapshots: [], now });
+    await renderApp(empty);
+    expect(screen.getByText(/^Data zatím nejsou k dispozici\./)).toBeTruthy();
+    expect(screen.queryByRole("list", { name: "Počty nádrží podle stavu" })).toBeNull();
+    expect(screen.queryByText(/Souhrnná naplněnost/)).toBeNull();
+  });
+
+  it("keeps last known values when a source failed today (spec: Source failed)", async () => {
+    const shift = (iso: string | null) =>
+      iso === null ? null : new Date(Date.parse(iso) - 24 * 3600_000).toISOString();
+    const yesterday: Snapshot = {
+      ...today,
+      date: "2026-11-21",
+      fetchedAt: shift(today.fetchedAt)!,
+      stations: Object.fromEntries(
+        Object.entries(today.stations).map(([id, s]) => [
+          id,
+          { ...s, measuredAt: shift(s.measuredAt) },
+        ]),
+      ),
+    };
+    const failed: Snapshot = {
+      ...today,
+      sources: { ...today.sources, pla: "failed" },
+      sourceReasons: { ...today.sourceReasons, pla: "HTTP 503" },
+      stations: Object.fromEntries(
+        Object.entries(today.stations).filter(([id]) => !id.startsWith("pla-")),
+      ),
+    };
+    const data = buildLatest({ registry, overrides, snapshots: [yesterday, failed], now });
+    history.replaceState(null, "", "/?stanice=pla-bedrichov");
+    await renderApp(data);
+    await screen.findByRole("heading", { level: 2, name: "Bedřichov" });
+    expect(
+      screen.getByText(
+        /^Dnešní měření se nepodařilo načíst\. Poslední známé hodnoty jsou z 21\. 11\. 2026\.$/,
+      ),
+    ).toBeTruthy();
+    expect(text(document.querySelector(".values")!)).toContain("773,64 m n. m.");
+    expect(text(document.querySelector(".source p")!)).toMatch(/poslední měření 21\. 11\. 2026/);
+  });
+
+  it("says the change since yesterday is unknown on the first day (spec: First day)", async () => {
+    history.replaceState(null, "", "/?stanice=pod-slezska-harta");
+    await renderApp();
+    await screen.findByRole("heading", { level: 2, name: "VD Slezská Harta" });
+    expect(screen.getByText("Změnu od včerejška neznáme")).toBeTruthy();
   });
 });

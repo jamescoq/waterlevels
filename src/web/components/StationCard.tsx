@@ -53,7 +53,9 @@ export function StationCard({ station: s }: { station: ViewStation }) {
     <article class="card" style={statusVars(s.status)} aria-labelledby="card-title">
       <div class="card-title">
         <div>
-          <h2 id="card-title">{s.name}</h2>
+          <h2 id="card-title" tabIndex={-1}>
+            {s.name}
+          </h2>
           <span class="sub">
             {s.river} · {s.sourceName}
           </span>

@@ -13,6 +13,8 @@ import {
 export type Tab = "detail" | "list";
 
 export interface SidePanelProps {
+  /** Phone layout: shorter tab labels and a tap hint. */
+  phone: boolean;
   view: View;
   tab: Tab;
   onTab: (tab: Tab) => void;
@@ -23,6 +25,7 @@ export interface SidePanelProps {
 }
 
 export function SidePanel({
+  phone,
   view,
   tab,
   onTab,
@@ -35,10 +38,10 @@ export function SidePanel({
     <aside class="side-panel" aria-label="Detail a seznam nádrží">
       <div class="tabs" role="group" aria-label="Zobrazení panelu">
         <button type="button" aria-pressed={tab === "detail"} onClick={() => onTab("detail")}>
-          Detail nádrže
+          {phone ? "Detail" : "Detail nádrže"}
         </button>
         <button type="button" aria-pressed={tab === "list"} onClick={() => onTab("list")}>
-          Všechny nádrže ({view.stations.length})
+          {phone ? "Seznam" : "Všechny nádrže"} ({view.stations.length})
         </button>
       </div>
       {/* Screen readers hear only the name and status when the selection changes. */}
@@ -53,6 +56,7 @@ export function SidePanel({
         )
       ) : (
         <StationList
+          phone={phone}
           view={view}
           selectedId={selected?.id ?? null}
           hoveredId={hoveredId}
@@ -65,12 +69,14 @@ export function SidePanel({
 }
 
 function StationList({
+  phone,
   view,
   selectedId,
   hoveredId,
   onHover,
   onSelect,
 }: {
+  phone: boolean;
   view: View;
   selectedId: string | null;
   hoveredId: string | null;
@@ -79,7 +85,11 @@ function StationList({
 }) {
   return (
     <div class="list">
-      <p class="hint">Najetím na název nádrž na mapě zvýrazníte, kliknutím otevřete její detail.</p>
+      <p class="hint">
+        {phone
+          ? "Klepnutím na nádrž otevřete její detail."
+          : "Najetím na název nádrž na mapě zvýrazníte, kliknutím otevřete její detail."}
+      </p>
       <div class="list-scroll">
         {view.groups.map((group) => (
           <section key={group.basin} class="group" aria-labelledby={`group-${group.basin}`}>

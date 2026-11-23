@@ -7,3 +7,5 @@ probe-out/
 data/
 raw-pages/
 public/data/
+test-results/
+playwright-report/

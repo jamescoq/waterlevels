@@ -342,10 +342,10 @@ Alternative considered: showing a station with an unpublished fill as "Bez dat".
 
 Visits are counted with GoatCounter's hosted service, which is free for non-commercial use.
 
-- The counting script `count.js` is **self-hosted**: a pinned copy is committed under `public/` and served from stavvody.cz. The only third-party request is the one it sends to `https://<site-code>.goatcounter.com/count`.
-- The script is loaded with `async` after the app's own code, and only when `location.hostname` is `stavvody.cz`.
-- The counted path is set explicitly instead of relying on the script's default: `/` for a plain visit and `/?stanice=<id>` for a visit that arrives through a shared link. Selections inside the page use `history.replaceState` and are not counted.
-- The site code is not a secret; it sits in the page source.
+- No GoatCounter code runs on the page. `src/web/visits.ts` sends the one request GoatCounter's `count.js` would send, to its documented `/count` endpoint (`p` path, `t` title, `r` referrer, `s` screen size, `b`, `rnd`), with `navigator.sendBeacon` and a `fetch` fallback.
+- It runs only when `location.hostname` is `stavvody.cz` and a GoatCounter host is configured at build time (`VITE_GOATCOUNTER_HOST`, e.g. `stavvody.goatcounter.com`, set by the deploy workflow from a repository variable). Local builds and forks send nothing.
+- It runs once, after the page has rendered (`requestIdleCallback`), and swallows every error.
+- The counted path is `/` for a plain visit and `/?stanice=<id>` for a visit that arrives through a shared link. Selections inside the page use `history.replaceState` and are not counted.
 - Per GoatCounter's documentation it sets no cookies, stores nothing on the device and does not keep IP addresses. It records the page, the referring site, browser and system, screen size, language and country. Re-check this when signing up, and list the same items on the methodology page.
 
 Alternatives considered:
@@ -353,7 +353,7 @@ Alternatives considered:
 | Option | Why not |
 |---|---|
 | Google Analytics | Sets cookies, so it needs a consent banner under Czech law; its script is larger than the whole JS budget; sends visitor IPs to Google; widely blocked |
-| Cloudflare Web Analytics | Free and cookieless, but needs a Cloudflare account and its script cannot be self-hosted; the fallback if GoatCounter stops fitting |
+| Cloudflare Web Analytics | Free and cookieless, but needs a Cloudflare account and its script cannot be replaced by a single request; the fallback if GoatCounter stops fitting |
 | Plausible, Fathom, Simple Analytics | Paid |
 | No counting, Google Search Console only | Shows only visits from Google Search; still worth adding next to GoatCounter, since it needs no script |
 

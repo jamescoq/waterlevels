@@ -59,12 +59,12 @@
 - [x] 8.3 Build the map: hillshade, border, rivers, cities, circles by status, labels, legend, hover and focus preview, selection; verify against the desktop artboard and the `station-map` scenarios
 - [x] 8.4 Build the list tab grouped by Povodí with hover highlight and selection; verify the `station-list` scenarios
 - [x] 8.5 Build the station card with the dam cut-through, level sentence, note box, share link and source link; verify against the six-states artboard and the `station-detail` scenarios
-- [ ] 8.6 Apply the 36-hour rule in the browser and add the stale banner, loading skeleton, source-failed and first-day states and the no-data-yet notice; verify each state with fixture data in a component test
-- [ ] 8.7 Implement `?stanice=` selection with `history.replaceState`; verify the shared-link, unknown-id and back-button scenarios in the Playwright smoke test
-- [ ] 8.8 Build the phone layout with the bottom sheet opening on the list; verify against the phone artboards at 390 px width with no horizontal scroll
-- [ ] 8.9 Meet the `site-accessibility` requirements; verify an automated axe check reports no violations, a keyboard-only walk-through, and contrast of the smallest labels
+- [x] 8.6 Apply the 36-hour rule in the browser and add the stale banner, loading skeleton, source-failed and first-day states and the no-data-yet notice; verify each state with fixture data in a component test
+- [x] 8.7 Implement `?stanice=` selection with `history.replaceState`; verify the shared-link, unknown-id and back-button scenarios in the Playwright smoke test
+- [x] 8.8 Build the phone layout with the bottom sheet opening on the list; verify against the phone artboards at 390 px width with no horizontal scroll
+- [x] 8.9 Meet the `site-accessibility` requirements; verify an automated axe check reports no violations, a keyboard-only walk-through, and contrast of the smallest labels
 - [x] 8.10 Build the footer with sources, update frequency, "data bez záruky" and the unofficial notice; verify the `data-transparency` footer scenarios
-- [ ] 8.11 Add visit counting with a self-hosted, pinned `count.js`, loaded only on stavvody.cz with an explicit path; verify in the Playwright test that a load under the production hostname sends exactly one request to the counter, a load on localhost sends none, selecting stations sends none, and the site works with the counter request blocked
+- [x] 8.11 Add visit counting as a single request to GoatCounter's `/count` endpoint (no third-party script), sent only on stavvody.cz with an explicit path; verify in the Playwright test that a load under the production hostname sends exactly one request to the counter, a load on localhost sends none, selecting stations sends none, and the site works with the counter request blocked
 
 ## 9. Hosting and launch
 

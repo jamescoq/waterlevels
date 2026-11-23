@@ -14,7 +14,16 @@ const CHIPS: { label: string; status: Status; count: (h: Headline) => number }[]
   { label: "mimo hodnocení", status: "planned", count: (h) => h.outsideRating },
 ];
 
-export function Hero({ headline }: { headline: Headline }) {
+export function Hero({
+  headline,
+  hasData,
+  phone,
+}: {
+  headline: Headline;
+  /** False before the first collection: then no numbers are shown. */
+  hasData: boolean;
+  phone: boolean;
+}) {
   const text = headlineText(headline);
   const outside = headline.statusCounts;
   return (
@@ -33,29 +42,34 @@ export function Hero({ headline }: { headline: Headline }) {
           </>
         )}
       </h1>
-      <p>
-        {text.weighted ? `${text.weighted} ` : ""}
-        Najetím na kruh zobrazíte náhled, kliknutím otevřete řez hrází. Všechny nádrže najdete také
-        v seznamu vedle mapy.
-      </p>
-      <ul class="chips" aria-label="Počty nádrží podle stavu">
-        {CHIPS.map((chip) => (
-          <li
-            key={chip.label}
-            class="chip"
-            title={
-              chip.status === "planned"
-                ? `${outside["no-data"]} bez dat, ${outside.planned} plánované snížení, ${outside["level-only"]} jen hladina`
-                : undefined
-            }
-          >
-            <span class="dot" style={statusVars(chip.status)} aria-hidden="true" />
-            <span>
-              <strong>{chip.count(headline)}</strong> {chip.label}
-            </span>
-          </li>
-        ))}
-      </ul>
+      {hasData && (
+        <p>
+          {text.weighted ? `${text.weighted} ` : ""}
+          {phone
+            ? "Klepnutím na kruh nebo na nádrž v seznamu otevřete její detail."
+            : "Najetím na kruh zobrazíte náhled, kliknutím otevřete řez hrází. Všechny nádrže najdete také v seznamu vedle mapy."}
+        </p>
+      )}
+      {hasData && (
+        <ul class="chips" aria-label="Počty nádrží podle stavu">
+          {CHIPS.map((chip) => (
+            <li
+              key={chip.label}
+              class="chip"
+              title={
+                chip.status === "planned"
+                  ? `${outside["no-data"]} bez dat, ${outside.planned} plánované snížení, ${outside["level-only"]} jen hladina`
+                  : undefined
+              }
+            >
+              <span class="dot" style={statusVars(chip.status)} aria-hidden="true" />
+              <span>
+                <strong>{chip.count(headline)}</strong> {chip.label}
+              </span>
+            </li>
+          ))}
+        </ul>
+      )}
     </section>
   );
 }
