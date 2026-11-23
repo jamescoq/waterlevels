@@ -73,11 +73,21 @@ jobs:
         if: success() && env.HEALTHCHECK_URL != ''
         run: curl -fsS -m 10 --retry 3 "$HEALTHCHECK_URL" > /dev/null
 
-  # The deploy workflow is called here once it exists (tasks 9.1).
-
-  alert:
+  # Publish the new snapshot. Called directly: the commit above, made with Actions' token,
+  # does not start other workflows.
+  deploy:
     needs: scrape
-    if: github.repository == 'jamescoq/waterlevels'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/deploy.yml
+
+  # Last, so a data alert never holds back the commit or the deploy; it still runs when the
+  # deploy fails.
+  alert:
+    needs: [scrape, deploy]
+    if: always() && github.repository == 'jamescoq/waterlevels' && needs.scrape.result == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:

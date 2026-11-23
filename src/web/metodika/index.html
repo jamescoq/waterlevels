@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jak data vznikají – Stav nádrží</title>
+    <meta
+      name="description"
+      content="Odkud mapa nádrží bere data, co znamenají jednotlivé stavy a barvy a jak vznikají souhrnná čísla."
+    />
+    <meta name="theme-color" content="#050B16" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <div class="page doc">
+      <header class="site-header">
+        <a class="brand" href="/">
+          <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true" focusable="false">
+            <circle cx="17" cy="17" r="16" fill="#0B1828" stroke="#3DB9F2" stroke-width="1.5" />
+            <path
+              d="M5 19 C9 16.5 13 16.5 17 19 S25 21.5 29 19 L29 22 C28 27 23 31 17 31 C11 31 6 27 5 22 Z"
+              fill="#3DB9F2"
+            />
+            <path
+              d="M5 19 C9 16.5 13 16.5 17 19 S25 21.5 29 19"
+              fill="none"
+              stroke="#BDEBFF"
+              stroke-width="1.2"
+            />
+          </svg>
+          <span>Stav nádrží</span>
+        </a>
+        <a href="/">Zpět na mapu</a>
+      </header>
+
+      <main>
+        <p class="eyebrow">Metodika</p>
+        <h1>Jak data vznikají a co znamenají barvy</h1>
+        <p class="lead">
+          Mapa ukazuje, jak plné jsou dnes české nádrže, které sledují státní podniky Povodí. Tady
+          najdete, odkud čísla pocházejí, jak z nich vzniká stav každé nádrže a co mapa neříká.
+        </p>
+
+        <section aria-labelledby="projekt">
+          <h2 id="projekt">Neoficiální projekt</h2>
+          <p>
+            Stav nádrží je osobní, nekomerční projekt. Nejde o službu státních podniků Povodí ani
+            státu a nemá s nimi žádnou smlouvu. Všechna čísla přebíráme z jejich veřejných webů a u
+            každé nádrže odkazujeme na její živou stránku. Pro rozhodování se vždy řiďte daty
+            Povodí.
+          </p>
+        </section>
+
+        <section aria-labelledby="zdroje">
+          <h2 id="zdroje">Odkud data pocházejí</h2>
+          <p>
+            Data zveřejňují na svých webech státní podniky Povodí Vltavy, Labe, Ohře, Moravy a Odry.
+            Jednou denně ráno si stáhneme dvě stránky každého z nich: přehled měření (hladina,
+            objem, přítok, odtok, srážky, teplota) a objemy vody v jednotlivých prostorech nádrže.
+            Každá hodnota na mapě má u sebe čas měření; nejde o naše měření.
+          </p>
+          <ul>
+            <li>Data jsou provozní a Povodí je zveřejňují <strong>bez záruky</strong>.</li>
+            <li>
+              Odtok zveřejňují v přehledu jen Povodí Vltavy a Odry. U ostatních nádrží ho ukazujeme
+              jako neznámý.
+            </li>
+            <li>
+              Data Povodí Ohře zatím nestahujeme: jejich web automatické stahování odmítá. Nádrže
+              Povodí Ohře jsou proto na mapě bez dat a odkazují na jeho web.
+            </li>
+            <li>
+              Když se stažení nepovede, ukazujeme poslední známé hodnoty s datem měření a nádrž
+              označíme jako „Bez dat“.
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="prostory">
+          <h2 id="prostory">Prostory v nádrži</h2>
+          <p>Nádrž je rozdělená na prostory podle toho, k čemu voda slouží:</p>
+          <dl class="terms">
+            <dt>Stálé nadržení</dt>
+            <dd>Spodní část nádrže, která zůstává zaplněná vždy.</dd>
+            <dt>Zásobní prostor</dt>
+            <dd>
+              Voda pro odběry, například pro pitnou vodu, průmysl nebo nadlepšování průtoků.
+              Procento naplnění na mapě se týká právě tohoto prostoru.
+            </dd>
+            <dt>Retenční prostor (ovladatelný a neovladatelný)</dt>
+            <dd>Horní část nádrže, která má zůstat prázdná, aby mohla zachytit povodeň.</dd>
+          </dl>
+          <p>
+            Řez hrází u každé nádrže je schematický, ne v měřítku: ukazuje, kde je dnešní hladina
+            mezi stálým nadržením, plnou zásobou a maximální hladinou.
+          </p>
+        </section>
+
+        <section aria-labelledby="stavy">
+          <h2 id="stavy">Jak určujeme stav nádrže</h2>
+          <p>
+            Každá nádrž má právě jeden stav. Pravidla platí v tomto pořadí a použije se první, které
+            sedí. Stav popisuje, jak plný je zásobní prostor; neříká, zda je to na danou roční dobu
+            obvyklé, protože srovnání s minulými lety zatím neděláme.
+          </p>
+          <table class="statuses">
+            <thead>
+              <tr>
+                <th scope="col">Stav</th>
+                <th scope="col">Kdy</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><span class="dot" style="--c: #8fa3ba"></span> Bez dat</th>
+                <td>
+                  Dnešní data se nepodařilo stáhnout, Povodí pro nádrž nic nezveřejnilo, nebo je
+                  poslední měření starší než 36 hodin.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <span class="dot" style="--c: #b4c3d6"></span> Plánované snížení
+                </th>
+                <td>
+                  Správce hladinu záměrně snížil, například kvůli opravě hráze. Zapisujeme podle
+                  oznámení správce.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <span class="dot" style="--c: #b79cff"></span> Nad zásobní hladinou
+                </th>
+                <td>
+                  Voda zasahuje do retenčního prostoru, hladina je nad plnou zásobou, nebo Povodí
+                  uvádí naplnění zásobního prostoru přes 100 %.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="dot" style="--c: #a9bcd2"></span> Jen hladina</th>
+                <td>
+                  Nádrž nemá vymezený zásobní prostor, nebo Povodí jeho naplnění neuvádí. Ukazujeme
+                  jen výšku hladiny.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="dot" style="--c: #3db9f2"></span> Vysoká zásoba</th>
+                <td>Zásobní prostor je plný ze 70 % a více.</td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="dot" style="--c: #f4b740"></span> Střední zásoba</th>
+                <td>Zásobní prostor je plný ze 40 až 70 %.</td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="dot" style="--c: #ff6e6e"></span> Nízká zásoba</th>
+                <td>Zásobní prostor je plný méně než ze 40 %.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            Hranice 70 % a 40 % jsou zatím pracovní a po týdnu skutečných dat je ještě prověříme.
+          </p>
+        </section>
+
+        <section aria-labelledby="snizeni">
+          <h2 id="snizeni">Proč plánované snížení nehodnotíme</h2>
+          <p>
+            Když správce nádrž záměrně vypustí, třeba kvůli opravě hráze, je hladina nízko, ale o
+            sucho nejde. Kdybychom takovou nádrž obarvili jako nízkou zásobu, mapa by budila falešný
+            poplach. Proto ji ukazujeme šedě s vysvětlením a do souhrnných čísel ji nepočítáme.
+          </p>
+        </section>
+
+        <section aria-labelledby="souhrn">
+          <h2 id="souhrn">Souhrnná čísla</h2>
+          <ul>
+            <li>
+              <strong>Hlavní věta</strong> („V 25 z 37 nádrží je zásoba vody nad 70 %“) počítá
+              nádrže ve stavech Vysoká zásoba a Nad zásobní hladinou ze všech nádrží na mapě.
+            </li>
+            <li>
+              <strong>Souhrnná naplněnost</strong> je součet vody ve všech zásobních prostorech
+              dělený jejich celkovým objemem. Nádrže bez dat, s plánovaným snížením a s údajem jen o
+              hladině do ní nepočítáme. Velké nádrže v ní mají velkou váhu, proto ji uvádíme až
+              druhou.
+            </li>
+            <li>
+              <strong>Mimo hodnocení</strong> jsou nádrže bez dat, s plánovaným snížením a s údajem
+              jen o hladině.
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="zmena">
+          <h2 id="zmena">Změna od včerejška</h2>
+          <p>
+            Porovnáváme dnešní změřenou hladinu s měřením zhruba o den starším (18 až 30 hodin) a
+            rozdíl zaokrouhlujeme na celé centimetry. Pod 1 cm píšeme „beze změny“. Rozdíl přítoku a
+            odtoku nepoužíváme, protože nezahrnuje odběry, například pro pitnou vodu.
+          </p>
+        </section>
+
+        <section aria-labelledby="mapa">
+          <h2 id="mapa">Mapa</h2>
+          <p>
+            Velikost kruhu odpovídá objemu zásobního prostoru. Barva ukazuje stav, výplň zespodu
+            naplnění zásobního prostoru. Kruhy, které by se překrývaly, mírně posouváme, nejvýše o
+            16 pixelů od skutečné polohy.
+          </p>
+        </section>
+
+        <section aria-labelledby="navstevnost">
+          <h2 id="navstevnost">Počítání návštěv</h2>
+          <p>
+            Návštěvnost měříme službou GoatCounter, bez cookies a bez ukládání čehokoli do vašeho
+            zařízení, proto tu nenajdete žádný souhlas s cookies. Při načtení stránky se zaznamená:
+            adresa stránky, web, ze kterého jste přišli, prohlížeč a operační systém, velikost
+            obrazovky, jazyk a země. IP adresu GoatCounter neukládá. Výběr nádrží na mapě se
+            nezaznamenává.
+          </p>
+        </section>
+
+        <section aria-labelledby="licence">
+          <h2 id="licence">Mapové podklady a licence</h2>
+          <ul>
+            <li>
+              Hranice státu a města: <a href="https://www.naturalearthdata.com/">Natural Earth</a>,
+              volné dílo (public domain).
+            </li>
+            <li>
+              Řeky: ©
+              <a href="https://www.openstreetmap.org/copyright">přispěvatelé OpenStreetMap</a>,
+              licence ODbL.
+            </li>
+            <li>
+              Reliéf: Copernicus DEM GLO-90 © DLR e.V. 2010–2014 a © Airbus Defence and Space GmbH
+              2014–2018, poskytnuto v rámci programu Copernicus Evropskou unií a ESA.
+            </li>
+            <li>
+              Souřadnice nádrží: <a href="https://www.wikidata.org/">Wikidata</a> (CC0) a
+              OpenStreetMap.
+            </li>
+            <li>Písma Inter a Outfit: SIL Open Font License.</li>
+            <li>
+              Data o nádržích patří státním podnikům Povodí Vltavy, Labe, Ohře, Moravy a Odry.
+            </li>
+          </ul>
+          <p>
+            Zdrojový kód je veřejný pod licencí MIT:
+            <a href="https://github.com/jamescoq/waterlevels">github.com/jamescoq/waterlevels</a>.
+            Kontakt: <a href="mailto:stavvodycz@gmail.com">stavvodycz@gmail.com</a>.
+          </p>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="./metodika.ts"></script>
+  </body>
+</html>

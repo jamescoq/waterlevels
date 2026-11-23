@@ -5,7 +5,7 @@ export function Footer() {
     <footer class="site-footer">
       <p>
         Data: státní podniky Povodí Vltavy, Labe, Ohře, Moravy a Odry · aktualizace jednou denně ·
-        provozní data bez záruky.
+        provozní data bez záruky. <a href="/metodika/">Jak data vznikají a co znamenají barvy</a>
       </p>
       <p>
         Neoficiální projekt, nejde o službu státních podniků Povodí ani státu. Kontakt:{" "}

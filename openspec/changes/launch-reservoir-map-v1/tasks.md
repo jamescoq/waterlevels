@@ -70,7 +70,7 @@
 
 - [ ] 9.1 Add `deploy.yml` as a reusable workflow called by `scrape.yml` and triggered by pushes to `main` and `data`; verify a manual scrape run ends with a new Pages deployment
 - [ ] 9.2 Set the DNS records, verify the domain in GitHub, set the custom domain and enforce HTTPS; verify `https://stavvody.cz` loads and both http and www redirect to it
-- [ ] 9.3 Write the Czech methodology page with the map data credits; verify it covers every topic in the `data-transparency` methodology requirement
+- [x] 9.3 Write the Czech methodology page with the map data credits; verify it covers every topic in the `data-transparency` methodology requirement
 - [ ] 9.4 Render the map at the real station count and have the owner choose a density solution if it is crowded; verify the decision is recorded in design.md
 - [ ] 9.5 Review the 70 % and 40 % thresholds against a week of real data with the owner; verify the decision is recorded in design.md
 - [ ] 9.6 Measure the home page with a mobile lab test; verify Largest Contentful Paint is 2.5 s or less

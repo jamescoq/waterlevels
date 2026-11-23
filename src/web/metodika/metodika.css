@@ -1,0 +1,93 @@
+/* Methodology page: a readable column in the site's colours. */
+.doc {
+  max-width: 820px;
+}
+.doc .brand {
+  color: var(--text);
+  text-decoration: none;
+}
+.doc main {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.doc h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.12;
+}
+.doc h2 {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+}
+.doc p,
+.doc li,
+.doc dd,
+.doc td {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-2);
+}
+.doc p {
+  margin: 0 0 10px;
+}
+.doc .lead {
+  font-size: 18px;
+  color: var(--text-3);
+}
+.doc ul {
+  margin: 0;
+  padding-left: 22px;
+}
+.doc li + li {
+  margin-top: 6px;
+}
+.doc .terms dt {
+  font-weight: 600;
+  color: var(--text);
+}
+.doc .terms dd {
+  margin: 2px 0 12px;
+}
+.doc .statuses {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 6px 0 12px;
+}
+.doc .statuses th,
+.doc .statuses td {
+  padding: 10px 12px;
+  border-top: 1px solid var(--border-soft);
+  text-align: left;
+  vertical-align: top;
+}
+.doc .statuses thead th {
+  border-top: 0;
+  font-size: 12.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--eyebrow);
+}
+.doc .statuses tbody th {
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+.doc .statuses .dot {
+  display: inline-block;
+  margin-right: 6px;
+  vertical-align: 1px;
+}
+@media (max-width: 640px) {
+  .doc h1 {
+    font-size: 28px;
+  }
+  .doc .statuses tbody th {
+    white-space: normal;
+  }
+}

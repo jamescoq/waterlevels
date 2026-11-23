@@ -1,0 +1,64 @@
+name: Deploy
+
+# Builds latest.json from the data branch and the site from main, and publishes it to GitHub
+# Pages (design.md Decision 1 and 9; tasks 9.1).
+#
+# Runs after every daily scrape (called by scrape.yml), on pushes to main, on pushes to data
+# made outside Actions (the Czech fallback machine), and on demand. Pushes made by Actions'
+# own token do not start workflows, which is why scrape.yml calls this one directly.
+
+on:
+  workflow_call:
+  workflow_dispatch:
+  push:
+    branches: [main, data]
+
+permissions:
+  contents: read
+
+# One deploy at a time; a newer one waits instead of cancelling a running one.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.repository == 'jamescoq/waterlevels'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: data
+          path: data
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm derive --data-dir data --out public/data/latest.json
+      - run: pnpm build
+        env:
+          # GoatCounter site for visit counting (tasks 9.7); unset means nothing is counted.
+          VITE_GOATCOUNTER_HOST: ${{ vars.GOATCOUNTER_HOST }}
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: dist/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
