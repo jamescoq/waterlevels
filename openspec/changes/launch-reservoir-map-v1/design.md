@@ -156,7 +156,9 @@ Probe findings that shape the parsers (details in `src/scraper/sources.ts`):
 
 Alternatives considered: React (fits but uses most of the JS budget on the library) and React code compiled to Preact through `preact/compat` (kept as an escape hatch if a needed library expects React). The owner chose plain Preact.
 
-Fonts (Outfit, Inter) are **self-hosted** so visitor IPs are not sent to Google, which also avoids a consent banner.
+Fonts (Outfit, Inter) are **self-hosted** from the `@fontsource` packages, Latin and Latin Extended subsets only, so visitor IPs are not sent to Google, which also avoids a consent banner. Preact stays on the 10.x line (10.29.8): Preact 11 came out in September 2026 and its ecosystem had not caught up.
+
+The front end follows the desktop mockup (design brief extracted from `design/`), with these differences: the weighted fill excludes planned drawdowns (national-summary spec); "Jen hladina" gets its own colour, legend entry and centre dot; the mockup's "Ukázková data" badge and sample-data footer line are dropped; river names along the rivers are not drawn yet; the methodology link is added with the page (tasks 9.3).
 
 ### 5. Map geometry projected at build time
 
