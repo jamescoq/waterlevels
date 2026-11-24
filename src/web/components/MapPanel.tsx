@@ -57,6 +57,13 @@ export function MapPanel(props: MapPanelProps) {
         <div class="map" style={{ aspectRatio: "880 / 505" }} />
       )}
       <Legend />
+      {/* OpenStreetMap and Copernicus ask for the credit where the map is seen; the full
+          notices are on the methodology page. */}
+      <p class="map-credit">
+        Řeky © <a href="https://www.openstreetmap.org/copyright">přispěvatelé OpenStreetMap</a> ·
+        reliéf: Copernicus WorldDEM-90 © DLR e.V., Airbus · hranice: Natural Earth ·{" "}
+        <a href="/metodika/#licence">mapové podklady</a>
+      </p>
     </section>
   );
 }

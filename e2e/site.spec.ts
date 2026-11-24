@@ -207,7 +207,7 @@ test.describe("methodology page (data-transparency spec, tasks 9.3)", () => {
       "Mapové podklady a licence",
     ]);
     await expect(page.getByText("přispěvatelé OpenStreetMap")).toBeVisible();
-    await expect(page.getByText(/Copernicus DEM GLO-90/)).toBeVisible();
+    await expect(page.getByText(/produced using Copernicus\s+WorldDEM-90/)).toBeVisible();
     const { violations } = await new AxeBuilder({ page })
       .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
       .analyze();

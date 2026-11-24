@@ -81,7 +81,7 @@
 ## 10. Integration checks
 
 - [ ] 10.1 Let the scheduled job run seven consecutive days; verify seven snapshots on `data` and seven successful deployments
-- [ ] 10.2 Simulate a failed source and a failed run on a test branch; verify the site shows "Bez dat" for that source's stations and keeps serving the previous data
+- [x] 10.2 Simulate a failed source and a failed run on a test branch; verify the site shows "Bez dat" for that source's stations and keeps serving the previous data
 - [ ] 10.3 Check freshness end to end; verify new measurement times are visible on https://stavvody.cz within 30 minutes of a successful run
 
 ## Workflow follow-up
