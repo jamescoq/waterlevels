@@ -32,7 +32,7 @@
 
 - [x] 5.1 Implement the polite HTTP client (User-Agent, robots.txt, 2 s spacing, 30 s timeout, two retries); verify mocked-server tests for the request budget, robots.txt blocking and retry scenarios
 - [x] 5.2 Implement the run: scrape (fetching a page again after 30 s, at most twice, when the portal answers with its "Prosím, čekejte, načítám data" placeholder), match stations, contain source failures, apply validation guards, write the snapshot with every parsed value; verify tests for the layout-change, all-unreachable, one-portal-down, paused-source, unmatched-row and value-not-shown scenarios, including that a paused source receives no request
-- [ ] 5.3 Add `scrape.yml` with the schedule, the repository guard, the commit to `data`, `status/last-run.json` and the raw-page artifact with 90-day retention; verify a manual run commits a snapshot and uploads the artifact, and that the guard condition is on the scrape job
+- [x] 5.3 Add `scrape.yml` with the schedule, the repository guard, the commit to `data`, `status/last-run.json` and the raw-page artifact with 90-day retention; verify a manual run commits a snapshot and uploads the artifact, and that the guard condition is on the scrape job
 - [x] 5.4 Add `pnpm reparse <archive-dir>...` that regenerates snapshots from downloaded raw-page artifacts; verify it reproduces a committed snapshot byte for byte
 - [ ] 5.5 Add the dead-man's-switch ping with its URL as a repository secret; verify the check service records a ping after a manual run
 - [x] 5.6 Add the `alert` job that runs last and fails for a "partial" source, a source without usable data in three consecutive snapshots, or a new unmatched row; verify with fixture snapshots that it fails in each case, passes after a one-day outage and for a paused source, and that the snapshot commit and deploy still happen
@@ -68,12 +68,12 @@
 
 ## 9. Hosting and launch
 
-- [ ] 9.1 Add `deploy.yml` as a reusable workflow called by `scrape.yml` and triggered by pushes to `main` and `data`; verify a manual scrape run ends with a new Pages deployment
+- [x] 9.1 Add `deploy.yml` as a reusable workflow called by `scrape.yml` and triggered by pushes to `main` and `data`; verify a manual scrape run ends with a new Pages deployment
 - [ ] 9.2 Set the DNS records, verify the domain in GitHub, set the custom domain and enforce HTTPS; verify `https://stavvody.cz` loads and both http and www redirect to it
 - [x] 9.3 Write the Czech methodology page with the map data credits; verify it covers every topic in the `data-transparency` methodology requirement
 - [ ] 9.4 Render the map at the real station count and have the owner choose a density solution if it is crowded; verify the decision is recorded in design.md
 - [ ] 9.5 Review the 70 % and 40 % thresholds against a week of real data with the owner; verify the decision is recorded in design.md
-- [ ] 9.6 Measure the home page with a mobile lab test; verify Largest Contentful Paint is 2.5 s or less
+- [x] 9.6 Measure the home page with a mobile lab test; verify Largest Contentful Paint is 2.5 s or less
 - [ ] 9.7 Have the owner create the GoatCounter site and put its site code into the build configuration; verify a visit to https://stavvody.cz appears in the GoatCounter dashboard and that the browser stores no cookie
 - [ ] 9.8 Add stavvody.cz to Google Search Console using DNS verification; verify the property shows as verified
 - [ ] 9.9 Have the owner ask Povodí Ohře to let `stavvody.cz-bot` through Cloudflare or to provide a data feed; once agreed, run the probe workflow and remove the pause; verify the probe loads both Ohře pages from GitHub and the next snapshot records `poh` as "ok"

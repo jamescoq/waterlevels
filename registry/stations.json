@@ -1441,9 +1441,9 @@
         "oid": "3"
       },
       "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=5003&oid=3",
-      "lat": null,
-      "lon": null,
-      "coordinateSource": null,
+      "lat": 50.09788,
+      "lon": 13.40257,
+      "coordinateSource": "osm:way/50998761",
       "levels": {
         "crest": 406.4,
         "spillway": 404.8,
@@ -2001,9 +2001,9 @@
         "oid": "3"
       },
       "sourceUrl": "https://sap.poh.cz/portal/nadrze/cz/pc/Mereni.aspx?id=3091&oid=3",
-      "lat": null,
-      "lon": null,
-      "coordinateSource": null,
+      "lat": 50.70099,
+      "lon": 14.81314,
+      "coordinateSource": "wikidata:Q96156473",
       "levels": {
         "crest": 310.05,
         "spillway": 308.53,
@@ -2169,9 +2169,9 @@
         "oid": "2"
       },
       "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=ROCI&oid=2",
-      "lat": null,
-      "lon": null,
-      "coordinateSource": null,
+      "lat": 50.09414,
+      "lon": 14.55099,
+      "coordinateSource": "wikidata:Q108169665",
       "levels": {
         "crest": 210,
         "spillway": 200,
@@ -2197,9 +2197,9 @@
         "oid": "3"
       },
       "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=KLDP&oid=3",
-      "lat": null,
-      "lon": null,
-      "coordinateSource": null,
+      "lat": 49.65428,
+      "lon": 13.76133,
+      "coordinateSource": "osm:way/51556259",
       "levels": {
         "crest": 635.26,
         "spillway": 632.89,
@@ -2225,9 +2225,9 @@
         "oid": "3"
       },
       "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=CPDR&oid=3",
-      "lat": null,
-      "lon": null,
-      "coordinateSource": null,
+      "lat": 49.80065,
+      "lon": 13.86834,
+      "coordinateSource": "osm:way/50968239",
       "levels": {
         "crest": 418.24,
         "spillway": 416.76,
@@ -2281,9 +2281,9 @@
         "oid": "3"
       },
       "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=KLHP&oid=3",
-      "lat": null,
-      "lon": null,
-      "coordinateSource": null,
+      "lat": 49.64204,
+      "lon": 13.76185,
+      "coordinateSource": "osm:way/51556261",
       "levels": {
         "crest": 638.17,
         "spillway": 636.36,
@@ -2785,9 +2785,9 @@
         "oid": "3"
       },
       "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=PPPI&oid=3",
-      "lat": null,
-      "lon": null,
-      "coordinateSource": null,
+      "lat": 49.67806,
+      "lon": 13.90639,
+      "coordinateSource": "wikidata:Q12045322",
       "levels": {
         "crest": 673.7,
         "spillway": 671.38,
@@ -2813,9 +2813,9 @@
         "oid": "2"
       },
       "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=SAPI&oid=2",
-      "lat": null,
-      "lon": null,
-      "coordinateSource": null,
+      "lat": 49.5906,
+      "lon": 15.9269,
+      "coordinateSource": "wikidata:Q11923557",
       "levels": {
         "crest": 578.31,
         "spillway": 576.6,
@@ -2841,9 +2841,9 @@
         "oid": "3"
       },
       "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=MZSS&oid=3",
-      "lat": null,
-      "lon": null,
-      "coordinateSource": null,
+      "lat": 49.75023,
+      "lon": 13.38724,
+      "coordinateSource": "manual",
       "levels": {
         "crest": 319,
         "spillway": 316,
@@ -3233,9 +3233,9 @@
         "oid": "1"
       },
       "sourceUrl": "https://www.pvl.cz/portal/Nadrze/cz/pc/Mereni.aspx?id=SPZH&oid=1",
-      "lat": null,
-      "lon": null,
-      "coordinateSource": null,
+      "lat": 49.22156,
+      "lon": 15.3125,
+      "coordinateSource": "osm:way/51221162",
       "levels": {
         "crest": 680,
         "spillway": 678.76,
