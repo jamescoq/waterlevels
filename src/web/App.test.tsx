@@ -100,7 +100,7 @@ describe("App", () => {
       screen.getByRole("button", { name: "Všechny nádrže (117)" }).getAttribute("aria-pressed"),
     ).toBe("true");
     const groups = screen
-      .getAllByRole("heading", { level: 3 })
+      .getAllByRole("heading", { level: 2 })
       .map((h) => text(h).replace(/\d+$/, "").trim());
     expect(groups).toEqual([
       "Povodí Vltavy",
@@ -113,7 +113,7 @@ describe("App", () => {
 
   it("opens a station's card from the list and puts it in the URL", async () => {
     await renderApp();
-    fireEvent.click(screen.getAllByRole("button", { name: /^VD Slezská Harta:/ }).at(-1)!);
+    fireEvent.click(screen.getAllByRole("button", { name: /^VD Slezská Harta/ }).at(-1)!);
     await screen.findByRole("heading", { level: 2, name: "VD Slezská Harta" });
     expect(screen.getByRole("button", { name: "Detail nádrže" }).getAttribute("aria-pressed")).toBe(
       "true",
@@ -142,7 +142,8 @@ describe("App", () => {
   it("ignores an unknown station id (spec: Unknown station id)", async () => {
     history.replaceState(null, "", "/?stanice=neexistuje");
     await renderApp();
-    expect(screen.queryByRole("heading", { level: 2 })).toBeNull();
+    // No station card is open.
+    expect(document.getElementById("card-title")).toBeNull();
     expect(
       screen.getByRole("button", { name: "Všechny nádrže (117)" }).getAttribute("aria-pressed"),
     ).toBe("true");

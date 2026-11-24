@@ -2,7 +2,6 @@ import { StationCard } from "./StationCard.tsx";
 import { formatPct } from "../format.ts";
 import {
   shownFill,
-  stationAria,
   statusLabel,
   statusLower,
   statusVars,
@@ -93,10 +92,10 @@ function StationList({
       <div class="list-scroll">
         {view.groups.map((group) => (
           <section key={group.basin} class="group" aria-labelledby={`group-${group.basin}`}>
-            <h3 id={`group-${group.basin}`}>
+            <h2 id={`group-${group.basin}`}>
               <span>{group.title}</span>
               <span class="num">{group.stations.length}</span>
-            </h3>
+            </h2>
             {group.stations.map((s) => {
               const fill = shownFill(s);
               const outside =
@@ -107,7 +106,6 @@ function StationList({
                   type="button"
                   class={`row${s.id === hoveredId ? " hovered" : ""}${s.id === selectedId ? " selected" : ""}`}
                   style={statusVars(s.status)}
-                  aria-label={stationAria(s)}
                   aria-pressed={s.id === selectedId}
                   onMouseEnter={() => onHover(s.id)}
                   onMouseLeave={() => onHover(null)}
@@ -127,7 +125,12 @@ function StationList({
                       style={{ width: `${fill === null ? 0 : Math.min(100, Math.max(0, fill))}%` }}
                     />
                   </span>
-                  <span class="pct">{formatPct(fill)}</span>
+                  {/* The visible text is the accessible name (WCAG 2.5.3); colour alone shows
+                      the status of a rated station, so screen readers get it in words. */}
+                  <span class="pct" aria-hidden={fill === null ? "true" : undefined}>
+                    {formatPct(fill)}
+                  </span>
+                  {outside ? null : <span class="visually-hidden">, {statusLower(s.status)}</span>}
                 </button>
               );
             })}

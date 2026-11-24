@@ -30,7 +30,8 @@ test.describe("shared links (station-detail spec, tasks 8.7)", () => {
     const response = await page.goto("/?stanice=neexistuje");
     expect(response?.status()).toBe(200);
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
-    await expect(page.getByRole("heading", { level: 2 })).toHaveCount(0);
+    // No station card is open.
+    await expect(page.locator("#card-title")).toHaveCount(0);
   });
 
   test("the back button leaves the site instead of stepping through selections", async ({

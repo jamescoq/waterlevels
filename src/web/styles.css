@@ -432,7 +432,7 @@ button {
   flex-direction: column;
   gap: 2px;
 }
-.group h3 {
+.group h2 {
   display: flex;
   justify-content: space-between;
   margin: 0;

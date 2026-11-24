@@ -95,7 +95,8 @@ export function plausibleForBasin(
     case "pod":
       return lon >= 17.0 && lat >= 49.4;
     case "poh":
-      return lon <= 14.6 && lat >= 49.9;
+      // Povodí Ohře also manages the Ploučnice catchment (Stráž pod Ralskem, 14.8° E).
+      return lon <= 14.9 && lat >= 49.9;
     case "pvl":
       // The Sázava catchment reaches east of Žďár nad Sázavou.
       return lon <= 16.1;
