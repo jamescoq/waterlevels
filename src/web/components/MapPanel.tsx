@@ -297,6 +297,9 @@ function Disc({
   const { rgb, color } = STATUS_STYLE[status];
   const over = status === "above-storage";
   const noData = status === "no-data";
+  // The three statuses outside the rating differ by shape, not only by shade of grey:
+  // dashed and empty (Bez dat), hatched (Plánované snížení), waterline (Jen hladina).
+  const mark = noData ? " dashed" : status === "planned" ? " hatched" : "";
   // Built up as in the design (brief §3): glow, double outline, selection ring, hover glow.
   const shadows = [`0 0 14px rgba(${rgb}, ${noData ? 0 : 0.45})`];
   let edge = 0;
@@ -310,7 +313,7 @@ function Disc({
     <>
       {over && <span class="pulse" style={{ ...statusVars(status), width: size, height: size }} />}
       <span
-        class={`disc${noData ? " dashed" : ""}`}
+        class={`disc${mark}`}
         style={{
           ...statusVars(status),
           width: size,
@@ -322,7 +325,7 @@ function Disc({
         {fill !== null && (
           <span class="fill" style={{ height: `${Math.min(100, Math.max(0, fill))}%` }} />
         )}
-        {status === "level-only" && <span class="centre" />}
+        {status === "level-only" && <span class="waterline" />}
       </span>
     </>
   );
@@ -332,7 +335,7 @@ const LEGEND: {
   status: Status;
   title: string;
   sub: string;
-  kind?: "over" | "dashed" | "level-only";
+  kind?: "over" | "dashed" | "hatched" | "level-only";
 }[] = [
   {
     status: "above-storage",
@@ -343,7 +346,12 @@ const LEGEND: {
   { status: "high", title: "Vysoká zásoba", sub: "70 % a více" },
   { status: "medium", title: "Střední zásoba", sub: "40–70 %" },
   { status: "low", title: "Nízká zásoba", sub: "pod 40 %" },
-  { status: "planned", title: "Plánované snížení", sub: "záměr správce, nejde o sucho" },
+  {
+    status: "planned",
+    title: "Plánované snížení",
+    sub: "záměr správce, nejde o sucho",
+    kind: "hatched",
+  },
   { status: "level-only", title: "Jen hladina", sub: "naplnění se neuvádí", kind: "level-only" },
   { status: "no-data", title: "Bez dat", sub: "měření se nenačetlo", kind: "dashed" },
 ];

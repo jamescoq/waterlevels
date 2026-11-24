@@ -17,7 +17,7 @@ export const STATUS_STYLE: Record<Status, StatusStyle> = {
   medium: { color: "#F4B740", rgb: "244, 183, 64" },
   low: { color: "#FF6E6E", rgb: "255, 110, 110" },
   planned: { color: "#B4C3D6", rgb: "180, 195, 214" },
-  "no-data": { color: "#8FA3BA", rgb: "143, 163, 186" },
+  "no-data": { color: "#7A8BA0", rgb: "122, 139, 160" },
   "level-only": { color: "#A9BCD2", rgb: "169, 188, 210" },
 };
 

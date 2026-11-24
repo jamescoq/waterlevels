@@ -97,7 +97,7 @@ describe("App", () => {
   it("lists every station grouped by Povodí (station-list spec)", async () => {
     await renderApp();
     expect(
-      screen.getByRole("button", { name: "Všechny nádrže (117)" }).getAttribute("aria-pressed"),
+      screen.getByRole("button", { name: "Všechny nádrže" }).getAttribute("aria-pressed"),
     ).toBe("true");
     const groups = screen
       .getAllByRole("heading", { level: 2 })
@@ -145,7 +145,7 @@ describe("App", () => {
     // No station card is open.
     expect(document.getElementById("card-title")).toBeNull();
     expect(
-      screen.getByRole("button", { name: "Všechny nádrže (117)" }).getAttribute("aria-pressed"),
+      screen.getByRole("button", { name: "Všechny nádrže" }).getAttribute("aria-pressed"),
     ).toBe("true");
   });
 

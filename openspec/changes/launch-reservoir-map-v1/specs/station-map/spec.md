@@ -29,7 +29,7 @@ Each circle's diameter SHALL be 10 + 2.45 × √(storage capacity in mil. m³) p
 - **THEN** its circle is drawn at the minimum size
 
 ### Requirement: Circle appearance by status
-Each circle SHALL be filled from the bottom up to its storage fill, drawn at most 100 %. Outline and fill SHALL use the status colour: "Nad zásobní hladinou" #B79CFF with a double outline and slow pulse; "Vysoká zásoba" #3DB9F2; "Střední zásoba" #F4B740; "Nízká zásoba" #FF6E6E; "Plánované snížení" #B4C3D6 solid; "Bez dat" #8FA3BA dashed and empty; "Jen hladina" #A9BCD2 solid, empty, with a centre dot.
+Each circle SHALL be filled from the bottom up to its storage fill, drawn at most 100 %. Outline and fill SHALL use the status colour: "Nad zásobní hladinou" #B79CFF with a double outline and slow pulse; "Vysoká zásoba" #3DB9F2; "Střední zásoba" #F4B740; "Nízká zásoba" #FF6E6E; "Plánované snížení" #B4C3D6 solid with diagonal hatching; "Bez dat" #7A8BA0 dashed and empty; "Jen hladina" #A9BCD2 solid and empty with a horizontal waterline through the middle. The three statuses outside the rating SHALL differ by shape, not only by shade.
 
 #### Scenario: Half-full reservoir
 - **WHEN** a station's storage zone is 55 % full
@@ -41,7 +41,11 @@ Each circle SHALL be filled from the bottom up to its storage fill, drawn at mos
 
 #### Scenario: Level only
 - **WHEN** a station's status is "Jen hladina"
-- **THEN** its circle has a solid outline, no fill and a centre dot
+- **THEN** its circle has a solid outline, no fill and a horizontal waterline through the middle
+
+#### Scenario: Planned drawdown
+- **WHEN** a station's status is "Plánované snížení"
+- **THEN** its circle is hatched diagonally, so it cannot be mistaken for "Bez dat" or "Jen hladina"
 
 ### Requirement: Overlap handling
 Overlapping circles SHALL be moved apart, aiming for a gap of 3 px, and no circle SHALL move more than 16 px from its true position. The 16 px limit takes precedence: where a cluster cannot reach the gap within it, circles MAY overlap and the smaller circle SHALL be drawn on top. Positions SHALL be worked out separately for the desktop and the phone layout.
