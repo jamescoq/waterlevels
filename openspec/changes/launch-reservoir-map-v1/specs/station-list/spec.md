@@ -7,11 +7,11 @@ Lets a visitor find any station by name without hunting on the map: a full list 
 ## ADDED Requirements
 
 ### Requirement: Full list grouped by Povodí
-The site SHALL list every shown station, grouped by Povodí, in a tab labelled "Všechny nádrže ({N})" where N is the number of shown stations. Each row SHALL show the station's name, status and fill or level.
+The site SHALL list every shown station, grouped by Povodí, in a tab labelled "Všechny nádrže" ("Seznam" on phones), without a count: the headline already gives the number of stations. Each row SHALL show the station's name, status and fill or level.
 
 #### Scenario: Tab label
 - **WHEN** 37 stations are shown
-- **THEN** the list tab is labelled "Všechny nádrže (37)"
+- **THEN** the list tab is labelled "Všechny nádrže" and the headline names the 37 stations
 
 #### Scenario: Grouping
 - **WHEN** the visitor opens the list

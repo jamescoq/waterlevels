@@ -8,7 +8,7 @@ export const CONTACT_EMAIL = "stavvodycz@gmail.com";
  * Sent with every request to a Povodí portal. The URL points to the public repository until
  * the site's methodology page (https://stavvody.cz/o-datech) is live.
  */
-export const USER_AGENT = `${BOT_TOKEN}/0.1 (+https://github.com/jamescoq/waterlevels; ${CONTACT_EMAIL})`;
+export const USER_AGENT = `${BOT_TOKEN}/0.1 (+https://stavvody.cz/metodika/; ${CONTACT_EMAIL})`;
 
 /** Minimum gap between two requests to the same host. */
 export const MIN_REQUEST_GAP_MS = 2_000;

@@ -40,7 +40,7 @@ export function SidePanel({
           {phone ? "Detail" : "Detail nádrže"}
         </button>
         <button type="button" aria-pressed={tab === "list"} onClick={() => onTab("list")}>
-          {phone ? "Seznam" : "Všechny nádrže"} ({view.stations.length})
+          {phone ? "Seznam" : "Všechny nádrže"}
         </button>
       </div>
       {/* Screen readers hear only the name and status when the selection changes. */}

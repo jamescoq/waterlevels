@@ -121,7 +121,7 @@ Alternatives considered:
 Scraper behaviour:
 
 - One parser for the MGE Data software (`portals/mge.ts`), configured per source in `sources.ts`. If a portal needs ASP.NET postbacks (`__VIEWSTATE`) to show all rows, the adapter replays the form post as a single request.
-- User-Agent: `stavvody.cz-bot/1.0 (+https://stavvody.cz/o-datech; stavvodycz@gmail.com)`. Until the methodology page is live the URL points to the GitHub repository.
+- User-Agent: `stavvody.cz-bot/0.1 (+https://stavvody.cz/metodika/; stavvodycz@gmail.com)`, pointing portal operators to the methodology page. The site does not link to the source repository.
 - Timeout 30 s; retries after 5 s and 20 s.
 
 | Source | Povodí | Base URL | Stations (2026-11-22) |
@@ -158,7 +158,7 @@ Alternatives considered: React (fits but uses most of the JS budget on the libra
 
 Fonts (Outfit, Inter) are **self-hosted** from the `@fontsource` packages, Latin and Latin Extended subsets only, so visitor IPs are not sent to Google, which also avoids a consent banner. Preact stays on the 10.x line (10.29.8): Preact 11 came out in September 2026 and its ecosystem had not caught up.
 
-The front end follows the desktop mockup (design brief extracted from `design/`), with these differences: the weighted fill excludes planned drawdowns (national-summary spec); "Jen hladina" gets its own colour, legend entry and centre dot; the mockup's "Ukázková data" badge and sample-data footer line are dropped; river names along the rivers are not drawn yet; the methodology link is added with the page (tasks 9.3).
+The front end follows the desktop mockup (design brief extracted from `design/`), with these differences: the weighted fill excludes planned drawdowns (national-summary spec); "Jen hladina" gets its own colour, legend entry and waterline mark; "Plánované snížení" is hatched and "Bez dat" is a darker dashed grey, so the three statuses outside the rating differ by shape (owner feedback after launch: the greys were hard to tell apart); the mockup's "Ukázková data" badge and sample-data footer line are dropped; river names along the rivers are not drawn yet; the methodology link is added with the page (tasks 9.3).
 
 ### 5. Map geometry projected at build time
 
@@ -334,7 +334,7 @@ The scrape and probe jobs carry `if: github.repository == 'jamescoq/waterlevels'
 
 Stations whose dam has no storage zone, and stations whose Povodí does not publish the fill, share one status, "Jen hladina". The card's note says which case applies (`levelOnlyReason`).
 
-The label and the map mark (solid `#A9BCD2` outline, empty, centre dot) are defaults chosen here. They are not on the canvas, and the owner can overrule them.
+The label and the map mark (solid `#A9BCD2` outline, empty, a horizontal waterline through the middle; first drawn as a centre dot, which was too hard to tell from the other greys) are defaults chosen here. They are not on the canvas, and the owner can overrule them.
 
 Alternative considered: showing a station with an unpublished fill as "Bez dat". Rejected because it has a fresh level, which an empty dashed circle would hide.
 

@@ -11,7 +11,7 @@ test.beforeEach(async ({ page }) => {
 const isPhone = (page: Page) => (page.viewportSize()?.width ?? 1000) < 640;
 
 const openList = async (page: Page) => {
-  const listTab = page.getByRole("button", { name: /^(Všechny nádrže|Seznam) \(\d+\)$/ });
+  const listTab = page.getByRole("button", { name: /^(Všechny nádrže|Seznam)$/ });
   if ((await listTab.getAttribute("aria-pressed")) !== "true") await listTab.click();
 };
 
@@ -105,7 +105,7 @@ test.describe("layout (site-availability spec)", () => {
   test("phones show the map above the sheet, which opens on the list", async ({ page }) => {
     test.skip(!isPhone(page), "phone layout only");
     await page.goto("/");
-    await expect(page.getByRole("button", { name: /^Seznam \(\d+\)$/ })).toHaveAttribute(
+    await expect(page.getByRole("button", { name: "Seznam", exact: true })).toHaveAttribute(
       "aria-pressed",
       "true",
     );
@@ -207,7 +207,7 @@ test.describe("methodology page (data-transparency spec, tasks 9.3)", () => {
       "Mapové podklady a licence",
     ]);
     await expect(page.getByText("přispěvatelé OpenStreetMap")).toBeVisible();
-    await expect(page.getByText(/Copernicus DEM GLO-90/)).toBeVisible();
+    await expect(page.getByText(/produced using Copernicus\s+WorldDEM-90/)).toBeVisible();
     const { violations } = await new AxeBuilder({ page })
       .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
       .analyze();
