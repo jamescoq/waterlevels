@@ -1,0 +1,3275 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-27",
+  "fetchedAt": "2026-11-27T17:28:35.338Z",
+  "sources": {
+    "pmo": "ok",
+    "pod": "ok",
+    "poh": "paused",
+    "pvl": "ok",
+    "pla": "ok"
+  },
+  "sourceReasons": {
+    "pmo": null,
+    "pod": null,
+    "poh": "Cloudflare bot challenge (403) for GitHub-hosted runners",
+    "pvl": null,
+    "pla": null
+  },
+  "stations": {
+    "pmo-bojkovice": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 317.86,
+      "volume": 0.44,
+      "inflow": 0,
+      "outflow": 0.01,
+      "precipitation1h": null,
+      "precipitation24h": 4.2,
+      "airTemperature": -0.8,
+      "floodThresholds": {
+        "Qa": 0.09,
+        "Q1": 4,
+        "Q5": 12.5,
+        "Q20": 24.5,
+        "Q100": 45
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 0.39,
+        "filledPct": 51.16,
+        "free": 0.38,
+        "freePct": 48.84
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.153,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-boskovice": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 425.92,
+      "volume": 4.68,
+      "inflow": 0.03,
+      "outflow": 0.1,
+      "precipitation1h": null,
+      "precipitation24h": 5.5,
+      "airTemperature": -1.86,
+      "floodThresholds": {
+        "Qa": 0.33,
+        "Q1": 4.3,
+        "Q5": 8.1,
+        "Q20": 16,
+        "Q100": 33.5
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 4.26,
+        "filledPct": 69.2,
+        "free": 1.9,
+        "freePct": 30.8
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.796,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-brno": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 226.8,
+      "volume": 10.21,
+      "inflow": 1.68,
+      "outflow": null,
+      "precipitation1h": null,
+      "precipitation24h": 8.9,
+      "airTemperature": -0.3,
+      "floodThresholds": {
+        "Qa": 7.68,
+        "Q1": 65,
+        "Q5": 132,
+        "Q20": 202,
+        "Q100": 282
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 8.54,
+        "filledPct": 67.47,
+        "free": 4.12,
+        "freePct": 32.53
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 2.038,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-bystricka": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 376.8,
+      "volume": 1.69,
+      "inflow": 0.06,
+      "outflow": 1.91,
+      "precipitation1h": null,
+      "precipitation24h": 5.7,
+      "airTemperature": -1.1,
+      "floodThresholds": {
+        "Qa": 0.88,
+        "Q1": 15.3,
+        "Q5": 42.2,
+        "Q20": 77.8,
+        "Q100": 134
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 1.64,
+        "filledPct": 100,
+        "free": 0,
+        "freePct": 0
+      },
+      "retentionControllable": {
+        "filled": 0.046,
+        "filledPct": 2.06,
+        "free": 2.189,
+        "freePct": 97.94
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.702,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-dalesice": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 372.67,
+      "volume": 89.97,
+      "inflow": 1.44,
+      "outflow": 0.77,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": null,
+      "floodThresholds": {
+        "Qa": 5.18,
+        "Q1": 62.1,
+        "Q5": 131,
+        "Q20": 207,
+        "Q100": 310
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 84.05,
+        "filledPct": 72.29,
+        "free": 32.21,
+        "freePct": 27.71
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-frystak": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 244.52,
+      "volume": 1.28,
+      "inflow": 0.78,
+      "outflow": 0.04,
+      "precipitation1h": null,
+      "precipitation24h": 4.8,
+      "airTemperature": -1.3,
+      "floodThresholds": {
+        "Qa": 0.24,
+        "Q1": 6.4,
+        "Q5": 20,
+        "Q20": 39,
+        "Q100": 70
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 0.41,
+        "filledPct": 45.56,
+        "free": 0.49,
+        "freePct": 54.44
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.59,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.59,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-horni-becva": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 560.84,
+      "volume": 0.41,
+      "inflow": 0.02,
+      "outflow": 0.11,
+      "precipitation1h": null,
+      "precipitation24h": 8.1,
+      "airTemperature": -1.7,
+      "floodThresholds": {
+        "Qa": 0.29,
+        "Q1": 7,
+        "Q5": 18,
+        "Q20": 32,
+        "Q100": 54
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.37,
+        "filledPct": 94.63,
+        "free": 0.02,
+        "freePct": 5.37
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.087,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.145,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-hubenov": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 519.28,
+      "volume": 1.84,
+      "inflow": 0.04,
+      "outflow": 0.04,
+      "precipitation1h": null,
+      "precipitation24h": 5.6,
+      "airTemperature": -2.5,
+      "floodThresholds": {
+        "Qa": 0.13,
+        "Q1": 1.7,
+        "Q5": 6.5,
+        "Q20": 13,
+        "Q100": 23
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 1.17,
+        "filledPct": 49.02,
+        "free": 1.22,
+        "freePct": 50.98
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.32,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-jevisovice": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 326.88,
+      "volume": 0.16,
+      "inflow": 0,
+      "outflow": 0.03,
+      "precipitation1h": null,
+      "precipitation24h": 6.22,
+      "airTemperature": -0.98,
+      "floodThresholds": {
+        "Qa": 0.26,
+        "Q1": 4,
+        "Q5": 12.5,
+        "Q20": 24,
+        "Q100": 43
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.05,
+        "filledPct": 35.88,
+        "free": 0.08,
+        "freePct": 64.12
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.146,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.163,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-karolinka": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 514.04,
+      "volume": 4.41,
+      "inflow": 0.02,
+      "outflow": 0.05,
+      "precipitation1h": null,
+      "precipitation24h": 6.5,
+      "airTemperature": -0.78,
+      "floodThresholds": {
+        "Qa": 0.36,
+        "Q1": 12,
+        "Q5": 23,
+        "Q20": 36,
+        "Q100": 87.4
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 3.48,
+        "filledPct": 59.85,
+        "free": 2.33,
+        "freePct": 40.15
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.654,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-korycany": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 301.43,
+      "volume": 1.09,
+      "inflow": 0,
+      "outflow": 0.02,
+      "precipitation1h": null,
+      "precipitation24h": 4.3,
+      "airTemperature": 0.9,
+      "floodThresholds": {
+        "Qa": 0.13,
+        "Q1": 3.1,
+        "Q5": 11,
+        "Q20": 22.5,
+        "Q100": 42.5
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 0.99,
+        "filledPct": 46.39,
+        "free": 1.14,
+        "freePct": 53.62
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.332,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-landstejn": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 570.54,
+      "volume": 2.27,
+      "inflow": 0,
+      "outflow": 0.01,
+      "precipitation1h": null,
+      "precipitation24h": 5.7,
+      "airTemperature": -3.6,
+      "floodThresholds": {
+        "Qa": 0.09,
+        "Q1": 3.5,
+        "Q5": 8,
+        "Q20": 13,
+        "Q100": 20
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 1.82,
+        "filledPct": 70.42,
+        "free": 0.77,
+        "freePct": 29.59
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.232,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-letovice": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 357.25,
+      "volume": 7.86,
+      "inflow": 0.11,
+      "outflow": 0.09,
+      "precipitation1h": null,
+      "precipitation24h": 8.3,
+      "airTemperature": -0.6,
+      "floodThresholds": {
+        "Qa": 0.64,
+        "Q1": 7.5,
+        "Q5": 18,
+        "Q20": 30.5,
+        "Q100": 50
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 6.3,
+        "filledPct": 69.85,
+        "free": 2.72,
+        "freePct": 30.15
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 1.069,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-ludkovice": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 280.69,
+      "volume": 0.27,
+      "inflow": 0.02,
+      "outflow": 0.01,
+      "precipitation1h": null,
+      "precipitation24h": 1.8,
+      "airTemperature": -1.5,
+      "floodThresholds": {
+        "Qa": 0.09,
+        "Q1": 3.4,
+        "Q5": 11.2,
+        "Q20": 22.5,
+        "Q100": 42
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 0.18,
+        "filledPct": 36.93,
+        "free": 0.31,
+        "freePct": 63.07
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.107,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-luhacovice": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T16:00:00+01:00",
+      "level": 277.18,
+      "volume": 0.58,
+      "inflow": 0.04,
+      "outflow": 0.05,
+      "precipitation1h": null,
+      "precipitation24h": 4.1,
+      "airTemperature": 0.7,
+      "floodThresholds": {
+        "Qa": 0.31,
+        "Q1": 8.5,
+        "Q5": 25,
+        "Q20": 45,
+        "Q100": 89.5
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.33,
+        "filledPct": 37.16,
+        "free": 0.56,
+        "freePct": 62.84
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 1.049,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.544,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-mohelno": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 298.34,
+      "volume": 11.77,
+      "inflow": null,
+      "outflow": 0.77,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": null,
+      "floodThresholds": {
+        "Qa": 5.35,
+        "Q1": 26,
+        "Q5": 61.3,
+        "Q100": 192
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 6.07,
+        "filledPct": 53.7,
+        "free": 5.23,
+        "freePct": 46.3
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-mostiste": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 474.91,
+      "volume": 8.78,
+      "inflow": 0.56,
+      "outflow": 0.24,
+      "precipitation1h": null,
+      "precipitation24h": 5.9,
+      "airTemperature": -1.9,
+      "floodThresholds": {
+        "Qa": 1.39,
+        "Q1": 16,
+        "Q5": 34.5,
+        "Q20": 54.5,
+        "Q100": 82
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 7.73,
+        "filledPct": 82.8,
+        "free": 1.61,
+        "freePct": 17.2
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.609,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.944,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-nova-rise": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 553,
+      "volume": 1.89,
+      "inflow": null,
+      "outflow": 0.01,
+      "precipitation1h": null,
+      "precipitation24h": 5.5,
+      "airTemperature": -3,
+      "floodThresholds": {
+        "Qa": 0.11,
+        "Q1": 3,
+        "Q5": 7,
+        "Q20": 12.5,
+        "Q100": 20
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 1.59,
+        "filledPct": 71,
+        "free": 0.65,
+        "freePct": 29
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.506,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-nove-mlyny-dolni-nadrz": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 168.98,
+      "volume": 49.32,
+      "inflow": 9.49,
+      "outflow": 9,
+      "precipitation1h": null,
+      "precipitation24h": 2.4,
+      "airTemperature": 0.2,
+      "floodThresholds": {
+        "Qa": 41.06,
+        "Q1": 172,
+        "Q5": 380,
+        "Q20": 612,
+        "Q100": 940
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 25.64,
+        "filledPct": 63.13,
+        "free": 14.97,
+        "freePct": 36.87
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 19.666,
+        "freePct": 100
+      },
+      "retentionUncontrollable": "undefined-zone",
+      "note": ""
+    },
+    "pmo-nove-mlyny-horni-nadrz": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 171.51,
+      "volume": 14.18,
+      "inflow": null,
+      "outflow": null,
+      "precipitation1h": null,
+      "precipitation24h": 1.2,
+      "airTemperature": 0.7,
+      "floodThresholds": {
+        "Qa": 13.33,
+        "Q1": 73,
+        "Q5": 140,
+        "Q20": 205,
+        "Q100": 280
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 13.74,
+        "filledPct": 100,
+        "free": 0,
+        "freePct": 0
+      },
+      "retentionControllable": {
+        "filled": 0.439,
+        "filledPct": 76.48,
+        "free": 0.135,
+        "freePct": 23.52
+      },
+      "retentionUncontrollable": "undefined-zone",
+      "note": ""
+    },
+    "pmo-nove-mlyny-stredni-nadrz": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 170.06,
+      "volume": 18.16,
+      "inflow": null,
+      "outflow": null,
+      "precipitation1h": null,
+      "precipitation24h": 1.3,
+      "airTemperature": null,
+      "floodThresholds": {
+        "Qa": 40.86,
+        "Q1": 172,
+        "Q5": 380,
+        "Q20": 612,
+        "Q100": 940
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 17.55,
+        "filledPct": 100,
+        "free": 0,
+        "freePct": 0
+      },
+      "retentionControllable": {
+        "filled": 0.613,
+        "filledPct": 4.22,
+        "free": 13.904,
+        "freePct": 95.78
+      },
+      "retentionUncontrollable": "undefined-zone",
+      "note": ""
+    },
+    "pmo-opatovice": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 329.3,
+      "volume": 6.99,
+      "inflow": 0.05,
+      "outflow": 0.05,
+      "precipitation1h": null,
+      "precipitation24h": 8.8,
+      "airTemperature": -1.5,
+      "floodThresholds": {
+        "Qa": 0.21,
+        "Q1": 3.5,
+        "Q5": 7.9,
+        "Q20": 14.5,
+        "Q100": 26
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 5.28,
+        "filledPct": 67.31,
+        "free": 2.56,
+        "freePct": 32.69
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 1.078,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-plumlov": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 269.52,
+      "volume": 1.3,
+      "inflow": 0.02,
+      "outflow": 0.15,
+      "precipitation1h": null,
+      "precipitation24h": 5.6,
+      "airTemperature": -1.3,
+      "floodThresholds": {
+        "Qa": 0.65,
+        "Q1": 7,
+        "Q5": 16.5,
+        "Q20": 26.6,
+        "Q100": 41
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.96,
+        "filledPct": 33.33,
+        "free": 1.92,
+        "freePct": 66.67
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 1.784,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.849,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-slusovice": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 311.56,
+      "volume": 5.66,
+      "inflow": 0.05,
+      "outflow": 0.04,
+      "precipitation1h": null,
+      "precipitation24h": 1.4,
+      "airTemperature": -1.8,
+      "floodThresholds": {
+        "Qa": 0.5,
+        "Q1": 6.1,
+        "Q5": 21,
+        "Q20": 42,
+        "Q100": 80
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 4.1,
+        "filledPct": 56.52,
+        "free": 3.15,
+        "freePct": 43.48
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 1.137,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-vir-i": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T16:00:00+01:00",
+      "level": 446.45,
+      "volume": 21.01,
+      "inflow": 0.57,
+      "outflow": 0.65,
+      "precipitation1h": null,
+      "precipitation24h": 6.1,
+      "airTemperature": -1.9,
+      "floodThresholds": {
+        "Qa": 3.6,
+        "Q1": 39,
+        "Q5": 75.5,
+        "Q20": 112,
+        "Q100": 160.5
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 17.69,
+        "filledPct": 40.16,
+        "free": 26.36,
+        "freePct": 59.84
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 5.166,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 2.895,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-vranov": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 337.07,
+      "volume": 45.78,
+      "inflow": 1.9,
+      "outflow": 2.51,
+      "precipitation1h": null,
+      "precipitation24h": 3.8,
+      "airTemperature": -0.8,
+      "floodThresholds": {
+        "Qa": 9.74,
+        "Q1": 108,
+        "Q5": 188,
+        "Q20": 263,
+        "Q100": 355
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 17.89,
+        "filledPct": 24.11,
+        "free": 56.32,
+        "freePct": 75.89
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 10.356,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 9.942,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-vyrovice": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 230.34,
+      "volume": 1.93,
+      "inflow": 0.08,
+      "outflow": 0.1,
+      "precipitation1h": null,
+      "precipitation24h": 3.1,
+      "airTemperature": -1.1,
+      "floodThresholds": {
+        "Qa": 0.57,
+        "Q1": 7.5,
+        "Q5": 20,
+        "Q20": 35.5,
+        "Q100": 60
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 1.72,
+        "filledPct": 57.64,
+        "free": 1.26,
+        "freePct": 42.36
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.404,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.577,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pmo-znojmo": {
+      "measuredAt": "2026-11-27T17:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T17:00:00+01:00",
+      "level": 225.52,
+      "volume": 3.53,
+      "inflow": 2.51,
+      "outflow": 2.84,
+      "precipitation1h": null,
+      "precipitation24h": 10.7,
+      "airTemperature": 0.4,
+      "floodThresholds": {
+        "Qa": 10.25,
+        "Q1": 78,
+        "Q5": 133,
+        "Q20": 183,
+        "Q100": 244
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 2.43,
+        "filledPct": 98.98,
+        "free": 0.03,
+        "freePct": 1.02
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.74,
+        "freePct": 100
+      },
+      "retentionUncontrollable": "undefined-zone",
+      "note": ""
+    },
+    "pod-kruzberk": {
+      "measuredAt": "2026-11-27T18:10:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:10:00+01:00",
+      "level": 428.04,
+      "volume": 27.45,
+      "inflow": 5.73,
+      "outflow": 1.41,
+      "precipitation1h": 0,
+      "precipitation24h": null,
+      "airTemperature": -3,
+      "floodThresholds": {
+        "Qa": 2.38,
+        "Q1": 52.6,
+        "Q5": 111,
+        "Q20": 173,
+        "Q100": 258
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 23.43,
+        "filledPct": 95.34,
+        "free": 1.15,
+        "freePct": 4.66
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 6.927,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "note": ""
+    },
+    "pod-moravka": {
+      "measuredAt": "2026-11-27T18:10:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:10:00+01:00",
+      "level": 506.46,
+      "volume": 5.27,
+      "inflow": 0.27,
+      "outflow": 0.17,
+      "precipitation1h": 0,
+      "precipitation24h": null,
+      "airTemperature": -4,
+      "floodThresholds": {
+        "Qa": 1.47,
+        "Q1": 21.8,
+        "Q5": 67,
+        "Q20": 117,
+        "Q100": 187
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 4.79,
+        "filledPct": 96.52,
+        "free": 0.17,
+        "freePct": 3.48
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 5.209,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 1.294,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pod-olesna": {
+      "measuredAt": "2026-11-27T18:10:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:10:00+01:00",
+      "level": 301.74,
+      "volume": 2.4,
+      "inflow": 0.05,
+      "outflow": 0.05,
+      "precipitation1h": 0,
+      "precipitation24h": null,
+      "airTemperature": -1,
+      "floodThresholds": {
+        "Qa": 0.56,
+        "Q1": 9.6,
+        "Q5": 26.9,
+        "Q20": 49.9,
+        "Q100": 87
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 2.1,
+        "filledPct": 74.43,
+        "free": 0.72,
+        "freePct": 25.57
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.388,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.905,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pod-slezska-harta": {
+      "measuredAt": "2026-11-27T18:10:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:10:00+01:00",
+      "level": 490.96,
+      "volume": 154.26,
+      "inflow": 4.54,
+      "outflow": 4.54,
+      "precipitation1h": 0,
+      "precipitation24h": null,
+      "airTemperature": -3,
+      "floodThresholds": {
+        "Qa": 4.77,
+        "Q1": 46,
+        "Q5": 100,
+        "Q20": 158,
+        "Q100": 235
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 146.69,
+        "filledPct": 78.77,
+        "free": 39.54,
+        "freePct": 21.23
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 7.157,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 17.786,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pod-sance": {
+      "measuredAt": "2026-11-27T18:10:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:10:00+01:00",
+      "level": 495.88,
+      "volume": 28.93,
+      "inflow": 1.12,
+      "outflow": 0.45,
+      "precipitation1h": 0,
+      "precipitation24h": null,
+      "airTemperature": -3,
+      "floodThresholds": {
+        "Qa": 2.05,
+        "Q1": 52.8,
+        "Q5": 132,
+        "Q20": 211,
+        "Q100": 313
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 26.8,
+        "filledPct": 66.16,
+        "free": 13.71,
+        "freePct": 33.84
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 5.821,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 7.908,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pod-terlicko": {
+      "measuredAt": "2026-11-27T18:10:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:10:00+01:00",
+      "level": 273.97,
+      "volume": 18.96,
+      "inflow": 0.26,
+      "outflow": 0.18,
+      "precipitation1h": 0,
+      "precipitation24h": null,
+      "airTemperature": -2,
+      "floodThresholds": {
+        "Qa": 0.88,
+        "Q1": 27.8,
+        "Q5": 61.2,
+        "Q20": 98.1,
+        "Q100": 150
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 18.31,
+        "filledPct": 83.2,
+        "free": 3.7,
+        "freePct": 16.8
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 1.468,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 3.267,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pod-zermanice": {
+      "measuredAt": "2026-11-27T18:10:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:10:00+01:00",
+      "level": 289.39,
+      "volume": 15.92,
+      "inflow": 0.59,
+      "outflow": 0.23,
+      "precipitation1h": 0,
+      "precipitation24h": null,
+      "airTemperature": -2,
+      "floodThresholds": {
+        "Qa": 0.99,
+        "Q1": 16.2,
+        "Q5": 34.1,
+        "Q20": 53.3,
+        "Q100": 79.5
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 14.94,
+        "filledPct": 80.87,
+        "free": 3.53,
+        "freePct": 19.13
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 5.819,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "note": ""
+    },
+    "pvl-bilsko": {
+      "measuredAt": "2026-11-27T18:15:00+01:00",
+      "volumesMeasuredAt": null,
+      "level": 463.42,
+      "volume": null,
+      "inflow": null,
+      "outflow": null,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": null,
+      "floodThresholds": {
+        "Qa": 0.03,
+        "Q1": 2.1,
+        "Q5": 6.7,
+        "Q20": 13.9,
+        "Q100": 25
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "retentionControllable": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "retentionUncontrollable": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "note": ""
+    },
+    "pvl-ceske-udoli": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 313.49,
+      "volume": 3.01,
+      "inflow": 1.84,
+      "outflow": 1.62,
+      "precipitation1h": null,
+      "precipitation24h": 0,
+      "airTemperature": -1.5,
+      "floodThresholds": {
+        "Qa": 5.49,
+        "Q1": 45,
+        "Q5": 107,
+        "Q20": 180,
+        "Q100": 287
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 2.38,
+        "filledPct": 94.98,
+        "free": 0.13,
+        "freePct": 5.02
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 2.141,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-cihadla": {
+      "measuredAt": null,
+      "volumesMeasuredAt": null,
+      "level": null,
+      "volume": null,
+      "inflow": null,
+      "outflow": null,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": null,
+      "floodThresholds": null,
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "retentionControllable": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "retentionUncontrollable": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "note": ""
+    },
+    "pvl-dolejsi-padrtsky-rybnik": {
+      "measuredAt": "2026-11-27T18:00:00+01:00",
+      "volumesMeasuredAt": null,
+      "level": 632.31,
+      "volume": null,
+      "inflow": null,
+      "outflow": null,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": null,
+      "floodThresholds": {
+        "Qa": 0.2,
+        "Q1": 3.83,
+        "Q5": 9.91,
+        "Q20": 17.7,
+        "Q100": 29.9
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "retentionControllable": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "retentionUncontrollable": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "note": ""
+    },
+    "pvl-dratenik": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 416.71,
+      "volume": 0.09,
+      "inflow": null,
+      "outflow": null,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": null,
+      "floodThresholds": {
+        "Qa": 0.16,
+        "Q1": 3.3,
+        "Q5": 10.3,
+        "Q20": 20.4,
+        "Q100": 37.8
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.08,
+        "filledPct": 100,
+        "free": 0,
+        "freePct": 0
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0.001,
+        "filledPct": 2.43,
+        "free": 0.05,
+        "freePct": 97.57
+      },
+      "note": ""
+    },
+    "pvl-hnevkovice": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 369.07,
+      "volume": 18.34,
+      "inflow": 12.06,
+      "outflow": 2.5,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": null,
+      "floodThresholds": {
+        "Qa": 30.8,
+        "Q1": 200,
+        "Q5": 374,
+        "Q20": 543,
+        "Q100": 760
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 9.4,
+        "filledPct": 77.35,
+        "free": 2.75,
+        "freePct": 22.65
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": "undefined-zone",
+      "note": ""
+    },
+    "pvl-horejsi-padrtsky-rybnik": {
+      "measuredAt": "2026-11-27T18:00:00+01:00",
+      "volumesMeasuredAt": null,
+      "level": 634.05,
+      "volume": null,
+      "inflow": null,
+      "outflow": null,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": -3.7,
+      "floodThresholds": {
+        "Qa": 0.15,
+        "Q1": 3.23,
+        "Q5": 8.35,
+        "Q20": 14.9,
+        "Q100": 25.2
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "retentionControllable": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "retentionUncontrollable": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "note": ""
+    },
+    "pvl-hracholusky": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 348.07,
+      "volume": 18.5,
+      "inflow": 2.59,
+      "outflow": 1.55,
+      "precipitation1h": null,
+      "precipitation24h": 0,
+      "airTemperature": -2,
+      "floodThresholds": {
+        "Qa": 8.28,
+        "Q1": 60.7,
+        "Q5": 129,
+        "Q20": 203,
+        "Q100": 305
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 13.39,
+        "filledPct": 41.81,
+        "free": 18.63,
+        "freePct": 58.19
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 4.579,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 12.921,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-humenice": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 533.84,
+      "volume": 0.07,
+      "inflow": 0.08,
+      "outflow": 0.06,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": -3.5,
+      "floodThresholds": {
+        "Qa": 0.32,
+        "Q1": 4.1,
+        "Q5": 12,
+        "Q20": 23,
+        "Q100": 40
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.05,
+        "filledPct": 42.88,
+        "free": 0.07,
+        "freePct": 57.12
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.485,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.184,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-husinec": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 517.39,
+      "volume": 1.24,
+      "inflow": 0.55,
+      "outflow": 0.39,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": -3,
+      "floodThresholds": {
+        "Qa": 2.08,
+        "Q1": 22,
+        "Q5": 55,
+        "Q20": 97,
+        "Q100": 150
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 0.46,
+        "filledPct": 22.57,
+        "free": 1.59,
+        "freePct": 77.43
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 2.814,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.909,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-jince": {
+      "measuredAt": null,
+      "volumesMeasuredAt": null,
+      "level": null,
+      "volume": null,
+      "inflow": null,
+      "outflow": null,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": null,
+      "floodThresholds": {
+        "Qa": 0.03,
+        "Q1": 1,
+        "Q5": 3.6,
+        "Q20": 7.6,
+        "Q100": 15.1
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "retentionControllable": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "retentionUncontrollable": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "note": ""
+    },
+    "pvl-kamyk": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 283.3,
+      "volume": 10.23,
+      "inflow": 20.56,
+      "outflow": 41.74,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": null,
+      "floodThresholds": {
+        "Qa": 83.7,
+        "Q1": 500,
+        "Q5": 975,
+        "Q20": 1453,
+        "Q100": 2065
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 1.9,
+        "filledPct": 40.88,
+        "free": 2.75,
+        "freePct": 59.12
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": "undefined-zone",
+      "note": ""
+    },
+    "pvl-karhof": {
+      "measuredAt": "2026-11-27T18:10:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 667.79,
+      "volume": 0.26,
+      "inflow": null,
+      "outflow": null,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": null,
+      "floodThresholds": {
+        "Qa": 0.08,
+        "Q1": 2.5,
+        "Q5": 5.8,
+        "Q20": 9.6,
+        "Q100": 15
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 0.15,
+        "filledPct": 51.63,
+        "free": 0.14,
+        "freePct": 48.37
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.175,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-klabava": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 345.34,
+      "volume": 0.77,
+      "inflow": 0.56,
+      "outflow": 0.44,
+      "precipitation1h": null,
+      "precipitation24h": 0,
+      "airTemperature": -1.4,
+      "floodThresholds": {
+        "Qa": 2.04,
+        "Q1": 26.9,
+        "Q5": 68.9,
+        "Q20": 121,
+        "Q100": 201
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.28,
+        "filledPct": 68.33,
+        "free": 0.13,
+        "freePct": 31.67
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 4.151,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-klicava": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 291.82,
+      "volume": 6.86,
+      "inflow": -0.02,
+      "outflow": 0.01,
+      "precipitation1h": null,
+      "precipitation24h": 1,
+      "airTemperature": -0.8,
+      "floodThresholds": {
+        "Qa": 0.23,
+        "Q1": 7.6,
+        "Q5": 16.8,
+        "Q20": 27,
+        "Q100": 41.5
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 6.74,
+        "filledPct": 85.73,
+        "free": 1.12,
+        "freePct": 14.27
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.573,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 1.598,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-korensko": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 350.77,
+      "volume": 2.14,
+      "inflow": 5.47,
+      "outflow": 6.55,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": -1.8,
+      "floodThresholds": {
+        "Qa": 55.2,
+        "Q1": 322,
+        "Q5": 597,
+        "Q20": 862,
+        "Q100": 1200
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 1.07,
+        "filledPct": 61.73,
+        "free": 0.66,
+        "freePct": 38.27
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": "undefined-zone",
+      "note": ""
+    },
+    "pvl-laz": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 639.04,
+      "volume": 0.52,
+      "inflow": 0.02,
+      "outflow": 0.01,
+      "precipitation1h": null,
+      "precipitation24h": 0,
+      "airTemperature": -3.7,
+      "floodThresholds": {
+        "Qa": 0.06,
+        "Q1": 1.8,
+        "Q5": 5.5,
+        "Q20": 10.4,
+        "Q100": 18.8
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 0.51,
+        "filledPct": 62.21,
+        "free": 0.31,
+        "freePct": 37.79
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.132,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-lipno-1": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 721.51,
+      "volume": 141.39,
+      "inflow": 8.6,
+      "outflow": 43.75,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": null,
+      "floodThresholds": {
+        "Qa": 13.16,
+        "Q1": 68,
+        "Q5": 140,
+        "Q20": 215,
+        "Q100": 317
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 118.04,
+        "filledPct": 46.66,
+        "free": 134.95,
+        "freePct": 53.34
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 33.156,
+        "freePct": 100
+      },
+      "retentionUncontrollable": "undefined-zone",
+      "note": ""
+    },
+    "pvl-lipno-2": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 561.72,
+      "volume": 1.18,
+      "inflow": 4.78,
+      "outflow": 6,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": null,
+      "floodThresholds": {
+        "Qa": 13.4,
+        "Q1": 70,
+        "Q5": 145,
+        "Q20": 223,
+        "Q100": 328
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.96,
+        "filledPct": 66.49,
+        "free": 0.48,
+        "freePct": 33.51
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": "undefined-zone",
+      "note": ""
+    },
+    "pvl-lucina": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 530.28,
+      "volume": 2.71,
+      "inflow": 0.36,
+      "outflow": 0.23,
+      "precipitation1h": null,
+      "precipitation24h": 0,
+      "airTemperature": -2.1,
+      "floodThresholds": {
+        "Qa": 1.09,
+        "Q1": 5.89,
+        "Q5": 16.8,
+        "Q20": 31.4,
+        "Q100": 55.2
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 2.36,
+        "filledPct": 68.3,
+        "free": 1.09,
+        "freePct": 31.7
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.798,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 1.14,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-nemcice": {
+      "measuredAt": "2026-11-27T18:00:00+01:00",
+      "volumesMeasuredAt": null,
+      "level": null,
+      "volume": null,
+      "inflow": null,
+      "outflow": null,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": -1.3,
+      "floodThresholds": {
+        "Qa": 0.45,
+        "Q1": 9.5,
+        "Q5": 20,
+        "Q20": 31,
+        "Q100": 46.5
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "retentionControllable": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "retentionUncontrollable": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "note": ""
+    },
+    "pvl-nyrsko": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 517.04,
+      "volume": 11.43,
+      "inflow": null,
+      "outflow": 0.35,
+      "precipitation1h": null,
+      "precipitation24h": 0.9,
+      "airTemperature": null,
+      "floodThresholds": {
+        "Qa": 1.45,
+        "Q1": 9.82,
+        "Q5": 24,
+        "Q20": 41.1,
+        "Q100": 66.4
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 10.47,
+        "filledPct": 65.55,
+        "free": 5.5,
+        "freePct": 34.45
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 2.008,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 1.812,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-obecnice": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 561.85,
+      "volume": 0.3,
+      "inflow": 0,
+      "outflow": 0.01,
+      "precipitation1h": null,
+      "precipitation24h": 1,
+      "airTemperature": -3.3,
+      "floodThresholds": {
+        "Qa": 0.08,
+        "Q1": 1.8,
+        "Q5": 7,
+        "Q20": 13.2,
+        "Q100": 21.4
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 0.28,
+        "filledPct": 52.6,
+        "free": 0.25,
+        "freePct": 47.4
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.16,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-orlik": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 334.72,
+      "volume": 345.7,
+      "inflow": 21.9,
+      "outflow": 0,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": null,
+      "floodThresholds": {
+        "Qa": 83.4,
+        "Q1": 498,
+        "Q5": 966,
+        "Q20": 1440,
+        "Q100": 2050
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 65.7,
+        "filledPct": 19.15,
+        "free": 277.38,
+        "freePct": 80.85
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 93.422,
+        "freePct": 100
+      },
+      "retentionUncontrollable": "undefined-zone",
+      "note": ""
+    },
+    "pvl-pilska-u-pribrame": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 668.81,
+      "volume": null,
+      "inflow": null,
+      "outflow": 0.01,
+      "precipitation1h": null,
+      "precipitation24h": 0.6,
+      "airTemperature": -4,
+      "floodThresholds": {
+        "Qa": 0.05,
+        "Q1": 1.2,
+        "Q5": 3.6,
+        "Q20": 6.9,
+        "Q100": 12.4
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 0.86,
+        "filledPct": 63.85,
+        "free": 0.49,
+        "freePct": 36.15
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.282,
+        "freePct": 100
+      },
+      "note": "Odtok zadáván 1x denně v 7:00."
+    },
+    "pvl-pilska-u-zdaru": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 575.24,
+      "volume": 0.87,
+      "inflow": null,
+      "outflow": 0.01,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": -3,
+      "floodThresholds": {
+        "Qa": 0.39,
+        "Q1": 7.3,
+        "Q5": 15.2,
+        "Q20": 17.1,
+        "Q100": 22.8
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.81,
+        "filledPct": 55.99,
+        "free": 0.64,
+        "freePct": 44.01
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.394,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-plzen-struncovy-sady": {
+      "measuredAt": null,
+      "volumesMeasuredAt": null,
+      "level": null,
+      "volume": null,
+      "inflow": null,
+      "outflow": null,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": null,
+      "floodThresholds": {
+        "Qa": 8.55,
+        "Q1": 82,
+        "Q5": 129,
+        "Q20": 214,
+        "Q100": 400
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "retentionControllable": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "retentionUncontrollable": {
+        "filled": null,
+        "filledPct": null,
+        "free": null,
+        "freePct": null
+      },
+      "note": ""
+    },
+    "pvl-rimov": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 462.03,
+      "volume": 17.56,
+      "inflow": 0.94,
+      "outflow": 0.2,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": -2,
+      "floodThresholds": {
+        "Qa": 4.1,
+        "Q1": 50,
+        "Q5": 118,
+        "Q20": 197,
+        "Q100": 283
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 15.49,
+        "filledPct": 51.6,
+        "free": 14.53,
+        "freePct": 48.4
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 1.552,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.169,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-sedlice": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 446.71,
+      "volume": 1.55,
+      "inflow": 0.67,
+      "outflow": 0.25,
+      "precipitation1h": null,
+      "precipitation24h": 6.6,
+      "airTemperature": -2.2,
+      "floodThresholds": {
+        "Qa": 2.58,
+        "Q1": 29.6,
+        "Q5": 63.5,
+        "Q20": 100,
+        "Q100": 150.5
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.72,
+        "filledPct": 76.31,
+        "free": 0.22,
+        "freePct": 23.69
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.096,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.35,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-slapy": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 262.73,
+      "volume": 186.31,
+      "inflow": 26.14,
+      "outflow": 81.99,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": -0.5,
+      "floodThresholds": {
+        "Qa": 84.7,
+        "Q1": 450,
+        "Q5": 1087,
+        "Q20": 1702,
+        "Q100": 2503
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 117.51,
+        "filledPct": 58.61,
+        "free": 82.99,
+        "freePct": 41.39
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": "undefined-zone",
+      "note": ""
+    },
+    "pvl-sobenov": {
+      "measuredAt": "2026-11-27T18:00:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 580.72,
+      "volume": 0.02,
+      "inflow": null,
+      "outflow": null,
+      "precipitation1h": null,
+      "precipitation24h": 0,
+      "airTemperature": -3.3,
+      "floodThresholds": {
+        "Qa": 1.66,
+        "Q1": 21,
+        "Q5": 52,
+        "Q20": 89,
+        "Q100": 145
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.01,
+        "filledPct": 18.21,
+        "free": 0.05,
+        "freePct": 81.79
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.098,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-staviste": {
+      "measuredAt": "2026-11-27T18:10:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 578.64,
+      "volume": 0.21,
+      "inflow": null,
+      "outflow": 0.04,
+      "precipitation1h": null,
+      "precipitation24h": 0,
+      "airTemperature": -2.9,
+      "floodThresholds": {
+        "Qa": 0.19,
+        "Q1": 6.9,
+        "Q5": 11.9,
+        "Q20": 16.5,
+        "Q100": 22
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 0.18,
+        "filledPct": 47.47,
+        "free": 0.2,
+        "freePct": 52.53
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.139,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-strz": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 588.44,
+      "volume": 0.33,
+      "inflow": null,
+      "outflow": 0.03,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": null,
+      "floodThresholds": {
+        "Qa": 0.31,
+        "Q1": 7.7,
+        "Q5": 12.8,
+        "Q20": 17.5,
+        "Q100": 23.2
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.27,
+        "filledPct": 89.94,
+        "free": 0.03,
+        "freePct": 10.06
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.136,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-suchomasty": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 260.09,
+      "volume": 0.41,
+      "inflow": 0.02,
+      "outflow": 0.02,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": null,
+      "floodThresholds": {
+        "Qa": 0.13,
+        "Q1": 4.1,
+        "Q5": 12,
+        "Q20": 22.9,
+        "Q100": 41
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.41,
+        "filledPct": 99.79,
+        "free": 0,
+        "freePct": 0.21
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.073,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-stechovice": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 218.88,
+      "volume": 9.86,
+      "inflow": 24.89,
+      "outflow": 79.81,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": null,
+      "floodThresholds": {
+        "Qa": 85.1,
+        "Q1": 526,
+        "Q5": 1055,
+        "Q20": 1750,
+        "Q100": 2400
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 3.63,
+        "filledPct": 86.19,
+        "free": 0.58,
+        "freePct": 13.81
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": "undefined-zone",
+      "note": ""
+    },
+    "pvl-svihov-zelivka": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 372.88,
+      "volume": 212.09,
+      "inflow": 1.51,
+      "outflow": 0.13,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": -3,
+      "floodThresholds": {
+        "Qa": 6.93,
+        "Q1": 71,
+        "Q5": 143,
+        "Q20": 217,
+        "Q100": 316
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 191.59,
+        "filledPct": 77.86,
+        "free": 54.48,
+        "freePct": 22.14
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 42.413,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-trnavka": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 411.21,
+      "volume": 4,
+      "inflow": 0.43,
+      "outflow": 0.34,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": -1.9,
+      "floodThresholds": {
+        "Qa": 2.06,
+        "Q1": 26,
+        "Q5": 55,
+        "Q20": 86,
+        "Q100": 128
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.81,
+        "filledPct": 38.11,
+        "free": 1.31,
+        "freePct": 61.89
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 1.365,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-vrane": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 199.96,
+      "volume": 10.63,
+      "inflow": 28.41,
+      "outflow": 28.4,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": -0.3,
+      "floodThresholds": {
+        "Qa": 111,
+        "Q1": 550,
+        "Q5": 1330,
+        "Q20": 2050,
+        "Q100": 2670
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 2.06,
+        "filledPct": 81.51,
+        "free": 0.47,
+        "freePct": 18.49
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": "undefined-zone",
+      "note": ""
+    },
+    "pvl-vresnik": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 407.56,
+      "volume": 0.13,
+      "inflow": 0.55,
+      "outflow": 0.19,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": null,
+      "floodThresholds": {
+        "Qa": 2.71,
+        "Q1": 1,
+        "Q5": 51.7,
+        "Q20": 84.1,
+        "Q100": 133
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.05,
+        "filledPct": 93.22,
+        "free": 0,
+        "freePct": 6.78
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.241,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-zaskalska": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 448.82,
+      "volume": 0.67,
+      "inflow": null,
+      "outflow": null,
+      "precipitation1h": null,
+      "precipitation24h": 0,
+      "airTemperature": -2.5,
+      "floodThresholds": {
+        "Qa": 0.13,
+        "Q1": 3.1,
+        "Q5": 9.8,
+        "Q20": 19.4,
+        "Q100": 36
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.6,
+        "filledPct": 100,
+        "free": 0,
+        "freePct": 0
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0.004,
+        "filledPct": 5.38,
+        "free": 0.073,
+        "freePct": 94.62
+      },
+      "note": ""
+    },
+    "pvl-zhejral": {
+      "measuredAt": "2026-11-27T18:10:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:00:00+01:00",
+      "level": 678.27,
+      "volume": 0.13,
+      "inflow": null,
+      "outflow": null,
+      "precipitation1h": null,
+      "precipitation24h": null,
+      "airTemperature": null,
+      "floodThresholds": {
+        "Qa": 0.04,
+        "Q1": 2,
+        "Q5": 4.6,
+        "Q20": 7.6,
+        "Q100": 12
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.13,
+        "filledPct": 82.44,
+        "free": 0.03,
+        "freePct": 17.56
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.132,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pvl-zlutice": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T07:00:00+01:00",
+      "level": 502.24,
+      "volume": 5.68,
+      "inflow": null,
+      "outflow": 0.22,
+      "precipitation1h": null,
+      "precipitation24h": 0,
+      "airTemperature": -0.5,
+      "floodThresholds": {
+        "Qa": 1.24,
+        "Q1": 8.79,
+        "Q5": 28.6,
+        "Q20": 41.9,
+        "Q100": 85.1
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 4.83,
+        "filledPct": 46.95,
+        "free": 5.45,
+        "freePct": 53.05
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 1.309,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 2.81,
+        "freePct": 100
+      },
+      "note": "Hladina ručně 1x denně v 7:00."
+    },
+    "pla-bedrichov": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:10:00+01:00",
+      "level": 773.49,
+      "volume": 1.75,
+      "inflow": 0.04,
+      "outflow": 0.64,
+      "precipitation1h": null,
+      "precipitation24h": 0.1,
+      "airTemperature": -5.4,
+      "floodThresholds": {
+        "Qa": 0.27,
+        "Q1": 4.57,
+        "Q5": 12.9,
+        "Q20": 24,
+        "Q100": 41.9
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 1.71,
+        "filledPct": 100,
+        "free": 0,
+        "freePct": 0
+      },
+      "retentionControllable": {
+        "filled": 0.004,
+        "filledPct": 1.87,
+        "free": 0.228,
+        "freePct": 98.13
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.122,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pla-fojtka": {
+      "measuredAt": "2026-11-27T18:10:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:20:00+01:00",
+      "level": 389.52,
+      "volume": 0.15,
+      "inflow": 0.06,
+      "outflow": 0.05,
+      "precipitation1h": null,
+      "precipitation24h": 0.2,
+      "airTemperature": -3.73,
+      "floodThresholds": {
+        "Qa": 0.14,
+        "Q1": 2.97,
+        "Q5": 8.37,
+        "Q20": 16.7,
+        "Q100": 31.6
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.12,
+        "filledPct": 100,
+        "free": 0,
+        "freePct": 0
+      },
+      "retentionControllable": {
+        "filled": 0.001,
+        "filledPct": 0.6,
+        "free": 0.141,
+        "freePct": 99.4
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.03,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pla-hamry": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:20:00+01:00",
+      "level": 597.23,
+      "volume": 1.01,
+      "inflow": 0.12,
+      "outflow": 0.08,
+      "precipitation1h": null,
+      "precipitation24h": 10.9,
+      "airTemperature": -2.71,
+      "floodThresholds": {
+        "Qa": 0.56,
+        "Q1": 5.74,
+        "Q5": 12.7,
+        "Q20": 22.9,
+        "Q100": 40.8
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 0.92,
+        "filledPct": 61.87,
+        "free": 0.56,
+        "freePct": 38.13
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.805,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 1.068,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pla-harcov": {
+      "measuredAt": "2026-11-27T18:10:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:20:00+01:00",
+      "level": 369.57,
+      "volume": 0.34,
+      "inflow": 0.15,
+      "outflow": 0.11,
+      "precipitation1h": null,
+      "precipitation24h": 0.2,
+      "airTemperature": -2.92,
+      "floodThresholds": {
+        "Qa": 0.19,
+        "Q1": 3.97,
+        "Q5": 13.6,
+        "Q20": 28.4,
+        "Q100": 55.1
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.29,
+        "filledPct": 78.3,
+        "free": 0.08,
+        "freePct": 21.7
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.194,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.099,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pla-josefuv-dul": {
+      "measuredAt": "2026-11-27T18:10:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:10:00+01:00",
+      "level": 728.61,
+      "volume": 16.69,
+      "inflow": 0.07,
+      "outflow": 0.41,
+      "precipitation1h": null,
+      "precipitation24h": 0.1,
+      "airTemperature": -4.54,
+      "floodThresholds": {
+        "Qa": 0.41,
+        "Q1": 15.3,
+        "Q5": 37.9,
+        "Q20": 65.1,
+        "Q100": 106
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 16.16,
+        "filledPct": 84.49,
+        "free": 2.97,
+        "freePct": 15.51
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 1.596,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 1.379,
+        "freePct": 100
+      },
+      "note": "Odtok z nádrže zahrnuje vodárenský odběr. Informace o průtoku ve vodním toku pod nádrží lze nalézt v části Stavy a průtoky - profil Kamenice - Josefův Důl."
+    },
+    "pla-krizanovice": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:20:00+01:00",
+      "level": 402.79,
+      "volume": 1.42,
+      "inflow": 0.47,
+      "outflow": 0.5,
+      "precipitation1h": null,
+      "precipitation24h": 5.4,
+      "airTemperature": -3.99,
+      "floodThresholds": {
+        "Qa": 2.55,
+        "Q1": 23.9,
+        "Q5": 56.4,
+        "Q20": 94.3,
+        "Q100": 150
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 1.13,
+        "filledPct": 77.11,
+        "free": 0.33,
+        "freePct": 22.89
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": "undefined-zone",
+      "note": ""
+    },
+    "pla-labska": {
+      "measuredAt": "2026-11-27T18:10:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:10:00+01:00",
+      "level": 686.13,
+      "volume": 1.62,
+      "inflow": 0.76,
+      "outflow": 0.82,
+      "precipitation1h": null,
+      "precipitation24h": 0.1,
+      "airTemperature": -6.45,
+      "floodThresholds": {
+        "Qa": 2.62,
+        "Q1": 28.3,
+        "Q5": 58.2,
+        "Q20": 89.6,
+        "Q100": 132
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.76,
+        "filledPct": 100,
+        "free": 0,
+        "freePct": 0
+      },
+      "retentionControllable": {
+        "filled": 0.264,
+        "filledPct": 20.14,
+        "free": 1.046,
+        "freePct": 79.86
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.254,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pla-les-kralovstvi": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:20:00+01:00",
+      "level": 315.9,
+      "volume": 1.75,
+      "inflow": 4.2,
+      "outflow": 4.28,
+      "precipitation1h": null,
+      "precipitation24h": 2.8,
+      "airTemperature": -1.74,
+      "floodThresholds": {
+        "Qa": 8.17,
+        "Q1": 52.4,
+        "Q5": 105,
+        "Q20": 176,
+        "Q100": 294
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 1.42,
+        "filledPct": 100,
+        "free": 0,
+        "freePct": 0
+      },
+      "retentionControllable": {
+        "filled": 0.115,
+        "filledPct": 2.59,
+        "free": 4.334,
+        "freePct": 97.41
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 1.178,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pla-mlynice": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:20:00+01:00",
+      "level": 389.46,
+      "volume": 0.11,
+      "inflow": 0.06,
+      "outflow": 0.04,
+      "precipitation1h": null,
+      "precipitation24h": 0.6,
+      "airTemperature": -4.01,
+      "floodThresholds": {
+        "Qa": 0.1,
+        "Q1": 1.75,
+        "Q5": 6.08,
+        "Q20": 12.6,
+        "Q100": 24.3
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.09,
+        "filledPct": 100,
+        "free": 0,
+        "freePct": 0
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0.23,
+        "free": 0.1,
+        "freePct": 99.77
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.058,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pla-mseno": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:20:00+01:00",
+      "level": 507.64,
+      "volume": 1.21,
+      "inflow": 0.04,
+      "outflow": 0.06,
+      "precipitation1h": null,
+      "precipitation24h": 0,
+      "airTemperature": -3.66,
+      "floodThresholds": {
+        "Qa": 0.09,
+        "Q1": 2.16,
+        "Q5": 6.32,
+        "Q20": 12,
+        "Q100": 21
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 1.16,
+        "filledPct": 61.07,
+        "free": 0.74,
+        "freePct": 38.93
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.737,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.099,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pla-parizov": {
+      "measuredAt": "2026-11-27T18:10:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:20:00+01:00",
+      "level": 314.91,
+      "volume": 0.32,
+      "inflow": 0.19,
+      "outflow": 0.24,
+      "precipitation1h": null,
+      "precipitation24h": 2.5,
+      "airTemperature": -1.14,
+      "floodThresholds": {
+        "Qa": 1.61,
+        "Q1": 11.2,
+        "Q5": 34.8,
+        "Q20": 68.8,
+        "Q100": 127
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 0.26,
+        "filledPct": 100,
+        "free": 0,
+        "freePct": 0
+      },
+      "retentionControllable": {
+        "filled": 0.005,
+        "filledPct": 0.44,
+        "free": 1.199,
+        "freePct": 99.56
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 0.163,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pla-pastviny": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:20:00+01:00",
+      "level": 467.51,
+      "volume": 6.75,
+      "inflow": 2.26,
+      "outflow": 2.51,
+      "precipitation1h": null,
+      "precipitation24h": 1.5,
+      "airTemperature": -4.02,
+      "floodThresholds": {
+        "Qa": 3.44,
+        "Q1": 35.8,
+        "Q5": 73.5,
+        "Q20": 124,
+        "Q100": 207
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 5.47,
+        "filledPct": 87.63,
+        "free": 0.77,
+        "freePct": 12.37
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 1.254,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 2.049,
+        "freePct": 100
+      },
+      "note": "LMG Nekoř v rekonstrukci."
+    },
+    "pla-rozkos": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:20:00+01:00",
+      "level": 277.83,
+      "volume": 38.76,
+      "inflow": 0.5,
+      "outflow": 0.08,
+      "precipitation1h": null,
+      "precipitation24h": 1.7,
+      "airTemperature": -1.72,
+      "floodThresholds": {
+        "Qa": 0.43,
+        "Q1": 6.6,
+        "Q5": 14.1,
+        "Q20": 22.1,
+        "Q100": 33.2
+      },
+      "purpose": "Víceúčelová",
+      "storage": {
+        "filled": 28.32,
+        "filledPct": 61.64,
+        "free": 17.62,
+        "freePct": 38.36
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 19.798,
+        "freePct": 100
+      },
+      "retentionUncontrollable": "undefined-zone",
+      "note": ""
+    },
+    "pla-sec": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:10:00+01:00",
+      "level": 481.62,
+      "volume": 8.28,
+      "inflow": 0.47,
+      "outflow": 0.55,
+      "precipitation1h": null,
+      "precipitation24h": 3.7,
+      "airTemperature": -2.97,
+      "floodThresholds": {
+        "Qa": 2.37,
+        "Q1": 20.4,
+        "Q5": 48.9,
+        "Q20": 82.4,
+        "Q100": 133
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 6.97,
+        "filledPct": 49.75,
+        "free": 7.04,
+        "freePct": 50.25
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 3.17,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 3.305,
+        "freePct": 100
+      },
+      "note": ""
+    },
+    "pla-sous": {
+      "measuredAt": "2026-11-27T18:20:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:20:00+01:00",
+      "level": 765.24,
+      "volume": 4.2,
+      "inflow": 0.17,
+      "outflow": 0.32,
+      "precipitation1h": null,
+      "precipitation24h": 0.4,
+      "airTemperature": -5.71,
+      "floodThresholds": {
+        "Qa": 0.32,
+        "Q1": 12.5,
+        "Q5": 31.4,
+        "Q20": 54.6,
+        "Q100": 89.8
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 3.78,
+        "filledPct": 82.49,
+        "free": 0.8,
+        "freePct": 17.51
+      },
+      "retentionControllable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 1.269,
+        "freePct": 100
+      },
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 1.131,
+        "freePct": 100
+      },
+      "note": "Odtok z nádrže zahrnuje vodárenský odběr. Informace o průtoku ve vodním toku pod nádrží lze nalézt v části Stavy a průtoky - profil Černá Desná - Souš."
+    },
+    "pla-vrchlice": {
+      "measuredAt": "2026-11-27T18:10:00+01:00",
+      "volumesMeasuredAt": "2026-11-27T18:10:00+01:00",
+      "level": 321.26,
+      "volume": 6.15,
+      "inflow": 0.07,
+      "outflow": 0.13,
+      "precipitation1h": null,
+      "precipitation24h": 1.1,
+      "airTemperature": -1.55,
+      "floodThresholds": {
+        "Qa": 0.27,
+        "Q1": 5.88,
+        "Q5": 15.6,
+        "Q20": 27.9,
+        "Q100": 47
+      },
+      "purpose": "Vodárenská",
+      "storage": {
+        "filled": 5.72,
+        "filledPct": 72.46,
+        "free": 2.17,
+        "freePct": 27.54
+      },
+      "retentionControllable": "undefined-zone",
+      "retentionUncontrollable": {
+        "filled": 0,
+        "filledPct": 0,
+        "free": 1.462,
+        "freePct": 100
+      },
+      "note": "Odtok z nádrže zahrnuje vodárenský odběr. Informace o průtoku ve vodním toku pod nádrží lze nalézt v části Stavy a průtoky - profil Vrchlice - Vrchlice."
+    }
+  },
+  "unmatched": [],
+  "warnings": []
+}
